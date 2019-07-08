@@ -5,8 +5,8 @@ import {
   HashRouter
 } from "react-router-dom";
 import NavBar from './shared/Navbar/NavBar'
-import Home from './components/Home'
-import Other from './components/Other'
+import Home from './components/Home/Home'
+import Other from './components/Other/Other'
 
 const App: React.FC = () => {
   return (
