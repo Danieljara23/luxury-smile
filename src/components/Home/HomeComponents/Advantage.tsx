@@ -1,7 +1,7 @@
 import React from 'react';
-import { ReactComponent as IcoCalidad } from '../../../images/ico-calidad.svg'
-import { ReactComponent as IcoEspecialistas } from '../../../images/ico-especialistas.svg'
-import { ReactComponent as IcoMetodoPago } from '../../../images/ico-metodo-de-pago.svg'
+import { ReactComponent as IcoCalidad } from '../../images/ico-calidad.svg'
+import { ReactComponent as IcoEspecialistas } from '../../images/ico-calidad.svg'
+import { ReactComponent as IcoMetodoPago } from '../../images/ico-calidad.svg'
 
 
 const Advantages = () => {

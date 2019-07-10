@@ -10,6 +10,8 @@ import Button from '@material-ui/core/Button';
 import { TreatmentsList } from './TreatmentsList'
 import { TreatmentModel } from '../../../shared/models/TreatmentModel'
 
+
+
 const useStyles = makeStyles(
     createStyles({
         card: {
@@ -22,6 +24,8 @@ const useStyles = makeStyles(
 );
 
 const CardsCarousel = () => {
+
+    console.log(TreatmentsList)
     const classes = useStyles();
 
     const [activeItemIndex, setActiveItemIndex] = useState(0);
@@ -40,11 +44,11 @@ const CardsCarousel = () => {
                 chevronWidth={60}
                 numberOfCards={3}
                 slidesToScroll={3}
-                outsideChevron={false}
+                outsideChevron={true}
                 showSlither={false}
                 firstAndLastGutter={false}
                 activeItemIndex={activeItemIndex}
-                requestToChangeActive={() => setActiveItemIndex(activeItemIndex)}
+                requestToChangeActive={(value:any) => setActiveItemIndex(value)}
                 rightChevron={'>'}
                 leftChevron={'<'}
             >
@@ -55,7 +59,7 @@ const CardsCarousel = () => {
                                 <CardMedia
                                     className={classes.media}
                                     image={item.imagePath}
-                                    title="Contemplative Reptile"
+                                    title={item.title}
                                 />
                                 <CardContent>
                                     <h3>{item.title}</h3>
@@ -70,15 +74,7 @@ const CardsCarousel = () => {
                         </Card>  
                     ))
                 }
-                {/* {Array.from(new Array(10)).map((_, i) =>
-                <div
-                    key={i}
-                    style={{
-                    height: 200,
-                    background: 'url(https://placeimg.com/380/200/nature)'
-                    }}
-                />
-                )} */}
+              
             </ItemsCarousel>
             </div>
         </>

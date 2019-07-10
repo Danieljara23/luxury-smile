@@ -4,7 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import { NavLink } from "react-router-dom";
 import './NavBar.css'
-import { ReactComponent as Logo } from '../../images/logo-luxury-smile.svg'
+import { ReactComponent as Logo } from '../../components/images/logo-luxury-smile.svg'
 import { fontFamily } from '@material-ui/system';
 
 const useStyles = makeStyles({

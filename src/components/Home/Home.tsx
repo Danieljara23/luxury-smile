@@ -1,13 +1,17 @@
 import React from 'react'
 import Slider from '../Home/HomeComponents/Carousel'
 import Advantages from '../Home/HomeComponents/Advantage'
-import  CardsCarousel  from '../Home/HomeComponents/CardsCarousel'
+import Treatments from './HomeComponents/Treatments'
+import Experience from './HomeComponents/Experience'
+import Especialist from './HomeComponents/Especialist'
 const Home:React.FC = () => {
     return(
       <div>
         <Slider/>
         <Advantages/>
-        <CardsCarousel/>
+        <Treatments/>
+        <Experience/>
+        <Especialist/>
       </div>
     )
 }
