@@ -1,19 +1,24 @@
 import React from 'react';
 import './App.css';
+import {
+  Route,
+  HashRouter
+} from "react-router-dom";
+import NavBar from './shared/Navbar/NavBar'
+import Home from './components/Home/Home'
+import Other from './components/Other/Other'
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <h1>Simple SPA</h1>
-      <ul className="header">
-        <li><a href="/">Home</a></li>
-        <li><a href="/stuff">Stuff</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-      <div className="content">
-        
+    <HashRouter>
+      <div className="App">
+        <NavBar/>
+        <div className="content">
+          <Route exact path="/" component={Home}/>
+          <Route path="/Other" component={Other}/>
+        </div>
       </div>
-    </div>
+    </HashRouter>
   );
 }
 

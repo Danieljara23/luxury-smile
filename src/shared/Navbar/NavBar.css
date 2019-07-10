@@ -1,0 +1,10 @@
+ul.header li{
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+}
+ul.header li a{
+    color:white;
+    text-decoration: none;
+    display: inline-block;
+}

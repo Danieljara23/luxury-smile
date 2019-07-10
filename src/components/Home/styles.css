@@ -1,0 +1,95 @@
+.aws-btn {
+    --slider-height-percentage: 30%;
+    --slider-transition-duration: 387ms;
+    --organic-arrow-thickness: 4px;
+    --organic-arrow-border-radius: 0px;
+    --organic-arrow-height: 18px;
+    --organic-arrow-color: #cecece;
+    --control-button-width: 10%;
+    --control-button-height: 25%;
+    --control-button-background: transparent;
+    --control-bullet-color: #cecece;
+    --control-bullet-active-color: #747474;
+    --loader-bar-color: transparent;
+    --loader-bar-height: 6px;
+}
+.aws-sld__bullets button{
+    width: 6px;
+    height: 6px;
+    display: none;
+}
+.advantage-color{
+    color:#9D9D9D;
+}
+/* Esperiencias */
+.luxury-experience{
+    background-image: url('../images/experiencias-luxury.jpg');
+    background-repeat: no-repeat;
+    background-origin: inherit;
+    background-size: cover;
+}
+.luxury-experience h6, .luxury-experience span{
+    font-weight: lighter;
+    font-size: 31px;
+    color:white
+}
+.luxury-experience span{
+    font-weight: bold;
+}
+.experience-background{
+    background-color: #4D5766;
+}
+.img-experience{
+    width: 60px;
+    height: 60px;
+}
+.img-experience img{
+    border-radius: 50%;
+}
+.experience-title{
+    font-size: 21px;
+    font-weight: lighter;
+}
+.experience-type{
+    font-size: 14px;
+}
+.experience-description{
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+/* Especialist */
+.especialist-info, .especialist-image{
+    height: 200px;
+}
+.especialist-image{
+
+}
+.especialist-image img{
+    border-radius: 50;
+}
+.especialist-name{
+    color:#4D5766;
+    font-weight: lighter;
+    font-size: 23px;
+}
+.especialist-prefix{
+    font-weight: bold;
+    font-size: 23px;
+}
+.especialist-school{
+    color:#9D9D9D;
+    font-size: 14px;
+    font-weight: lighter;
+}
+.especialist-treatment{
+    color: #69ABBE;
+    font-weight: lighter;
+    font-size: 19px;
+}
+.especialist-read-more{
+    font-weight: lighter;
+    font-size: 12px;
+    text-transform:uppercase;
+    color: #69ABBE;
+}
