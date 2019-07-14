@@ -1,0 +1,18 @@
+.top-header{
+    background-color: white;
+    height: 35px;
+}
+.top-header-main-text h4{
+    color:#69ABBE;
+    font-size: 15px;
+    font-weight: bold;
+}
+.top-header-social-network{
+    
+}
+.social-network-number p{
+    color: #717171;
+    font-size: 14px;
+    font-weight: 300;
+    border-right: 1px solid #e6e6e6;
+}

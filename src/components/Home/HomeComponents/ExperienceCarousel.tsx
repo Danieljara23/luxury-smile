@@ -11,7 +11,7 @@ const useStyles = makeStyles(
             backgroundColor: 'white',
             color: '#4D5766',
             fontSize: '12px',
-            fontWeight: 'normal'
+            fontWeight: 500
         }
     }),
 );
@@ -25,18 +25,18 @@ const ExperienceCarousel = () => {
         
         <div style={{"padding":0,"maxWidth":"100%","margin":"0"}}>
             <ItemsCarousel
-                gutter={12}
+                gutter={0}
                 activePosition={'center'}
                 chevronWidth={60}
                 numberOfCards={1}
                 slidesToScroll={1}
                 outsideChevron={false}
-                showSlither={true}
+                showSlither={false}
                 firstAndLastGutter={true}
                 activeItemIndex={activeItemIndex}
                 requestToChangeActive={(value:any) => setActiveItemIndex(value)}
-                rightChevron={'>'}
-                leftChevron={'<'}
+                rightChevron={<div className="custom-chevron experience">{'>'}</div>}
+                leftChevron={<div className="custom-chevron experience">{'<'}</div>}
             >
             {
                 ExperienceList.map((item) => (
@@ -46,7 +46,7 @@ const ExperienceCarousel = () => {
                         </div>
                         <h6 className="pt3 white experience-title mv2">{item.name}</h6>
                         <p className="b white experience-type">Paciente <Chip className={classes.root} label={item.treatmentType} /></p>
-                        <div className="w-100 flex justify-center">
+                        <div className="w-100 flex justify-center pb3">
                             <p className="white experience-description w-60">{item.description}</p>
                         </div>
                     </div>

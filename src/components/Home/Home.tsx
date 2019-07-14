@@ -4,6 +4,7 @@ import Advantages from '../Home/HomeComponents/Advantage'
 import Treatments from './HomeComponents/Treatments'
 import Experience from './HomeComponents/Experience'
 import Especialist from './HomeComponents/Especialist'
+import Contact from './HomeComponents/Contact'
 const Home:React.FC = () => {
     return(
       <div>
@@ -12,6 +13,7 @@ const Home:React.FC = () => {
         <Treatments/>
         <Experience/>
         <Especialist/>
+        <Contact/>
       </div>
     )
 }
