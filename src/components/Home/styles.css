@@ -21,9 +21,9 @@
 .advantage-color{
     color:#9D9D9D;
 }
-/* Esperiencias */
+/* Experiencias */
 .luxury-experience{
-    background-image: url('../images/experiencias-luxury.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url('../images/experiencias-luxury.jpg');
     background-repeat: no-repeat;
     background-origin: inherit;
     background-size: cover;
@@ -40,8 +40,8 @@
     background-color: #4D5766;
 }
 .img-experience{
-    width: 60px;
-    height: 60px;
+    width: 90px;
+    height: 90px;
 }
 .img-experience img{
     border-radius: 50%;
@@ -57,7 +57,64 @@
     font-size: 14px;
     font-weight: lighter;
 }
-
+/* Treatments */
+.treatments-background{
+    background-color: #F2F2F2;
+}
+.treatments-title, .especialist-title, .contact-title{
+    color:#4D5766;
+    font-family: 'Biryani',sans-serif;
+    font-weight: lighter;
+    font-size: 27px;
+}
+.treatments-container{
+    padding: 0px;
+    max-width: 80%;
+    margin: 0px;
+    align-self: center;  
+}
+.treatment-description-container{
+    
+}
+.treatment-description{
+    color:#9D9D9D;
+    font-size: 14px;
+    text-align: justify;
+}
+.cards-title{
+    color:#4D5766;
+    font-weight: lighter;
+    font-size: 23px;
+}
+.cards-carousel > div:first-child{
+    padding-bottom: 20px;
+}
+.card-date-button {
+    font-size: 12px;
+    background-color: #69ABBE;
+    border-radius: 19px;
+    color:white;
+}
+.read-more-card{
+    font-size: 12px;
+}
+.custom-chevron{
+    background-color: #d1d1d15c;
+    box-shadow: none;
+    color: #848484;
+    width: 50px;
+    height: 50px;
+    padding: 17px;
+    border-radius: 50%;
+}
+.custom-chevron.experience{
+    color:#f1f1f1;
+}
+.see-all{
+    background-color: white;
+    border-radius: 24px;
+    box-shadow: #31313129 0px 3px 6px;
+}
 /* Especialist */
 .especialist-info, .especialist-image{
     height: 200px;
@@ -66,12 +123,14 @@
 
 }
 .especialist-image img{
-    border-radius: 50;
+    border-radius: 50%;
+    border: 1px solid #BCBCBC;
 }
 .especialist-name{
     color:#4D5766;
     font-weight: lighter;
     font-size: 23px;
+    margin-bottom: 0;
 }
 .especialist-prefix{
     font-weight: bold;
@@ -81,11 +140,14 @@
     color:#9D9D9D;
     font-size: 14px;
     font-weight: lighter;
+    margin-top: 8px;
+    margin-bottom: 4px;
 }
 .especialist-treatment{
     color: #69ABBE;
-    font-weight: lighter;
+    font-weight: 500;
     font-size: 19px;
+    margin-top: 4px;
 }
 .especialist-read-more{
     font-weight: lighter;
@@ -93,3 +155,26 @@
     text-transform:uppercase;
     color: #69ABBE;
 }
+.quality-icon svg{
+    width: 35px;
+}
+
+.blue-container{
+    background-color:#38aadd17;
+    color:#9D9D9D;
+    font-size: 14px;
+    text-align: left;
+    border-radius: 6px;
+}
+.custom-border{
+    border-right: 1px solid lightgrey;
+}
+.custom-border p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.map-container{
+}
+.ofix-container{
+}
+

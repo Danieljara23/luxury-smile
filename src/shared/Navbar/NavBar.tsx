@@ -17,14 +17,18 @@ const useStyles = makeStyles({
     },
     headerLink: {
         fontSize: '13px',
-        fontFamily: 'Biryani'
+        fontFamily: 'Biryani',
+        color: 'white'
     },
     dateButton: {
         color: '#4D5766',
         backgroundColor: 'white',
         borderRadius: '30px',
         fontFamily: "'Biryani', sans-serif",
-        fontSize: '13px'
+        fontSize: '13px',
+        lineHeight: 'normal',
+        padding: '10px 20px',
+        fontWeight: 'bold'
     }
   });
   
@@ -39,14 +43,14 @@ function NavBar() {
                     <Logo/>
                 </div>
                 <div className="w-70">
-                    <ul className="header">
+                    <ul className="header flex flex-row items-center">
                         <li><NavLink className={`${classes.headerLink} ttu tracked ph2`} to="/">Inicio</NavLink></li>
                         <li><NavLink className={`${classes.headerLink} ttu tracked ph2`} to="/Other">Consultorio</NavLink></li>
                         <li><NavLink className={`${classes.headerLink} ttu tracked ph2`} to="/Other">Tratamientos</NavLink></li>
                         <li><NavLink className={`${classes.headerLink} ttu tracked ph2`} to="/Other">Especialistas</NavLink></li>
                         <li><NavLink className={`${classes.headerLink} ttu tracked ph2`} to="/Other">Testimonios</NavLink></li>
                         <li><NavLink className={`${classes.headerLink} ttu tracked ph2`} to="/Other">Contacto</NavLink></li>
-                        <NavLink to="/" className={`${classes.dateButton} ttu no-underline pa2 dib`}>Pide tu cita aquí</NavLink>
+                        <li><NavLink to="/" className={`${classes.dateButton} ttu no-underline pa2 dib`}>Pide tu cita aquí</NavLink></li>
                     </ul>
                 </div>
                 
