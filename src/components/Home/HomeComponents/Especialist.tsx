@@ -6,7 +6,7 @@ import { ReactComponent as Flecha } from '../../images/ico-flecha.svg'
 const Especialist = () => {
 
     return(
-        <div className="w-100 mt5">
+        <div className="w-100 mt5 pb5">
             <div className="w-100">
                 <h3 className="especialist-title">Especialistas</h3>
             </div>
