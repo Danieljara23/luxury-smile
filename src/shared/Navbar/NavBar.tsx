@@ -17,14 +17,14 @@ const useStyles = makeStyles({
     },
     headerLink: {
         fontSize: '13px',
-        fontFamily: 'Biryani',
+        fontFamily: 'Roboto',
         color: 'white'
     },
     dateButton: {
         color: '#4D5766',
         backgroundColor: 'white',
         borderRadius: '30px',
-        fontFamily: "'Biryani', sans-serif",
+        fontFamily: "'Roboto', sans-serif",
         fontSize: '13px',
         lineHeight: 'normal',
         padding: '10px 20px',

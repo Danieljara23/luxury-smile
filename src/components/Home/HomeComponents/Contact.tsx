@@ -1,13 +1,34 @@
 import React from 'react';
 import { EspecialistsList } from './EspecialistList'
 import { ReactComponent as IcoCalidad } from '../../images/ico-calidad.svg'
+import { ReactComponent as IcoWaze } from '../../images/ico-waze.svg'
+import { ReactComponent as IcoMaps } from '../../images/ico-google-maps.svg'
+
+import { createStyles, makeStyles } from '@material-ui/core/styles';
 import '../styles.css'
 import  Ofix from '../../images/img-ofix.jpg'
 import OfixMap from './OfixMap'
-const Contact = () => {
+import Link from '@material-ui/core/Link';
 
+const useStyles = makeStyles(
+    createStyles({
+        route:{
+            color: '#2393B2',
+            backgroundColor: 'white',
+            borderRadius: 24,
+            fontWeight: 'bold',
+            boxShadow: '0px 0px 6px #00000038',
+            marginLeft: 10,
+            marginRight: 10,
+            fontSize: 13,
+            textDecoration: 'none',
+        }
+    })
+)
+const Contact = () => {
+    const classes = useStyles();
     return(
-        <div className="w-100 mt5">
+        <div className="w-100 pt5 top-border pb5">
             <div className="w-100">
                 <h3 className="contact-title">Contáctanos</h3>
             </div>
@@ -25,14 +46,18 @@ const Contact = () => {
                             <p> Sábados: 8am - 12pm</p>
                         </div>
                     </div>
-                    <div className="w-100">
+                    <div className="w-100 relative mt2">
                         <OfixMap/>
                     </div>
                 </div>
-                <div className="w-40">
+                <div className="w-40 ofix-container ph3 flex items-start">
                     <img src={Ofix} alt=""/>
                 </div>
                 
+            </div>
+            <div className="w-100 flex items-center justify-center pb4">
+                <Link className={`${classes.route} ttu ph3 pv2 items-center flex see-route-link`}><span><IcoWaze/></span> Ver ruta en Waze</Link>
+                <Link className={`${classes.route} ttu ph3 pv2 items-center flex see-route-link`}><span><IcoMaps/></span>Ver ruta en Google Maps</Link>
             </div>
         </div>
     )

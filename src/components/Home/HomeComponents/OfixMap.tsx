@@ -1,37 +1,38 @@
-import React from 'react';
-import GoogleMapReact from 'google-map-react';
+import React, { useState } from 'react';
+import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 
-const AnyReactComponent = (lat:any,lng:any, text:any ) => (
-    <div style={{
-      color: 'white', 
-      background: 'grey',
-      padding: '15px 10px',
-      display: 'inline-flex',
-      textAlign: 'center',
-      alignItems: 'center',
-      justifyContent: 'center',
-      borderRadius: '100%',
-      transform: 'translate(-50%, -50%)'
-    }}>
-      {text}
-    </div>
-  );
+interface MapInfo {
+    name: string
+    google: any
+}
 
+const style = {
+    width: '400px',
+    height: '300px'
+}
 const OfixMap = () => {
-    const defaultCenter = {lat: 59.95, lng: 30.33};
-    const defaultZoom = 11;
-    return(
-        <GoogleMapReact
-        defaultCenter={defaultCenter}
-        defaultZoom={defaultZoom}
-      >
-        <AnyReactComponent 
-          lat={59.955413} 
-          lng={30.337844} 
-          text={'Kreyser Avrora'} 
-        />
-      </GoogleMapReact>
+    // const [selectedPlace, setSelectedPlace] = useState({ name: 'Ofix' });
+    return (
+        <>
+            <div className="w-100 embebed-map">
+                {/* <Map google={props.google} zoom={14} style={style} initialCenter={{ lat: 6.2385993, lng:  -75.6030217 }}>
+
+                    <InfoWindow >
+                        <div>
+                            <h4>Ofix</h4>
+                        </div>
+                    </InfoWindow>
+                </Map> */}
+                      <iframe name="gMap" src={`https://www.google.com/maps/embed/v1/place?q=${6.2385993},${ -75.6030217}&key=${"AIzaSyAj3p-qEHSQrt-2SMP4mnGxwm_wsI5Y7C0"}`}></iframe>
+
+            </div>
+        </>
     )
 }
 
+
 export default OfixMap
+
+// export default GoogleApiWrapper({
+//     apiKey: ("AIzaSyAiXtIEpnjFD_nk7U0RXwKm_6d5is8llQI")
+// })(OfixMap)

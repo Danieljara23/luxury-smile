@@ -1,0 +1,13 @@
+.footer{
+    background-color: #121212;
+}
+.footer p, .footer h6,.footer-copyright h6{
+    color:white;
+    font-size: 13px;
+}
+.footer-copyright{
+   background-color: #242424; 
+}
+.footer-copyright h6{
+    font-weight: lighter;
+}
