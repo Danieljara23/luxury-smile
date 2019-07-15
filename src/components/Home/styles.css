@@ -194,4 +194,78 @@
     height: 405px;
     width: auto;
 }
+.mobile-card {
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 9px;
+    margin-right: 27px;
+    margin-left: 27px;
+    padding: 15px;
+}
+.contact-mobile{
+    display: none;
+}
+@media (max-width: 960px) {
+    .advantages-container{
+        overflow: auto;
+        white-space: nowrap;
+        justify-content: unset;
+    }
+    .advantage-container{
+        width: 300px;
+    }
+    .treatments-background{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .experience-container{
+        flex-direction: column; 
+    }
+    .experience-container > div{
+        width: 100%;
+        height: 300px;
+    }
+    .luxury-experience{
+        background-size: auto;
+        background-position: top;
+    }
+    .especialist-container > div{
+        width: 100%;
+        padding-left: 10%;
+        display: flex;
+        white-space: nowrap;
+        overflow: auto;
+        padding: 30px;
+    }
+    .ofix-contact-info{
+        width: 98%
+    }
+    .ofix-container img {
+        height: 470px;
+    }
+    .contact-desktop{
+        display: none;
+    }
+    .contact-mobile{
+        display: block
+    }
+    .route-links{
+        flex-direction: column;
+    }
+    .route-links a{
+        margin-top: 20px;
+    }
+    .custom-border{
+        border:none;
+    }
+    .custom-border ~ div{
+        padding: 0;
+    }
+    .top-border{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .aws-sld__wrapper{
+        height: 200px;
+    }
+}
 

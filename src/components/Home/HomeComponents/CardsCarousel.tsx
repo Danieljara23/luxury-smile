@@ -12,7 +12,6 @@ import LinesEllipsis from 'react-lines-ellipsis'
 import Link from '@material-ui/core/Link';
 import { ReactComponent as Flecha } from '../../images/ico-flecha.svg'
 
-
 const useStyles = makeStyles(
     createStyles({
         dateLink:{
@@ -24,6 +23,10 @@ const useStyles = makeStyles(
         },
         card: {
             maxWidth: 300,
+            boxShadow: '#31313129 0px 3px 6px',
+            borderRadius: 9
+        },
+        mobileCard: {
             boxShadow: '#31313129 0px 3px 6px',
             borderRadius: 9
         },
@@ -46,7 +49,8 @@ const useStyles = makeStyles(
 
 const CardsCarousel = () => {
 
-    console.log(TreatmentsList)
+    const isMobile = window.innerWidth < 480;
+    const showItems = isMobile ? 1 : 3;
     const classes = useStyles();
 
     const [activeItemIndex, setActiveItemIndex] = useState(0);
@@ -62,8 +66,8 @@ const CardsCarousel = () => {
                     gutter={20}
                     activePosition={'center'}
                     chevronWidth={60}
-                    numberOfCards={3}
-                    slidesToScroll={3}
+                    numberOfCards={showItems}
+                    slidesToScroll={showItems}
                     outsideChevron={false}
                     showSlither={false}
                     firstAndLastGutter={false}
@@ -75,7 +79,7 @@ const CardsCarousel = () => {
                 >
                     {
                         TreatmentsList.map( (item,i) => (
-                            <Card className={classes.card} key={i}>
+                            <Card className={`${ isMobile ? classes.mobileCard:classes.card}`} key={i}>
                                 <CardActionArea>
                                     <CardMedia
                                         className={classes.media}

@@ -13,7 +13,7 @@ const Footer = () => {
                 </div>
                 <div className="footer-item w-50 tl">
                     <h6 className="b tl">Contáctanos</h6>
-                    <div className="w-100 flex">
+                    <div className="w-100 flex contact-footer">
                         <div className="pr3">
                             <p>Edificio Ofix 33 piso 7 consultorio 715</p>
                             <p>Carrera 80a #32 EE - 72. Medellín - Colombia</p>

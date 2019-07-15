@@ -32,21 +32,21 @@ const Contact = () => {
             <div className="w-100">
                 <h3 className="contact-title">Contáctanos</h3>
             </div>
-            <div className="w-80 flex flex-row center">
-                <div className="w-60 flex flex-column">
+            <div className="w-80 flex flex-row center contact-desktop">
+                <div className="w-60 flex flex-column ofix-contact-photo">
                     <div className="w-100 flex flex-row blue-container ph4 pv3">
-                        <div className="w-60 custom-border flex flex-column justify-center">
+                        <div className="w-60 custom-border flex flex-column justify-center ofix-contact-info">
                             <p className="b">Edificio Ofix 33</p>
                             <p>piso 7 - consultorio 715</p>
                             <p>Carrera 80a #32 EE - 72 - Medellín - Colombia</p>
                         </div>
-                        <div className="w-40 pl4">
+                        <div className="w-40 pl4 ofix-photo">
                             <p>Horario de atención</p> 
                             <p>Lunes a viernes: 8am - 6pm</p>
                             <p> Sábados: 8am - 12pm</p>
                         </div>
                     </div>
-                    <div className="w-100 relative mt2">
+                    <div className="w-100 relative mt2 ofix-map">
                         <OfixMap/>
                     </div>
                 </div>
@@ -55,7 +55,31 @@ const Contact = () => {
                 </div>
                 
             </div>
-            <div className="w-100 flex items-center justify-center pb4">
+            <div className="w-80 flex flex-row center contact-mobile">
+                    <div className="w-100 flex flex-column blue-container ph4 pv3 ofix-contact-info mv3">
+                        <div className="custom-border flex flex-column justify-center">
+                            <p className="b">Edificio Ofix 33</p>
+                            <p>piso 7 - consultorio 715</p>
+                            <p>Carrera 80a #32 EE - 72 - Medellín - Colombia</p>
+                        </div>
+                        <div className="pl4 ">
+                            <p>Horario de atención</p> 
+                            <p>Lunes a viernes: 8am - 6pm</p>
+                            <p> Sábados: 8am - 12pm</p>
+                        </div>
+                    
+
+                    </div>
+
+                <div className="w-100 ofix-container ph3 flex items-start">
+                    <img src={Ofix} alt=""/>
+                </div>
+                <div className="relative mt2 ofix-map">
+                    <OfixMap/>
+                </div>
+                
+            </div>
+            <div className="w-100 flex items-center justify-center pb4 route-links">
                 <Link className={`${classes.route} ttu ph3 pv2 items-center flex see-route-link`}><span><IcoWaze/></span> Ver ruta en Waze</Link>
                 <Link className={`${classes.route} ttu ph3 pv2 items-center flex see-route-link`}><span><IcoMaps/></span>Ver ruta en Google Maps</Link>
             </div>

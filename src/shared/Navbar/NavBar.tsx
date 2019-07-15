@@ -6,6 +6,7 @@ import { NavLink } from "react-router-dom";
 import './NavBar.css'
 import { ReactComponent as Logo } from '../../components/images/logo-luxury-smile.svg'
 import { fontFamily } from '@material-ui/system';
+import MenuIcon from '@material-ui/icons/Menu';
 
 const useStyles = makeStyles({
     root: {
@@ -13,7 +14,7 @@ const useStyles = makeStyles({
     },
     appBar: {
         backgroundColor: 'black',
-        color: 'white'
+        color: 'white',
     },
     headerLink: {
         fontSize: '13px',
@@ -37,12 +38,13 @@ function NavBar() {
 
     return (
         <div className={classes.root}>
-            <AppBar position="static" className={classes.appBar}>
+            <AppBar position="static" className={`${classes.appBar} app-custom-bar`}>
                 <Toolbar className="flex">
-                <div className="w-30">
+                <div className="w-30 luxury-logo">
                     <Logo/>
                 </div>
-                <div className="w-70">
+                <div className="w-70 navbar-links">
+                    <MenuIcon className="hamburguer-icon" />
                     <ul className="header flex flex-row items-center">
                         <li><NavLink className={`${classes.headerLink} ttu tracked ph2`} to="/">Inicio</NavLink></li>
                         <li><NavLink className={`${classes.headerLink} ttu tracked ph2`} to="/Other">Consultorio</NavLink></li>
