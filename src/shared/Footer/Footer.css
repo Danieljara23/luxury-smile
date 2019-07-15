@@ -11,3 +11,18 @@
 .footer-copyright h6{
     font-weight: lighter;
 }
+@media (max-width: 960px) {
+    .footer{
+        flex-direction: column;
+    }
+    .footer> div {
+        width: 100%;
+    }
+    .contact-footer{
+        flex-direction: column;
+    }
+    .contact-footer > div{
+        width: 100%;
+        padding: 0;
+    }
+}

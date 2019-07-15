@@ -16,3 +16,32 @@
     font-weight: 300;
     border-right: 1px solid #e6e6e6;
 }
+
+@media (max-width: 960px) {
+    .top-header{
+        flex-wrap: wrap;
+        text-align: center;
+        height: 70px;
+    }
+    .top-header-main-text {
+      width: 100%;
+      display: block;
+      border-bottom: 1px solid lightgray;
+    }
+    .top-header-main-text h4{
+        margin-bottom: 8px;
+        margin-top: 8px;
+    }
+    .top-header-social-network {
+        width: 70%;
+        
+    }
+    .top-header-doctor{
+        overflow: hidden;
+        width: 30%;
+        display: inline-block;
+    }
+    .top-header-doctor svg {
+        width: 190px;
+    }
+  }
