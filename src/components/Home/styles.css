@@ -1,3 +1,4 @@
+@import "../../../node_modules/react-alice-carousel/lib/alice-carousel.css";
 .aws-btn {
     --slider-height-percentage: 30%;
     --slider-transition-duration: 387ms;
@@ -228,13 +229,17 @@
         background-size: auto;
         background-position: top;
     }
-    .especialist-container > div{
+    /* .especialist-container > div{
         width: 100%;
         padding-left: 10%;
         display: flex;
         white-space: nowrap;
         overflow: auto;
         padding: 30px;
+    } */
+    .especialist-container{
+        display: inline-block;
+        justify-content: unset;
     }
     .ofix-contact-info{
         width: 98%
