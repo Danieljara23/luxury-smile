@@ -161,7 +161,7 @@
 }
 
 .blue-container{
-    background-color:#38aadd17;
+    background-color:rgba(56, 170, 221, 0.16);
     color:#9D9D9D;
     font-size: 14px;
     text-align: left;
@@ -214,6 +214,9 @@
     .advantage-container{
         width: 300px;
     }
+    .advantages-container::-webkit-scrollbar {
+        display: none;
+    }
     .treatments-background{
         padding-left: 1rem;
         padding-right: 1rem;
@@ -243,9 +246,6 @@
     }
     .ofix-contact-info{
         width: 98%
-    }
-    .ofix-container img {
-        height: 470px;
     }
     .contact-desktop{
         display: none;

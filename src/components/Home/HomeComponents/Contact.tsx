@@ -17,7 +17,7 @@ const useStyles = makeStyles(
             backgroundColor: 'white',
             borderRadius: 24,
             fontWeight: 'bold',
-            boxShadow: '0px 0px 6px #00000038',
+            boxShadow: '0px 0px 6px rgba(0, 0, 0, 0.38)',
             marginLeft: 10,
             marginRight: 10,
             fontSize: 13,

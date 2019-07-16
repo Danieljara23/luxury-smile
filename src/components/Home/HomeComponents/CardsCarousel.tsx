@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ItemsCarousel from 'react-items-carousel';
+// import ItemsCarousel from 'react-items-carousel';
 import { createStyles, makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -11,6 +11,7 @@ import { TreatmentModel } from '../../../shared/models/TreatmentModel'
 import LinesEllipsis from 'react-lines-ellipsis'
 import Link from '@material-ui/core/Link';
 import { ReactComponent as Flecha } from '../../images/ico-flecha.svg'
+import AliceCarousel from 'react-alice-carousel';
 
 const useStyles = makeStyles(
     createStyles({
@@ -52,33 +53,25 @@ const CardsCarousel = () => {
     const isMobile = window.innerWidth < 480;
     const showItems = isMobile ? 1 : 3;
     const classes = useStyles();
+    const responsive = {
+        0: {
+            items: 1
+        },
+        600:{
+            items:2
+        },
+        800:{
+            items:3
+        },
+        1024: {
+            items: 3
+        }
+    }
 
     const [activeItemIndex, setActiveItemIndex] = useState(0);
-
-    useEffect( () => {
-        console.log(activeItemIndex)
-    } )
-
-    return(
-        <>
-            <div className="treatments-container" >
-                <ItemsCarousel
-                    gutter={20}
-                    activePosition={'center'}
-                    chevronWidth={60}
-                    numberOfCards={showItems}
-                    slidesToScroll={showItems}
-                    outsideChevron={false}
-                    showSlither={false}
-                    firstAndLastGutter={false}
-                    activeItemIndex={activeItemIndex}
-                    requestToChangeActive={(value:any) => setActiveItemIndex(value)}
-                    rightChevron={<div className="custom-chevron">{'>'}</div>}
-                    leftChevron={<div className="custom-chevron">{'<'}</div>}
-                    className="cards-carousel"
-                >
-                    {
-                        TreatmentsList.map( (item,i) => (
+    const [galleryItems, setGalleryItems] = useState(
+        TreatmentsList.map( (item,i) => (
+                            
                             <Card className={`${ isMobile ? classes.mobileCard:classes.card}`} key={i}>
                                 <CardActionArea>
                                     <CardMedia
@@ -107,11 +100,23 @@ const CardsCarousel = () => {
                                 <CardActions className={`flex justify-center pa3 ${classes.root}`}>
                                     <Link className={`${classes.dateLink} ttu card-date-button`}>Pide tu cita aquí</Link>
                                 </CardActions>
-                            </Card>  
+                            </Card>
                         ))
-                    }
-                
-                </ItemsCarousel>
+                    )
+    useEffect( () => {
+        console.log(activeItemIndex)
+    } )
+
+    return(
+        <>
+            <div className="treatments-container" >
+                <AliceCarousel mouseDragEnabled
+                    buttonsDisabled={true}
+                    dotsDisabled={false}
+                    items={galleryItems}
+                    responsive={responsive}
+                />
+                   
             </div>
         
         </>
