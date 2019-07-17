@@ -11,7 +11,7 @@ const isMobile = window.innerWidth < 600;
 const Especialist = () => {
     const [galleryItems, setGalleryItems] = useState(
         EspecialistsList.map((i) => (
-            <div className={`${ isMobile ? '':'w-30'}`}  >
+            <div className={`${ isMobile ? 'especialist-card-mobile':'w-30'}`}  >
                 <div className="especialist-image">
                     <img src={i.imgPath} alt={i.name}/>
                 </div>

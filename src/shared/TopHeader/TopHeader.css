@@ -40,6 +40,7 @@
         overflow: hidden;
         width: 30%;
         display: inline-block;
+        margin-top: 5px;
     }
     .top-header-doctor svg {
         width: 190px;
