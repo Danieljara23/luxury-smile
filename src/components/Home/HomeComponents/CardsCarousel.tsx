@@ -29,7 +29,8 @@ const useStyles = makeStyles(
             fontWeight: 600
         },
         readMore:{
-            color:'#69ABBE'
+            color:'#69ABBE',
+            fontWeight: 100
         }
     }))
 
@@ -62,7 +63,7 @@ const CardsCarousel = () => {
         <>
             <div className="treatments-container" >
                 <AliceCarousel mouseDragEnabled
-                    buttonsDisabled={true}
+                    buttonsDisabled={false}
                     dotsDisabled={false}
                     items={galleryItems}
                     responsive={responsive}

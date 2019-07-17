@@ -18,9 +18,9 @@ export const EspecialistsList:EspecialistModel[] = [
     },
     {
         name: 'Anabel Giraldo',
-        fieldName: 'Universidad CES',
+        fieldName: 'Endodoncia',
         prefixType: 'Dra',
-        schoolName: 'Endodoncia',
+        schoolName: 'Universidad CES',
         imgPath: require('../../images/img-especialistas-anabel.jpg')
     },
 ]

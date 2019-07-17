@@ -13,8 +13,13 @@
 .social-network-number p{
     color: #717171;
     font-size: 14px;
-    font-weight: 300;
+    font-weight: normal;
     border-right: 1px solid #e6e6e6;
+}
+.whatsapp-fixed {
+    right: 0;
+    bottom: 0;
+    z-index: 3;
 }
 
 @media (max-width: 960px) {

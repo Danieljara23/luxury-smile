@@ -79,20 +79,28 @@
     border-radius: 9px;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
     height: 450px;
+    max-width: 390px;
 }
 .alice-carousel__stage-item{
     padding-left: 15px;
     padding-right: 15px;
     margin-bottom: 10px;
 }
+.card-image {
+    height: 225px;
+}
 .card-image img{
     border-radius: 9px 9px 0 0;
+    width: 100%;
+    height: 100%;
 }
 .treatments-title, .especialist-title, .contact-title{
     color:#4D5766;
     font-family: 'Roboto',sans-serif;
     font-weight: lighter;
     font-size: 27px;
+    margin-bottom: 40px;
+    margin-top: 20px;
 }
 .treatments-container{
     padding: 0px;
@@ -107,6 +115,7 @@
     color:#9D9D9D;
     font-size: 14px;
     text-align: justify;
+    font-weight: lighter;
 }
 .cards-title{
     color:#4D5766;
@@ -146,6 +155,53 @@
 .especialist-info, .especialist-image{
     height: 200px;
 }
+.especialist-card-desktop {
+    max-width: 400px;
+}
+
+.discount-badge {
+    background-color: #04B3E5;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 11px;
+    padding-left: 0;
+    width: 110px;
+    display: flex;
+    flex-direction: row;
+    height: 33px;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    margin-bottom: 18px;
+}
+.discount-badge span{
+    font-weight: lighter;
+}
+.discount-badge.no-discount{
+    background-color: transparent;
+}
+.discount-badge.no-discount:after{
+    background-color: transparent;
+    border-color: transparent;
+}
+.discount-badge:after {
+    position: absolute;
+    content: "";
+    background-color: #04b3e5;
+    height: 0px;
+    width: 0px;
+    margin: 0 auto;
+    z-index: 6;
+    left: 77px;
+    transform: rotate(0deg);
+    top: 0px;
+    border: 33px solid #04b3e5;
+    background-color: transparent;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    /* padding: 2px 3px 23px 2px; */
+}
 .especialist-image{
 
 }
@@ -172,7 +228,7 @@
 }
 .especialist-treatment{
     color: #69ABBE;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 19px;
     margin-top: 4px;
 }
@@ -217,7 +273,9 @@
 }
 .map-container{
 }
-.ofix-container img{
+.ofix-container {
+    padding-left: 0;
+    padding-right: 0;
 }
 .mobile-card {
     box-shadow: 0px 3px 6px #00000029;
@@ -229,7 +287,67 @@
 .contact-mobile{
     display: none;
 }
+.alice-carousel__dots-item{
+    background-color:#BEBEBE
+}
+.alice-carousel__dots-item:hover, .alice-carousel__dots-item.__active{
+    background-color: rgba(190, 190, 190, 0.43);
+}
+.ofix-building{
+    font-size: 16px;
+}
+p.alice-carousel__prev-btn-item,.alice-carousel__prev-btn-item:hover {
+    background: url(/static/media/arrow-left.c5b924c9.svg), rgba(209, 209, 209, 0.78) no-repeat;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.alice-carousel__prev-btn-item, .alice-carousel__next-btn-item, .alice-carousel__prev-btn-item:hover, .alice-carousel__next-btn-item:hover {
+    color: transparent;
+    margin: 0;
+    width: 50px;
+    height: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 35%;
+    left: 0;
+}
+
+p.alice-carousel__next-btn-item,.alice-carousel__next-btn-item:hover  {
+    right: 0;
+    background: url(/static/media/arrow-right.a61e166b.svg), rgba(209, 209, 209, 0.78) no-repeat;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: unset;
+}
+/* 
+.alice-carousel__prev-btn-wrapper, .alice-carousel__next-btn-wrapper {
+    display: none;
+} */
+
+
+
+
+
+.experience-container-carousel .alice-carousel__prev-btn, .experience-container-carousel .alice-carousel__next-btn{
+    background-color: transparent;
+}
+.experience-container-carousel p.alice-carousel__prev-btn-item{
+    background-color: white;
+    left: 4%;
+}
+.experience-container-carousel p.alice-carousel__next-btn-item{
+    right: 4%;
+    background-color: white;
+}
+
 @media (max-width: 960px) {
+    .treatments-title, .especialist-title, .contact-title{
+        margin-bottom: 35px;
+        margin-top: 35px;
+    }
     .advantages-container{
         overflow: auto;
         white-space: nowrap;
@@ -247,7 +365,7 @@
     }
     .experience-container{
         flex-direction: column; 
-        margin-bottom: 120px;
+        margin-bottom: 150px;
     }
     
     .experience-container > div{
@@ -305,6 +423,26 @@
     .treatments-container{
         width: 100%;
     }
+    .card-image{
+        height: auto;
+    }
+    .card-container{
+        height: 435px;
+    }
+    .experience-container-carousel p.alice-carousel__prev-btn-item{
+        left: 2%;
+    }
+    .experience-container-carousel p.alice-carousel__next-btn-item{
+        right: 2%;
+    }
 
+}
+@media (min-width: 1100px){
+    .card-container{
+        height: 470px;
+    }
+    .embebed-map{
+        height: 395px;
+    }
 }
 

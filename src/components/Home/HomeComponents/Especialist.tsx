@@ -5,13 +5,20 @@ import { ReactComponent as Flecha } from '../../images/ico-flecha.svg'
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
 
-const isMobile = window.innerWidth < 600;
+const isMobile = window.innerWidth < 768;
 
 
 const Especialist = () => {
     const [galleryItems, setGalleryItems] = useState(
         EspecialistsList.map((i) => (
-            <div className={`${ isMobile ? 'especialist-card-mobile':'w-30'}`}  >
+            <div className={`${ isMobile ? 'especialist-card-mobile':'w-30 especialist-card-desktop'}`}  >
+                { i.discount ? (
+                    <div className="relative discount-badge"><p>{i.discount}<span> DCTO</span></p> </div>
+                ):(
+                    <div className="relative discount-badge no-discount"><p></p> </div>
+                )
+                
+                }
                 <div className="especialist-image">
                     <img src={i.imgPath} alt={i.name}/>
                 </div>

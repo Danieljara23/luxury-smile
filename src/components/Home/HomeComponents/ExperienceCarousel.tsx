@@ -38,7 +38,7 @@ const ExperienceCarousel = () => {
         
         <div style={{"padding":0,"maxWidth":"100%","margin":"0"}} className="experience-container-carousel">
             <AliceCarousel mouseDragEnabled
-                    buttonsDisabled={true}
+                    buttonsDisabled={false}
                     dotsDisabled={false}
                     items={galleryItems}
                 />

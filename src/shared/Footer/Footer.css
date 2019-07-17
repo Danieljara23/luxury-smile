@@ -4,12 +4,21 @@
 .footer p, .footer h6,.footer-copyright h6{
     color:white;
     font-size: 13px;
+    font-weight: lighter;
+}
+.footer h6{
+    font-weight: 400;
+}
+.footer p {
+    margin-top: 2px;
 }
 .footer-copyright{
-   background-color: #242424; 
+    background-color: #242424;
 }
 .footer-copyright h6{
-    font-weight: lighter;
+    font-weight: normal;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 @media (max-width: 960px) {
     .footer{

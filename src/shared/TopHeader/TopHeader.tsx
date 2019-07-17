@@ -3,12 +3,16 @@ import { ReactComponent as Instagram } from '../../components/images/ico-instagr
 import { ReactComponent as Facebook } from '../../components/images/ico-facebook.svg'
 import { ReactComponent as Whatsapp } from '../../components/images/ico-whatsapp.svg'
 import { ReactComponent as DocCarlos } from '../../components/images/ico-doc-carlos.svg'
+import { ReactComponent as WhatAppGreen } from '../../components/images/ico-whatsapp-green.svg'
 import './TopHeader.css'
 
 
 const TopHeader = () => {
     return(
         <div className="flex w-100 top-header">
+            <div className="fixed whatsapp-fixed">
+                <WhatAppGreen/>
+            </div>
             <div className="w-70-ns w-100-s top-header-main-text flex items-center justify-end">
                 <h4>!20% de DCTO en tu primer tratamiento</h4>
             </div>
