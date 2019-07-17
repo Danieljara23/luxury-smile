@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "98db9fb3d699d06c907fc75aa4266250",
+    "revision": "eda82c0e7c8fd56b048380b086c9ad8b",
     "url": "/luxury-smile/index.html"
   },
   {
@@ -8,20 +8,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/luxury-smile/static/css/2.5a7ea718.chunk.css"
   },
   {
-    "revision": "676e60b5021449c0bf82",
-    "url": "/luxury-smile/static/css/main.db52b86e.chunk.css"
+    "revision": "f4b167b4f26863d9d66d",
+    "url": "/luxury-smile/static/css/main.90bf2ca5.chunk.css"
   },
   {
     "revision": "c0c0ca8eefb8057f59f5",
     "url": "/luxury-smile/static/js/2.a050bd3b.chunk.js"
   },
   {
-    "revision": "676e60b5021449c0bf82",
+    "revision": "f4b167b4f26863d9d66d",
     "url": "/luxury-smile/static/js/main.b32fb0b3.chunk.js"
   },
   {
     "revision": "77ee0a0bf814341351ff",
     "url": "/luxury-smile/static/js/runtime~main.bd30390b.js"
+  },
+  {
+    "revision": "c5b924c9dd0af83227876548c3d5f0cf",
+    "url": "/luxury-smile/static/media/arrow-left.c5b924c9.svg"
+  },
+  {
+    "revision": "a61e166bc3808eb00ae0b2482529b449",
+    "url": "/luxury-smile/static/media/arrow-right.a61e166b.svg"
   },
   {
     "revision": "9d0bcd0253ba11ec346291e451a4dbc3",
