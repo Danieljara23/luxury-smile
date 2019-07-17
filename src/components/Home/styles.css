@@ -297,7 +297,7 @@
     font-size: 16px;
 }
 p.alice-carousel__prev-btn-item,.alice-carousel__prev-btn-item:hover {
-    background: url(/static/media/arrow-left.c5b924c9.svg), rgba(209, 209, 209, 0.78) no-repeat;
+    background: url(/static/media/arrow-left.svg), rgba(209, 209, 209, 0.78) no-repeat;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -317,18 +317,11 @@ p.alice-carousel__prev-btn-item,.alice-carousel__prev-btn-item:hover {
 
 p.alice-carousel__next-btn-item,.alice-carousel__next-btn-item:hover  {
     right: 0;
-    background: url(/static/media/arrow-right.a61e166b.svg), rgba(209, 209, 209, 0.78) no-repeat;
+    background: url(/static/media/arrow-right.svg), rgba(209, 209, 209, 0.78) no-repeat;
     background-repeat: no-repeat;
     background-position: center;
     left: unset;
 }
-/* 
-.alice-carousel__prev-btn-wrapper, .alice-carousel__next-btn-wrapper {
-    display: none;
-} */
-
-
-
 
 
 .experience-container-carousel .alice-carousel__prev-btn, .experience-container-carousel .alice-carousel__next-btn{
