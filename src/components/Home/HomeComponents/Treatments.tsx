@@ -8,7 +8,10 @@ const useStyles = makeStyles(
         seeAll: {
             color: '#2393B2',
             fontSize: 13,
-            fontWeight: 'bold'
+            fontWeight: 'bold',
+            padding: 10,
+            paddingLeft: 14,
+            paddingRight: 14
         }
     }))
 
@@ -20,7 +23,9 @@ const Treatments = () => {
             <div className="w-100">
                 <h3 className="treatments-title mb4 mt5">Tratamientos</h3>
             </div>
-            <CardsCarousel/>
+            <div className="w-100 flex flex-row justify-center">
+                <CardsCarousel/>
+            </div>
             <div className="w-100 pv3">
                 <Link className={`${classes.seeAll} ttu see-all ph3 pv1`}>VER TODOS </Link>
             </div>
