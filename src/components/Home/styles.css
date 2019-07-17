@@ -297,7 +297,7 @@
     font-size: 16px;
 }
 p.alice-carousel__prev-btn-item,.alice-carousel__prev-btn-item:hover {
-    background: url('../images/arrow-left'), rgba(209, 209, 209, 0.78) no-repeat;
+    background: url('../images/arrow-left.svg'), rgba(209, 209, 209, 0.78) no-repeat;
     background-repeat: no-repeat;
     background-position: center;
 }
