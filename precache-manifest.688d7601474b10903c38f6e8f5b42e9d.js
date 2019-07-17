@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e0952b9d3aed8bb6dc4d28c6af4ea184",
+    "revision": "990c18ebdfba570040b93a79802a2534",
     "url": "/luxury-smile/index.html"
   },
   {
-    "revision": "82c82ee13a05552b65d2",
+    "revision": "c0c0ca8eefb8057f59f5",
     "url": "/luxury-smile/static/css/2.5a7ea718.chunk.css"
   },
   {
-    "revision": "b37f99fb761ef0cb167c",
-    "url": "/luxury-smile/static/css/main.d03446f2.chunk.css"
+    "revision": "c94587e77d53eaf99b8e",
+    "url": "/luxury-smile/static/css/main.daa3f47a.chunk.css"
   },
   {
-    "revision": "82c82ee13a05552b65d2",
-    "url": "/luxury-smile/static/js/2.f8e9d218.chunk.js"
+    "revision": "c0c0ca8eefb8057f59f5",
+    "url": "/luxury-smile/static/js/2.a050bd3b.chunk.js"
   },
   {
-    "revision": "b37f99fb761ef0cb167c",
-    "url": "/luxury-smile/static/js/main.320d349e.chunk.js"
+    "revision": "c94587e77d53eaf99b8e",
+    "url": "/luxury-smile/static/js/main.b32fb0b3.chunk.js"
   },
   {
     "revision": "77ee0a0bf814341351ff",
@@ -64,6 +64,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/luxury-smile/static/media/ico-waze.157540ea.svg"
   },
   {
+    "revision": "01d63c74e82f9f5fa44bd7726f47f5cc",
+    "url": "/luxury-smile/static/media/ico-whatsapp-green.01d63c74.svg"
+  },
+  {
     "revision": "30ab7630392b052d20746a9f0228d7c1",
     "url": "/luxury-smile/static/media/ico-whatsapp.30ab7630.svg"
   },
@@ -100,11 +104,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/luxury-smile/static/media/logo-luxury-smile.92b7a67a.svg"
   },
   {
+    "revision": "5a0632da49863bd478e7c13adfc93870",
+    "url": "/luxury-smile/static/media/menu-mobile.5a0632da.svg"
+  },
+  {
     "revision": "2fa0a11198e8711dac49d9c2c619ceb3",
     "url": "/luxury-smile/static/media/slider-luxury-smile-1.2fa0a111.jpg"
   },
   {
-    "revision": "f9110cfb98241f3bff538f5d3a26ddd1",
-    "url": "/luxury-smile/static/media/slider-mobile-luxury.f9110cfb.jpg"
+    "revision": "4d96cfa9667aa35c2636b86c48201e18",
+    "url": "/luxury-smile/static/media/slider-mobile-luxury.4d96cfa9.jpg"
   }
 ]);
