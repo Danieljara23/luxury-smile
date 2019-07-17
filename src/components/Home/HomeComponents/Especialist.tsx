@@ -46,7 +46,7 @@ const Especialist = () => {
                 {
                     isMobile ? (
                         <AliceCarousel mouseDragEnabled
-                            buttonsDisabled={true}
+                            buttonsDisabled={false}
                             items={galleryItems} 
                         />
                     ):(

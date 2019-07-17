@@ -5,6 +5,7 @@ ul.header li{
     display: inline;
     list-style-type: none;
     margin: 0;
+    padding-left: 15px;
 }
 ul.header li a{
     text-decoration: none;

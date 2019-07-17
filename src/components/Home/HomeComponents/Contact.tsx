@@ -22,6 +22,7 @@ const useStyles = makeStyles(
             marginRight: 10,
             fontSize: 13,
             textDecoration: 'none',
+            cursor: 'pointer'
         }
     })
 )
@@ -81,8 +82,8 @@ const Contact = () => {
                 
             </div>
             <div className="w-100 flex items-center justify-center pb4 route-links">
-                <Link className={`${classes.route} ttu ph3 pv2 items-center flex see-route-link`}><span><IcoWaze/></span> Ver ruta en Waze</Link>
-                <Link className={`${classes.route} ttu ph3 pv2 items-center flex see-route-link`}><span><IcoMaps/></span>Ver ruta en Google Maps</Link>
+                <Link className={`${classes.route} ttu ph3 pv2 items-center flex see-route-link` } underline='none'><span><IcoWaze/></span> Ver ruta en Waze</Link>
+                <Link className={`${classes.route} ttu ph3 pv2 items-center flex see-route-link`} underline='none'><span><IcoMaps/></span>Ver ruta en Google Maps</Link>
             </div>
         </div>
     )

@@ -26,7 +26,8 @@ const useStyles = makeStyles(
             padding: 10,
             paddingLeft: 12,
             paddingRight: 12,
-            fontWeight: 600
+            fontWeight: 600,
+            cursor: 'pointer'
         },
         readMore:{
             color:'#69ABBE',
@@ -49,10 +50,10 @@ const CardsCarousel = () => {
                     <p className="treatment-description">{item.description.substring(0, 81) + "..."}</p>
                 </div>
                 <div className="w-100 flex ph3">
-                    <Link className={`${classes.readMore} ttu read-more-card`}>Leer más <Flecha /></Link>
+                    <Link className={`${classes.readMore} ttu read-more-card` } underline='none'>Leer más <Flecha /></Link>
                 </div>
                 <div className="pt3 pb4 flex justify-center">
-                    <Link className={`${classes.dateLink} ttu card-date-button`}>Pide tu cita aquí</Link>
+                    <Link className={`${classes.dateLink} ttu card-date-button`} underline='none'>Pide tu cita aquí</Link>
                 </div>
             </div>
 
