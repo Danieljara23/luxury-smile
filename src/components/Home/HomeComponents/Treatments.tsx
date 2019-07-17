@@ -11,7 +11,8 @@ const useStyles = makeStyles(
             fontWeight: 'bold',
             padding: 10,
             paddingLeft: 14,
-            paddingRight: 14
+            paddingRight: 14,
+            cursor: 'pointer'
         }
     }))
 
@@ -27,7 +28,7 @@ const Treatments = () => {
                 <CardsCarousel/>
             </div>
             <div className="w-100 pv3">
-                <Link className={`${classes.seeAll} ttu see-all ph3 pv1`}>VER TODOS </Link>
+                <Link className={`${classes.seeAll} ttu see-all ph3 pv1`} underline='none'>VER TODOS </Link>
             </div>
         </div>
         

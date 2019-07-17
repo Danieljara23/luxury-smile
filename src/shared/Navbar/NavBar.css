@@ -1,7 +1,11 @@
+ul.header{
+    justify-content: flex-end;
+}
 ul.header li{
     display: inline;
     list-style-type: none;
     margin: 0;
+    padding-left: 15px;
 }
 ul.header li a{
     text-decoration: none;
@@ -9,6 +13,9 @@ ul.header li a{
 }
 .hamburguer-icon{
     display: none !important;
+}
+.luxury-logo svg{
+    width: 100%;
 }
 @media (max-width: 960px) {
     .hamburguer-icon{

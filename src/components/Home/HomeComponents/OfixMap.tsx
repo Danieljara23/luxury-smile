@@ -15,15 +15,8 @@ const OfixMap = () => {
     return (
         <>
             <div className="w-100 embebed-map">
-                {/* <Map google={props.google} zoom={14} style={style} initialCenter={{ lat: 6.2385993, lng:  -75.6030217 }}>
-
-                    <InfoWindow >
-                        <div>
-                            <h4>Ofix</h4>
-                        </div>
-                    </InfoWindow>
-                </Map> */}
-                      <iframe name="gMap" src={`https://www.google.com/maps/embed/v1/place?q=${6.2385993},${ -75.6030217}&key=${"AIzaSyAj3p-qEHSQrt-2SMP4mnGxwm_wsI5Y7C0"}`}></iframe>
+                
+            <iframe name="gMap" src={`https://www.google.com/maps/embed/v1/place?q=${6.238882},${-75.600769}&key=${"AIzaSyAj3p-qEHSQrt-2SMP4mnGxwm_wsI5Y7C0"}`}></iframe>
 
             </div>
         </>
@@ -33,6 +26,3 @@ const OfixMap = () => {
 
 export default OfixMap
 
-// export default GoogleApiWrapper({
-//     apiKey: ("AIzaSyAiXtIEpnjFD_nk7U0RXwKm_6d5is8llQI")
-// })(OfixMap)
