@@ -297,7 +297,7 @@
     font-size: 16px;
 }
 p.alice-carousel__prev-btn-item,.alice-carousel__prev-btn-item:hover {
-    background: url(/static/media/arrow-left.svg), rgba(209, 209, 209, 0.78) no-repeat;
+    background: url('../images/arrow-left'), rgba(209, 209, 209, 0.78) no-repeat;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -317,7 +317,7 @@ p.alice-carousel__prev-btn-item,.alice-carousel__prev-btn-item:hover {
 
 p.alice-carousel__next-btn-item,.alice-carousel__next-btn-item:hover  {
     right: 0;
-    background: url(/static/media/arrow-right.svg), rgba(209, 209, 209, 0.78) no-repeat;
+    background: url('../images/arrow-right.svg'), rgba(209, 209, 209, 0.78) no-repeat;
     background-repeat: no-repeat;
     background-position: center;
     left: unset;
