@@ -6,10 +6,15 @@ import { ReactComponent as DocCarlos } from '../../components/images/ico-doc-car
 import { ReactComponent as WhatAppGreen } from '../../components/images/ico-whatsapp-green.svg'
 import './TopHeader.css'
 
+interface Props{
+    isFixed: boolean
+}
 
-const TopHeader = () => {
+const TopHeader = ( props:Props ) => {
+    const { isFixed } = props
+    console.log("isFixed from TopHeader", isFixed)
     return(
-        <div className="flex w-100 top-header">
+        <div className={`w-100 top-header ${isFixed! ? 'dn':'flex '}`}>
             <div className="fixed whatsapp-fixed">
                 <WhatAppGreen/>
             </div>
