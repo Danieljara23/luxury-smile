@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4dca5e5dbe7f1c606c03e5cfa811176e",
+    "revision": "91a755af808c6e9b0c6f5360767f86c6",
     "url": "/luxury-smile/index.html"
   },
   {
-    "revision": "c0c0ca8eefb8057f59f5",
+    "revision": "11b27ac44c525c88ebdb",
     "url": "/luxury-smile/static/css/2.5a7ea718.chunk.css"
   },
   {
-    "revision": "20e0e80cbe1c233a81bf",
-    "url": "/luxury-smile/static/css/main.4b6dc17f.chunk.css"
+    "revision": "fc7e73236c67f04a3afe",
+    "url": "/luxury-smile/static/css/main.0588a954.chunk.css"
   },
   {
-    "revision": "c0c0ca8eefb8057f59f5",
-    "url": "/luxury-smile/static/js/2.a050bd3b.chunk.js"
+    "revision": "11b27ac44c525c88ebdb",
+    "url": "/luxury-smile/static/js/2.e138501c.chunk.js"
   },
   {
-    "revision": "20e0e80cbe1c233a81bf",
-    "url": "/luxury-smile/static/js/main.87856514.chunk.js"
+    "revision": "fc7e73236c67f04a3afe",
+    "url": "/luxury-smile/static/js/main.778e6668.chunk.js"
   },
   {
     "revision": "77ee0a0bf814341351ff",
@@ -106,6 +106,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "0d1b88190eda550eaf55e2080c21e20a",
     "url": "/luxury-smile/static/media/img-ofix.0d1b8819.jpg"
+  },
+  {
+    "revision": "7c8ce64df65a4416e717a4003035535c",
+    "url": "/luxury-smile/static/media/logo-luxury-smile-black.7c8ce64d.svg"
   },
   {
     "revision": "92b7a67a87d97c92043a7e971e97357b",
