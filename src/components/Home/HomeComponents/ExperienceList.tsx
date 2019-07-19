@@ -13,4 +13,10 @@ export const ExperienceList: ExperienceModel[] = [
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the…',
         imgPath: require('../../images/img-testimonios.jpg')
     },
+    {
+        name: 'Daniel Jaramillo Grisales',
+        treatmentType: 'Endondoncia',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the…',
+        imgPath: require('../../images/img-testimonios.jpg')
+    },
 ]

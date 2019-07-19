@@ -1,0 +1,30 @@
+.consultory-experience-carousel h6{
+    color: #9D9D9D;
+    font-size: 21px;
+    font-weight: lighter;
+}
+h6.consultory-experience-title{
+    color: #4D5766;
+    font-size: 20px;
+    font-weight: lighter;
+}
+.consultory-experience-carousel .experience-type{
+    color: #9D9D9D;
+    font-size: 14px;
+}
+.consultory-experience-carousel .experience-description{
+    color: #9D9D9D;
+    font-size: 14px;
+    font-weight: lighter;
+}
+.consultory-contact .top-border{
+    padding-bottom: 20px;
+}
+.consultory-contact .route-links{
+    padding-bottom: 0;
+}
+.consultory-contact-info p{
+    font-size: 15px;
+    color: #9D9D9D;
+    font-weight: lighter;
+}

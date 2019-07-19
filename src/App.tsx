@@ -7,6 +7,7 @@ import {
 import NavBar from './shared/Navbar/NavBar'
 import Footer from './shared/Footer/Footer'
 import Home from './components/Home/Home'
+import Consultory from './components/Consultory/Consultory'
 import Other from './components/Other/Other'
 import TopHeader from './shared/TopHeader/TopHeader'
 
@@ -34,7 +35,7 @@ const App: React.FC = () => {
           <NavBar isFixed={isFixed}/>
           <div className="content">
             <Route exact path="/" component={Home}/>
-            <Route path="/Other" component={Other}/>
+            <Route path="/Consultory" component={Consultory}/>
           </div>
           <Footer/>
         </div>

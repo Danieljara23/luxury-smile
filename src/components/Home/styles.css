@@ -434,4 +434,9 @@ p.alice-carousel__next-btn-item,.alice-carousel__next-btn-item:hover  {
         height: 395px;
     }
 }
+@media (min-width: 1300px){
+    .embebed-map{
+        height: 310px;
+    }
+}
 

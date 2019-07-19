@@ -81,7 +81,7 @@ const Contact = () => {
                 </div>
                 
             </div>
-            <div className="w-100 flex items-center justify-center pb4 route-links">
+            <div className="w-100 flex items-center justify-center pb4 route-links mt4">
                 <Link className={`${classes.route} ttu ph3 pv2 items-center flex see-route-link` } underline='none'><span><IcoWaze/></span> Ver ruta en Waze</Link>
                 <Link className={`${classes.route} ttu ph3 pv2 items-center flex see-route-link`} underline='none'><span><IcoMaps/></span>Ver ruta en Google Maps</Link>
             </div>

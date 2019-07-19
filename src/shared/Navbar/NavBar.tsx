@@ -70,7 +70,7 @@ function NavBar(props:Props) {
                     <MenuMobile className="hamburguer-icon" />
                     <ul className="header flex flex-row items-center">
                         <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2`} to="/">Inicio</NavLink></li>
-                        <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2`} to="/Other">Consultorio</NavLink></li>
+                        <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2`} to="/Consultory">Consultorio</NavLink></li>
                         <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2`} to="/Other">Tratamientos</NavLink></li>
                         <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2`} to="/Other">Especialistas</NavLink></li>
                         <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2`} to="/Other">Testimonios</NavLink></li>
