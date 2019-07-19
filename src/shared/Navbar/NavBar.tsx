@@ -16,7 +16,7 @@ interface Props{
 const useStyles = makeStyles({
     root: {
       flexGrow: 1,
-      zIndex: 12
+      zIndex: 12,
     },
     appBar: {
         backgroundColor: 'black',
@@ -57,7 +57,7 @@ function NavBar(props:Props) {
     const classes = useStyles();
     console.log("isFixed from Navbar:", isFixed)
     return (
-        <div className={`${classes.root}  ${isFixed! ? 'fixed top w-100':'relative'}`}>
+        <div className={`${classes.root}  ${isFixed! ? 'fixed w-100 top-0':'relative'}`}>
             <AppBar position="static" className={`${ isFixed ? classes.fixedAppBar : classes.appBar} app-custom-bar`} elevation={0}>
                 <Toolbar className="flex">
                 <div className="w-30 luxury-logo tl">
@@ -71,8 +71,8 @@ function NavBar(props:Props) {
                     <ul className="header flex flex-row items-center">
                         <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2`} to="/">Inicio</NavLink></li>
                         <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2`} to="/Consultory">Consultorio</NavLink></li>
-                        <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2`} to="/Other">Tratamientos</NavLink></li>
-                        <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2`} to="/Other">Especialistas</NavLink></li>
+                        <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2`} to="/Treatments">Tratamientos</NavLink></li>
+                        <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2`} to="/Especialists">Especialistas</NavLink></li>
                         <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2`} to="/Other">Testimonios</NavLink></li>
                         <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2`} to="/Other">Contacto</NavLink></li>
                         <li><NavLink to="/" className={`${classes.dateButton} ${ isFixed ? classes.fixedDateButton:''} ttu no-underline pa2 dib`}>Pide tu cita aquí</NavLink></li>

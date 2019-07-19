@@ -8,6 +8,8 @@ import NavBar from './shared/Navbar/NavBar'
 import Footer from './shared/Footer/Footer'
 import Home from './components/Home/Home'
 import Consultory from './components/Consultory/Consultory'
+import TreatmentsSection from './components/Treatments/Treatments'
+import EspecialistsSection from './components/Especialists/Especialists'
 import Other from './components/Other/Other'
 import TopHeader from './shared/TopHeader/TopHeader'
 
@@ -36,6 +38,8 @@ const App: React.FC = () => {
           <div className="content">
             <Route exact path="/" component={Home}/>
             <Route path="/Consultory" component={Consultory}/>
+            <Route path="/Treatments" component={TreatmentsSection}/>
+            <Route path="/Especialists" component={EspecialistsSection}/>
           </div>
           <Footer/>
         </div>

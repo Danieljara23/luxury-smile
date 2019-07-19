@@ -1,26 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import  TreatmentsList from './TreatmentsList'
-import Link from '@material-ui/core/Link';
-import { ReactComponent as Flecha } from '../../images/ico-flecha.svg'
-import AliceCarousel from 'react-alice-carousel';
+import React, { useState } from 'react'
+import TreatmentsList from '../Home/HomeComponents/TreatmentsList'
 import { createStyles, makeStyles } from '@material-ui/core/styles';
+import Chip from '@material-ui/core/Chip';
+import Link from '@material-ui/core/Link';
+import { ReactComponent as Flecha } from '../images/ico-flecha.svg'
 
-const responsive = {
-    0: {
-        items: 1
-    },
-    600: {
-        items: 2
-    },
-    800: {
-        items: 3
-    },
-    1024: {
-        items: 3
-    }
-}
+import './Treatments.css'
+
 const useStyles = makeStyles(
     createStyles({
+        root: {
+            backgroundColor: 'white',
+            color: '#AFAFAF',
+            fontSize: '12px',
+            fontWeight: 500
+        },
         dateLink: {
             color: 'white',
             padding: 10,
@@ -33,15 +27,25 @@ const useStyles = makeStyles(
             color:'#69ABBE',
             fontWeight: 100
         }
-    }))
+    }),
+);
 
-const CardsCarousel = () => {
-
-
+const TreatmentsSection = () => {
     const classes = useStyles();
-    const [galleryItems, setGalleryItems] = useState(
+
+    const filterBadges = [
         TreatmentsList.map((item) => (
-            <div className="card-container">
+            <div className="ph2">
+                <span>
+                    <Chip className={classes.root} label={item.title} />
+                </span>
+            </div>
+        ))
+    ]
+
+    const galleryItems = [
+        TreatmentsList.map((item) => (
+            <div className="card-container ma3">
                 <div className="card-image">
                     <img src={item.imagePath} alt={item.title} />
                 </div>
@@ -58,22 +62,21 @@ const CardsCarousel = () => {
             </div>
 
         ))
-    )
-    const handleOnDragStart = (e: any) => e.preventDefault()
-    return (
-        <>
-            <div className="treatments-container" >
-                <AliceCarousel mouseDragEnabled
-                    buttonsDisabled={false}
-                    dotsDisabled={false}
-                    items={galleryItems}
-                    responsive={responsive}
-                    stagePadding={{ paddingLeft: 10, paddingRight: 10 }}
-                />
-            </div>
+    ]
 
-        </>
+    return (
+        <div className="w-100">
+            <h4>Tratamientos</h4>
+            <div className="treatment-content">
+                <div className="w-100 treatments-types flex pa3 justify-center">
+                    {filterBadges}
+                </div>
+                <div className="treatments flex pa3 flex-wrap justify-center">
+                    {galleryItems}
+                </div>
+            </div>
+        </div>
     )
 }
 
-export default CardsCarousel
+export default TreatmentsSection

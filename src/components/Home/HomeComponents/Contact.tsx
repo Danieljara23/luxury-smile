@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { EspecialistsList } from './EspecialistList'
+import  EspecialistsList from './EspecialistList'
 import { ReactComponent as IcoCalidad } from '../../images/ico-calidad.svg'
 import { ReactComponent as IcoWaze } from '../../images/ico-waze.svg'
 import { ReactComponent as IcoMaps } from '../../images/ico-google-maps.svg'

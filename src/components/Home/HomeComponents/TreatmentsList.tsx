@@ -1,6 +1,6 @@
 import { TreatmentModel } from '../../../shared/models/TreatmentModel'
 
-export const TreatmentsList:TreatmentModel[] = [
+const TreatmentsList:TreatmentModel[] = [
     {
         title: 'Rehabilitación Oral',
         imagePath: require('../../images/img-destacados-rehabilitacion-oral.jpg'),
@@ -54,3 +54,4 @@ export const TreatmentsList:TreatmentModel[] = [
         description: 'Es una técnica mínimamente invasiva, en la cual se extraen las bolsas de bichat, es decir, los cúmulos de grasa que se acumulan en las mejillas y consiste en hacer dos incisiones de un centímetro o dos aproximadamente en el interior de la boca, una a cada lado, a la altura de la parte intermedia entre las muelas. A partir de ahí, se extraen las bolsas de bichat, con el objetivo de perfilar el óvalo facial con resultados permanentes, debido a que la grasa eliminada no se vuelve a reproducir. '
     },
 ]
+export default TreatmentsList

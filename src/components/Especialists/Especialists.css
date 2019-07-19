@@ -1,0 +1,16 @@
+.especialist-types{
+    background-color: #EFEFEF;
+}
+.especialists{
+    background-color: rgba(0, 0, 0, 0.212)
+}
+.especialist-card-desktop{
+    background-color: white;
+}
+.especialist-card{
+    border-radius: 9px;
+    width: 350px;
+}
+.discount-badge{
+    margin-top: 12px;
+}

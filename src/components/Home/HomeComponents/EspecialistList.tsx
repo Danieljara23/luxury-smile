@@ -1,6 +1,6 @@
 import { EspecialistModel } from '../../../shared/models/EspecialistModel'
 
-export const EspecialistsList:EspecialistModel[] = [
+const EspecialistsList:EspecialistModel[] = [
     {
         name: 'Carlos Andres Enriquez N',
         fieldName: 'Rehabilitación Oral y Estética Dental',
@@ -24,3 +24,4 @@ export const EspecialistsList:EspecialistModel[] = [
         imgPath: require('../../images/img-especialistas-anabel.jpg')
     },
 ]
+export default EspecialistsList

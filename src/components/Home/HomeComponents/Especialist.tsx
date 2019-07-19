@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { EspecialistsList } from './EspecialistList'
+import  EspecialistsList from './EspecialistList'
 import { ReactComponent as IcoCalidad } from '../../images/ico-calidad.svg'
 import { ReactComponent as Flecha } from '../../images/ico-flecha.svg'
 import AliceCarousel from 'react-alice-carousel';
