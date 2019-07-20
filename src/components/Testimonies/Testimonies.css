@@ -1,0 +1,27 @@
+.testimonies-title{
+    color:#4D5766;
+    font-weight: lighter;
+    font-size: 27px;
+}
+.luxury-experience-background{
+    background: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url('../images/experiencias-luxury.jpg');
+    background-repeat: no-repeat;
+    background-origin: inherit;
+    background-size: cover;
+    height: 230px;
+}
+.luxury-experience-background h6, .luxury-experience-background span{
+    font-weight: lighter;
+    font-size: 31px;
+    color:white
+}
+.testimonies-experience .experience-title{
+    color: #9D9D9D;
+}
+.custom-border-top{
+    border-top: 1px solid lightgray;
+}
+.custom-border-top > div > div {
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+}

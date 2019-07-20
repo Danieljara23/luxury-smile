@@ -1,0 +1,17 @@
+.contact-title{
+    color: #4D5766;
+    font-size: 27px;
+    font-weight: lighter;
+    margin-top: 35px;
+    margin-bottom: 0px;
+}
+.form-border{
+    border: 1px solid #E0E0E0;
+    border-radius: 6px;
+}
+#standard-dense{
+    box-sizing: content-box;
+}
+.contact-component-container .top-border{
+    border: none;
+}

@@ -8,11 +8,11 @@ h6.consultory-experience-title{
     font-size: 20px;
     font-weight: lighter;
 }
-.consultory-experience-carousel .experience-type{
+.consultory-experience-carousel .experience-type, .testimonies-experience .experience-type{
     color: #9D9D9D;
     font-size: 14px;
 }
-.consultory-experience-carousel .experience-description{
+.consultory-experience-carousel .experience-description, .testimonies-experience .experience-description{
     color: #9D9D9D;
     font-size: 14px;
     font-weight: lighter;

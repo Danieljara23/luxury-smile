@@ -1,0 +1,14 @@
+.appointment-title{
+    color: #4D5766;
+    font-size: 27px;
+    font-weight: lighter;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+.promotion-image {
+    background:  url('../images/slider-luxury-smile-1.jpg');
+    background-repeat: no-repeat;
+    background-origin: inherit;
+    background-size: cover;
+    height: 300px;
+}

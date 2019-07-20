@@ -27,7 +27,7 @@ const Consultory = () => {
                 </div>
             </div>
             <div className="consultory-experience-carousel w-100">
-                <ConsultoryExperience/>
+                <ConsultoryExperience title="Nuestros clientes hablan por nosotros"/>
             </div>
             <div className="consultory-contact w-100">
                 <Contact/>

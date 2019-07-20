@@ -73,9 +73,9 @@ function NavBar(props:Props) {
                         <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2`} to="/Consultory">Consultorio</NavLink></li>
                         <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2`} to="/Treatments">Tratamientos</NavLink></li>
                         <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2`} to="/Especialists">Especialistas</NavLink></li>
-                        <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2`} to="/Other">Testimonios</NavLink></li>
-                        <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2`} to="/Other">Contacto</NavLink></li>
-                        <li><NavLink to="/" className={`${classes.dateButton} ${ isFixed ? classes.fixedDateButton:''} ttu no-underline pa2 dib`}>Pide tu cita aquí</NavLink></li>
+                        <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2`} to="/Testimonies">Testimonios</NavLink></li>
+                        <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2`} to="/Contact">Contacto</NavLink></li>
+                        <li><NavLink to="/Appointment" className={`${classes.dateButton} ${ isFixed ? classes.fixedDateButton:''} ttu no-underline pa2 dib`}>Pide tu cita aquí</NavLink></li>
                     </ul>
                 </div>
                 

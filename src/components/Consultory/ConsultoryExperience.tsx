@@ -16,12 +16,19 @@ const useStyles = makeStyles(
     }),
 );
 
-const ConsultoryExperience = () => {
+interface Props{
+    title?: string
+}
+
+const ConsultoryExperience = (props:Props) => {
     const classes = useStyles();
 
     return(
         <div className="w-100 flex flex-column">
-            <h6 className="consultory-experience-title">Nuestros clientes hablan por nosotros</h6>
+            {props.title ? (
+                <h6 className="consultory-experience-title">{props.title}</h6>
+
+            ):(<></>)}
             <div className="w-100 flex">
                 {ExperienceList.map((item) => (
                     <div className="w-100">

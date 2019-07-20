@@ -26,13 +26,19 @@ const useStyles = makeStyles(
         }
     })
 )
-const Contact = () => {
+
+interface Props {
+    title?: string
+}
+const Contact = (props:Props) => {
     
     const classes = useStyles();
     return(
         <div className="w-100 pt3 top-border pb5">
             <div className="w-100">
-                <h3 className="contact-title">Contáctanos</h3>
+                {props.title ? (
+                    <h3 className="contact-title">{props.title}</h3>
+                ):(<></>)}
             </div>
             <div className="w-80 flex flex-row center contact-desktop">
                 <div className="w-60 flex flex-column ofix-contact-photo">

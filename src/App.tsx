@@ -10,6 +10,9 @@ import Home from './components/Home/Home'
 import Consultory from './components/Consultory/Consultory'
 import TreatmentsSection from './components/Treatments/Treatments'
 import EspecialistsSection from './components/Especialists/Especialists'
+import Testimonies from './components/Testimonies/Testimonies'
+import ContactSection from './components/Contact/Contact'
+import Appointment from './components/Appointment/Appointment'
 import Other from './components/Other/Other'
 import TopHeader from './shared/TopHeader/TopHeader'
 
@@ -40,6 +43,9 @@ const App: React.FC = () => {
             <Route path="/Consultory" component={Consultory}/>
             <Route path="/Treatments" component={TreatmentsSection}/>
             <Route path="/Especialists" component={EspecialistsSection}/>
+            <Route path="/Testimonies" component={Testimonies}/>
+            <Route path="/Contact" component={ContactSection}/>
+            <Route path="/Appointment" component={Appointment}/>
           </div>
           <Footer/>
         </div>

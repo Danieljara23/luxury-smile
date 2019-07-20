@@ -13,7 +13,7 @@ const Home:React.FC = () => {
         <Treatments/>
         <Experience/>
         <Especialist/>
-        <Contact/>
+        <Contact title="Contáctanos"/>
       </div>
     )
 }
