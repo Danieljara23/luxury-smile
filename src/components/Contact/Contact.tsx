@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Contact.css'
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import clsx from 'clsx';
 import Contact from '../Home/HomeComponents/Contact'
+import axios from 'axios';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -48,47 +49,95 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
+
+
+interface State {
+  name: string
+  cellPhone: string
+  telephone: string
+  email: string
+  message: string
+}
+
 const ContactSection = () => {
     const classes = useStyles();
     
+    const [values, setValues] = useState<State>({
+      name: '',
+      cellPhone: '',
+      telephone: '',
+      email: '',
+      message: '',
+    });
+
+    const handleChange = (name: keyof State) => (event: React.ChangeEvent<HTMLInputElement>) => {
+      setValues({ ...values, [name]: event.target.value });
+    };
+
+    const handleSubmit = (e:any) => {
+      console.log(values)
+      e.preventDefault();
+        axios({
+          method: "POST", 
+          url:"http://localhost:3002/send", 
+          data: values
+      }).then((response)=>{
+        console.log(response)
+          if (response.data.msg === 'success'){
+              alert("Message Sent."); 
+              resetForm(e)
+          }else if(response.data.msg === 'fail'){
+              alert("Message failed to send.")
+          }
+      })
+    }
+
+    const resetForm = (e:any) => {
+      e.target.reset()
+    }
     
     return(
         <div className="w-100">
             <h4 className="contact-title">Contacto</h4>
             <div className="w-100 contact-form center flex justify-center">
-                <form className={`${classes.container} ma4 w-80 pt0`} noValidate autoComplete="off">
+                <form className={`${classes.container} ma4 w-80 pt0`} onSubmit={handleSubmit} noValidate autoComplete="off" id="contact-form" method="POST">
                     <div className="w-100 flex flex-column form-border pa4">
                         <div className="w-100 flex ph4 justify-center">
                             <TextField
-                                id="standard-dense"
+                                id="name"
                                 label="Nombre completo"
                                 className={clsx(classes.textField, classes.dense)}
                                 margin="dense"
+                                onChange={handleChange('name')}
                             />
                             <TextField
-                                id="standard-dense"
+                                id="cellPhone"
                                 label="Celular"
                                 className={clsx(classes.textField, classes.dense)}
                                 margin="dense"
+                                onChange={handleChange('cellPhone')}
                             />
                         </div>
                         <div className="w-100 flex ph4 mt4 justify-center">
                             <TextField
-                                id="standard-dense"
+                                id="telephone"
                                 label="Teléfono"
                                 className={clsx(classes.textField, classes.dense)}
                                 margin="dense"
+                                onChange={handleChange('telephone')}
                             />
                             <TextField
-                                id="standard-dense"
+                                id="email"
                                 label="Correo electrónico"
                                 className={clsx(classes.textField, classes.dense)}
                                 margin="dense"
+                                name="email"
+                                onChange={handleChange('email')}
                             />
                         </div>
                         <div className="w-100 flex ph4 pt4 justify-center">
                             <TextField
-                                id="outlined-dense-multiline"
+                                id="message"
                                 label="Escribe tu mensaje aquí*"
                                 className={clsx(classes.textField, classes.dense, classes.multiLine)}
                                 multiline
@@ -96,10 +145,11 @@ const ContactSection = () => {
                                 defaultValue=""
                                 margin="normal"
                                 variant="outlined"
+                                onChange={handleChange('message')}
                             />
                         </div>
                         <div className="w-100 flex ph4 pt4 justify-center">
-                        <Button variant="contained" className={`${classes.button}`}>
+                        <Button variant="contained" className={`${classes.button}`} type="submit">
                             ENVIAR
                         </Button>
                         </div>

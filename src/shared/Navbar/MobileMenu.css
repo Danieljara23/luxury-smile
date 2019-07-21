@@ -1,0 +1,32 @@
+ul.mobile-menu{
+    background-color: black;
+    left: 0;
+    top: 155px;
+    height: 0vh;
+    justify-content: start;
+    max-height: 0vh;
+    visibility: hidden;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+ul.grow-menu{
+    max-height: 100vh;
+    height: 100vh;
+    visibility: visible;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+ul.fixed-mobile{
+    top: 55px;
+}
+ul.header li{
+    padding-left: 0;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
