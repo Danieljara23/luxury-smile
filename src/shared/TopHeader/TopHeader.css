@@ -1,6 +1,6 @@
 .top-header{
     background-color: white;
-    height: 35px;
+    height: 38px;
     transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 .top-header-main-text h4{
@@ -11,11 +11,32 @@
 .top-header-social-network{
     
 }
-.social-network-number p{
+.social-network-number a{
     color: #717171;
     font-size: 14px;
     font-weight: normal;
     border-right: 1px solid #e6e6e6;
+    text-decoration: none;
+    padding-right: 10px;
+}
+.social-network-number a:hover{
+    color: black;
+}
+.social-icon svg {
+    width: 24px;
+    padding: 4px;
+}
+
+a.social-icon:hover {
+    border-radius: 50%;
+    background-color: #E8E8E8;
+}
+
+a.social-icon {
+    padding: 2px;
+    display: flex;
+    width: 32px;
+    height: 32px;
 }
 
 @media (max-width: 960px) {
