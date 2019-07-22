@@ -37,7 +37,10 @@ const useStyles = makeStyles({
         }
     },
     headerLinkFixed: {
-        color: '#9D9D9D'
+        color: '#9D9D9D',
+        '&:hover': {
+            color: '#4D5766'
+        }
     },
     dateButton: {
         color: '#4D5766',
@@ -47,11 +50,17 @@ const useStyles = makeStyles({
         fontSize: '13px',
         lineHeight: 'normal',
         padding: '10px 20px',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        '&:hover':{
+            backgroundColor: '#C9C9C9'
+        }
     },
     fixedDateButton: {
         backgroundColor: '#87D2E7',
-        color: 'white'
+        color: 'white',
+        '&:hover': {
+            backgroundColor: '#6499A8'
+        }
     },
     menuLink: {
         color: 'white',

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import TreatmentsList from '../Home/HomeComponents/TreatmentsList'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import Chip from '@material-ui/core/Chip';
@@ -7,7 +7,7 @@ import { ReactComponent as Flecha } from '../images/ico-flecha.svg'
 import Modal from '@material-ui/core/Modal';
 import TreatmentsForm from '../CardsForms/TreatmentsForm'
 import './Treatments.css'
-
+import { TreatmentModel } from '../../shared/models/TreatmentModel'
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
@@ -49,17 +49,37 @@ const TreatmentsSection = () => {
     const classes = useStyles();
     const [showModal, setShowModal] = useState(false);
     const [modalStyle] = React.useState(getModalStyle);
+    const [filteredList, setFilteredList] = useState<TreatmentModel[]>(TreatmentsList)
+    const [selectedTreatment, setSelectedTreatment] = useState('')
 
     const [selectedItem, setSelectedItem] = useState({
         title: 'Rehabilitación Oral',
         imagePath: require('../images/img-destacados-rehabilitacion-oral.jpg'),
         description: 'Es una especialidad dentro de la odontología que combina en forma integral las áreas de prótesis fija, prótesis removible'
     })
+    const handleFilter = (e:any) => {
+        setSelectedTreatment(e)
+        console.log(selectedTreatment)
+    }
+
+    useEffect(() =>{
+        let tempSelected:TreatmentModel[] = TreatmentsList
+        
+        if(selectedTreatment != ""){
+            tempSelected = TreatmentsList.filter((item)=>{
+                return item.title.search(selectedTreatment) !== -1
+            })
+        }
+        
+        return() =>{
+            setFilteredList(tempSelected)
+        }
+    })
 
     const filterBadges = [
         TreatmentsList.map((item) => (
             <div className="ph2">
-                <span>
+                <span onClick={(e)=>handleFilter(item.title)}>
                     <Chip className={classes.root} label={item.title} />
                 </span>
             </div>
@@ -72,7 +92,7 @@ const TreatmentsSection = () => {
     }   
 
     const galleryItems = [
-        TreatmentsList.map((item,index) => (
+        filteredList.map((item,index) => (
             <div className="card-container ma3" id={"card-"+item}>
                 <div className="card-image">
                     <img src={item.imagePath} alt={item.title} />

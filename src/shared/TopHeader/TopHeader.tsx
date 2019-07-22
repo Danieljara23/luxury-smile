@@ -18,14 +18,20 @@ const TopHeader = ( props:Props ) => {
                 <h4>!20% de DCTO en tu primer tratamiento</h4>
             </div>
             <div className="w-20-ns w-70-s top-header-social-network flex flex-row items-center justify-center">
-                <div className="w-10 mh1">
-                    <Instagram/>
+                <div className="">
+                    <a href="https://www.instagram.com/luxurysmilecolombia/" target="_blank">
+                        <Instagram/>
+                    </a>
                 </div>
-                <div className="w-10 mh1">
-                    <Facebook/>
+                <div className="">
+                    <a href="https://www.facebook.com/LUXURY-SMILE-526886811114080/" target="_blank">
+                        <Facebook/>
+                    </a>
                 </div>
-                <div className="w-10 mh1">
-                    <Whatsapp/>
+                <div className="">
+                    <a href="https://wa.me/573013719026" target="_blank">
+                        <Whatsapp/>
+                    </a>
                 </div>
                 <div className="social-network-number w-50">
                     <p className="pv1 mv0">301 371 90 26</p>

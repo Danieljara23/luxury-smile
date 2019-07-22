@@ -47,10 +47,25 @@
     border:none;
 }
 @media (max-width: 960px) {
+    .advantages-container{
+        padding-top: 0;
+    }
     .consultory-container {
         flex-direction: column;
     }
+    .image-consultory {
+        padding: 0;
+    }
+    .consultory-subtitle{
+        margin-top: 10px;
+    }
     .consultory-container > div{
         width: 100%;
+    }
+    .consultory-advantage-container {
+        width: 100%;
+    }
+    .consultory-advantage-container svg{
+        padding-right: 20px;
     }
 }

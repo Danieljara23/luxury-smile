@@ -27,7 +27,6 @@ const Especialist = () => {
                     <p className="especialist-school">{i.schoolName}</p>
                     <div className="quality-icon"><IcoCalidad/></div>
                     <p className="especialist-treatment">{i.fieldName}</p>
-                    <p className="especialist-treatment-description">{i.description}</p>
                     <p className="especialist-read-more">Leer más <Flecha/></p>
                 </div>
             </div>

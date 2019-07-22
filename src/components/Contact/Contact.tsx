@@ -98,7 +98,7 @@ const ContactSection = () => {
     }
     
     return(
-        <div className="w-100">
+        <div className="w-100 contact-form-container">
             <h4 className="contact-title">Contacto</h4>
             <div className="w-100 contact-form center flex justify-center">
                 <form className={`${classes.container} ma4 w-80 pt0`} onSubmit={handleSubmit} noValidate autoComplete="off" id="contact-form" method="POST">

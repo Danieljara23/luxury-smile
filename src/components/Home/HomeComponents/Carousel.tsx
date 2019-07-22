@@ -6,11 +6,21 @@ import  FirstSlide from '../../images/slider-luxury-smile-1.jpg'
 import  FirstSlideMobile from '../../images/slider-mobile-luxury.jpg'
 import  SecondSlide from '../../images/slider-luxury-smile-1.jpg'
 import  SecondSlideMobile from '../../images/slider-mobile-luxury.jpg'
+import AliceCarousel from 'react-alice-carousel';
 
 const Slider:React.FC = () => { 
     const isMobile = window.innerWidth <= 400
+    const galleryItems = [
+        <div data-src={isMobile ? FirstSlideMobile: FirstSlide} />,
+        <div data-src={isMobile ? SecondSlideMobile:SecondSlide} />
+    ]
     return(
         <>
+            {/* <AliceCarousel mouseDragEnabled
+                buttonsDisabled={false}
+                dotsDisabled={false}
+                items={galleryItems}
+            /> */}
             <AwesomeSlider className="aws-btn">
                 <div data-src={isMobile ? FirstSlideMobile: FirstSlide} />
                 <div data-src={isMobile ? SecondSlideMobile:SecondSlide} />

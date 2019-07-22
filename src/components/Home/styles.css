@@ -79,7 +79,8 @@
     border-radius: 9px;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
     height: 450px;
-    max-width: 390px;
+    max-width: 360px;
+    border: 2px solid transparent;
 }
 .alice-carousel__stage-item{
     padding-left: 15px;
@@ -160,14 +161,13 @@
 }
 .especialist-card:hover{
     box-shadow: 0px 3px 6px #00000015;
-    height: 575px;
     -webkit-transition: all 300ms ease;
     -moz-transition: all 300ms ease;
     -o-transition: all 300ms ease;
     transition: all 300ms ease;
 }
-.especialist-card:hover .especialist-info, .especialist-card:hover .especialist-image{
-    height: 225px;
+.especialist-card{
+    height: 500px;
 }
 .especialist-card:hover .especialist-treatment-description{
     display: inline;
@@ -179,19 +179,24 @@
 .especialist-card-desktop {
     max-width: 400px;
 }
-    
+.card-container{
+    height: 500px;
+}
 .card-container .form-container form input{
     box-sizing: content-box;
 }
 .treatments-background .card-container .form-container form{
     display: none;
 }
-.treatments-background .card-container:hover .form-container form{
+.card-container:hover{
+    border: 2px solid #69A0B4;
+}
+/* .treatments-background .card-container:hover .form-container form{
     display: flex;
 }
 .treatments-background .card-container:hover .form-container .card-date-button{
     display: none;
-}
+} */
 .treatments-background .card-container .form-container .card-date-button{
     display: inline-block;
 }
@@ -334,7 +339,17 @@
     font-size: 16px;
 }
 p.alice-carousel__prev-btn-item,.alice-carousel__prev-btn-item:hover {
-    background: url('../images/arrow-left.svg'), rgba(209, 209, 209, 0.78) no-repeat;
+    background: url('../images/arrow-left.svg'), rgba(209, 209, 209, 0.67) no-repeat;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.alice-carousel__prev-btn-item:hover {
+    background: url('../images/arrow-left.svg'), rgba(209, 209, 209, 0.81) no-repeat;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.alice-carousel__next-btn-item:hover {
+    background: url('../images/arrow-right.svg'), rgba(209, 209, 209, 0.81) no-repeat;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -414,13 +429,16 @@ p.alice-carousel__next-btn-item,.alice-carousel__next-btn-item:hover  {
         justify-content: unset;
     }
     .ofix-contact-info{
-        width: 98%
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .contact-desktop{
         display: none;
     }
     .contact-mobile{
-        display: block
+        display: block;
+        width: 90%;
     }
     .route-links{
         flex-direction: column;
@@ -455,9 +473,9 @@ p.alice-carousel__next-btn-item,.alice-carousel__next-btn-item:hover  {
     .card-container{
         height: 435px;
     }
-    .card-container:hover{
+    /* .card-container:hover{
         height: auto;
-    }
+    } */
     .experience-container-carousel p.alice-carousel__prev-btn-item{
         left: 2%;
     }
@@ -466,13 +484,18 @@ p.alice-carousel__next-btn-item,.alice-carousel__next-btn-item:hover  {
     }
 
 }
+@media (min-width: 961px){
+    .embebed-map{
+        height: 225px;
+    }
+}
 @media (min-width: 1100px){
-    .card-container{
-        height: 510px;
-    }
-    .card-container:hover{
+    /* .card-container{
+        height: 335px;
+    } */
+    /* .card-container:hover{
         height: auto;
-    }
+    } */
     .embebed-map{
         height: 395px;
     }
