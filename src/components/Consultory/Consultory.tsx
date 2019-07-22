@@ -3,16 +3,17 @@ import { ReactComponent as DocCarlos } from '../images/ico-doc-carlos.svg'
 import Advantage from '../Home/HomeComponents/Advantage'
 import ConsultoryExperience from './ConsultoryExperience'
 import Contact from '../Home/HomeComponents/Contact'
+import  Imageconsultory from '../images/img-consultorio.jpg'
+import ContactInfo from '../ContactInfo/ContactInfo'
 import './Consultory.css'
-
 
 const Consultory = () => {
     return(
         <div className="w-90 center">
             <h4 className="consultory-main-title">Consultorio</h4>
-            <div className="w-100 flex flex-row">
-                <div className="w-50">
-
+            <div className="w-100 flex flex-row consultory-container">
+                <div className="w-50 image-consultory">
+                    <img src={Imageconsultory} alt="Image consultory"/>
                 </div>
                 <div className="w-50 flex flex-column items-start">
                     <h6 className="consultory-subtitle">Luxury Smile</h6>
@@ -32,20 +33,7 @@ const Consultory = () => {
             <div className="consultory-contact w-100">
                 <Contact/>
             </div>
-            <div className="consultory-contact-info w-100 flex mv2">
-                <div className="w-100">
-                    <p>WhatsApp: 301 371 90 26</p>
-                </div>
-                <div className="w-100">
-                    <p>557 84 16 - 350 873 60 90</p>
-                </div>
-                <div className="w-100">
-                    <p>luxurysmilecolombia@gmail.com</p>
-                </div>
-                <div className="w-100">
-                    <p>@luxurysmilecolombia</p>
-                </div>
-            </div>
+            <ContactInfo/>
         </div>
     )
 }

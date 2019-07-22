@@ -87,7 +87,7 @@
     margin-bottom: 10px;
 }
 .card-image {
-    height: 225px;
+    height: auto;
 }
 .card-image img{
     border-radius: 9px 9px 0 0;
@@ -104,7 +104,7 @@
 }
 .treatments-container{
     padding: 0px;
-    width: 80%;
+    width: 100%;
     margin: 0px;
     align-self: center;  
 }
@@ -155,8 +155,45 @@
 .especialist-info, .especialist-image{
     height: 200px;
 }
+.especialist-card .especialist-treatment-description{
+    display: none;
+}
+.especialist-card:hover{
+    box-shadow: 0px 3px 6px #00000015;
+    height: 575px;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+.especialist-card:hover .especialist-info, .especialist-card:hover .especialist-image{
+    height: 225px;
+}
+.especialist-card:hover .especialist-treatment-description{
+    display: inline;
+    color:#9D9D9D;
+    font-size: 14px;
+    font-weight: lighter;
+    margin: 2px 5px;
+}
 .especialist-card-desktop {
     max-width: 400px;
+}
+    
+.card-container .form-container form input{
+    box-sizing: content-box;
+}
+.treatments-background .card-container .form-container form{
+    display: none;
+}
+.treatments-background .card-container:hover .form-container form{
+    display: flex;
+}
+.treatments-background .card-container:hover .form-container .card-date-button{
+    display: none;
+}
+.treatments-background .card-container .form-container .card-date-button{
+    display: inline-block;
 }
 
 .discount-badge {
@@ -418,6 +455,9 @@ p.alice-carousel__next-btn-item,.alice-carousel__next-btn-item:hover  {
     .card-container{
         height: 435px;
     }
+    .card-container:hover{
+        height: auto;
+    }
     .experience-container-carousel p.alice-carousel__prev-btn-item{
         left: 2%;
     }
@@ -428,7 +468,10 @@ p.alice-carousel__next-btn-item,.alice-carousel__next-btn-item:hover  {
 }
 @media (min-width: 1100px){
     .card-container{
-        height: 470px;
+        height: 510px;
+    }
+    .card-container:hover{
+        height: auto;
     }
     .embebed-map{
         height: 395px;

@@ -9,7 +9,7 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import TreatmentsList from '../Home/HomeComponents/TreatmentsList'
 import InputLabel from '@material-ui/core/InputLabel';
-
+import ContactInfo from '../ContactInfo/ContactInfo'
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     container: {
@@ -71,45 +71,45 @@ const Appointment = () => {
         }));
     }
     return(
-        <div className="w-100">
+        <div className="w-100 apointment-container">
             <h4 className="appointment-title">Pide tu cita</h4>
             <div className="w-100 promotion-image">
                 {/* <img src={isMobile ? FirstSlideMobile: FirstSlide} alt=""/> */}
             </div>
             <div className="w-100 appointment-form mt1 center flex justify-center">
-                <form className={`${classes.container} ma4 w-80 pt0`} noValidate autoComplete="off">
+                <form className={`${classes.container} ma4 w-80 pt0 `} noValidate autoComplete="off" id="appointment-form">
                     <div className="w-100 flex flex-column form-border pa4">
-                        <div className="w-100 flex ph4 justify-center">
+                        <div className="w-100 flex ph4 justify-center appointment-container">
                             <TextField
                                 id="standard-dense"
                                 label="Nombre completo"
-                                className={clsx(classes.textField, classes.dense)}
+                                className={`${clsx(classes.textField, classes.dense)} mobile-input`}
                                 margin="dense"
                             />
                             <TextField
                                 id="standard-dense"
                                 label="Celular *"
-                                className={clsx(classes.textField, classes.dense)}
+                                className={`${clsx(classes.textField, classes.dense)} mobile-input`}
                                 margin="dense"
                             />
                         </div>
-                        <div className="w-100 flex ph4 mt4 justify-center">
+                        <div className="w-100 flex ph4 mt4 justify-center appointment-container">
                             <TextField
                                 id="standard-dense"
                                 label="Teléfono fijo"
-                                className={clsx(classes.textField, classes.dense)}
+                                className={`${clsx(classes.textField, classes.dense)} mobile-input`}
                                 margin="dense"
                             />
                             <TextField
                                 id="standard-dense"
                                 label="Correo electrónico"
-                                className={clsx(classes.textField, classes.dense)}
+                                className={`${clsx(classes.textField, classes.dense)} mobile-input`}
                                 margin="dense"
                             />
                             
                         </div>
-                        <div className="w-100 flex ph4 pt4 justify-start">
-                            <div className="w-70 pt3 pr3 pl0">
+                        <div className="w-100 flex ph4 pt4 justify-start appointment-container">
+                            <div className="w-70 pt3 pr3 pl0 multiline-container">
                             <FormControl className={classes.formControl}>
                             <InputLabel htmlFor="select-simple">Tratamiento</InputLabel>
                                 <Select
@@ -139,6 +139,7 @@ const Appointment = () => {
 
                 </form>
             </div>
+            <ContactInfo/>
             
         </div>
     )

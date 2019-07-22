@@ -15,3 +15,23 @@
 .contact-component-container .top-border{
     border: none;
 }
+#contact-form input{
+    box-sizing: content-box;
+}
+
+@media (max-width: 960px) {
+    #contact-form .mobile-input{
+        width: 100%;
+    }
+    #contact-form .form-containers{
+        flex-direction: column;
+        padding: 0;
+        margin-top: 0;
+    }
+    #contact-form .form-border{
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border: none;
+        padding-top: 0;
+    }
+}

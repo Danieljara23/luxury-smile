@@ -5,6 +5,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import clsx from 'clsx';
 import Contact from '../Home/HomeComponents/Contact'
+import ContactInfo from '../ContactInfo/ContactInfo'
 import axios from 'axios';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -102,44 +103,44 @@ const ContactSection = () => {
             <div className="w-100 contact-form center flex justify-center">
                 <form className={`${classes.container} ma4 w-80 pt0`} onSubmit={handleSubmit} noValidate autoComplete="off" id="contact-form" method="POST">
                     <div className="w-100 flex flex-column form-border pa4">
-                        <div className="w-100 flex ph4 justify-center">
+                        <div className="w-100 flex ph4 justify-center form-containers">
                             <TextField
                                 id="name"
                                 label="Nombre completo"
-                                className={clsx(classes.textField, classes.dense)}
+                                className={`${clsx(classes.textField, classes.dense)} mobile-input`}
                                 margin="dense"
                                 onChange={handleChange('name')}
                             />
                             <TextField
                                 id="cellPhone"
                                 label="Celular"
-                                className={clsx(classes.textField, classes.dense)}
+                                className={`${clsx(classes.textField, classes.dense)} mobile-input`}
                                 margin="dense"
                                 onChange={handleChange('cellPhone')}
                             />
                         </div>
-                        <div className="w-100 flex ph4 mt4 justify-center">
+                        <div className="w-100 flex ph4 mt4 justify-center form-containers">
                             <TextField
                                 id="telephone"
                                 label="Teléfono"
-                                className={clsx(classes.textField, classes.dense)}
+                                className={`${clsx(classes.textField, classes.dense)} mobile-input`}
                                 margin="dense"
                                 onChange={handleChange('telephone')}
                             />
                             <TextField
                                 id="email"
                                 label="Correo electrónico"
-                                className={clsx(classes.textField, classes.dense)}
+                                className={`${clsx(classes.textField, classes.dense)} mobile-input`}
                                 margin="dense"
                                 name="email"
                                 onChange={handleChange('email')}
                             />
                         </div>
-                        <div className="w-100 flex ph4 pt4 justify-center">
+                        <div className="w-100 flex ph4 pt4 justify-center form-containers">
                             <TextField
                                 id="message"
                                 label="Escribe tu mensaje aquí*"
-                                className={clsx(classes.textField, classes.dense, classes.multiLine)}
+                                className={`${clsx(classes.textField, classes.dense, classes.multiLine)} mobile-input`}
                                 multiline
                                 rows="4"
                                 defaultValue=""
@@ -159,6 +160,7 @@ const ContactSection = () => {
             </div>
             <div className="w-100 contact-component-container">
                 <Contact/>
+                <ContactInfo/>
             </div>
         </div>
     )

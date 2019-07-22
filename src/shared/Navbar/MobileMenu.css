@@ -1,10 +1,9 @@
 ul.mobile-menu{
     background-color: black;
     left: 0;
-    top: 155px;
+    top: 84px;
     height: 0vh;
     justify-content: start;
-    max-height: 0vh;
     visibility: hidden;
     -webkit-transition: all 300ms ease;
     -moz-transition: all 300ms ease;
@@ -12,7 +11,6 @@ ul.mobile-menu{
     transition: all 300ms ease;
 }
 ul.grow-menu{
-    max-height: 100vh;
     height: 100vh;
     visibility: visible;
     -webkit-transition: all 300ms ease;

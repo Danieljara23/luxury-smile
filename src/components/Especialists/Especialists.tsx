@@ -5,7 +5,7 @@ import Chip from '@material-ui/core/Chip';
 import Link from '@material-ui/core/Link';
 import { ReactComponent as Flecha } from '../images/ico-flecha.svg'
 import { ReactComponent as IcoCalidad } from '../images/ico-calidad.svg'
-
+import { NavLink } from "react-router-dom";
 import './Especialists.css'
 
 const useStyles = makeStyles(
@@ -22,12 +22,15 @@ const useStyles = makeStyles(
             paddingLeft: 12,
             paddingRight: 12,
             fontWeight: 600,
-            cursor: 'pointer'
+            cursor: 'pointer',
+            backgroundColor: '#69ABBE',
+            textDecoration: 'none',
+            borderRadius: 19
         },
         readMore:{
             color:'#69ABBE',
             fontWeight: 100
-        }
+        },
     }),
 );
 const isMobile = window.innerWidth < 768;
@@ -63,6 +66,7 @@ const EspecialistsSection = () => {
                     <p className="especialist-school">{i.schoolName}</p>
                     <div className="quality-icon"><IcoCalidad/></div>
                     <p className="especialist-treatment">{i.fieldName}</p>
+                    <p className="especialist-treatment-description">{i.description}</p>
                     <p className="especialist-read-more">Leer más <Flecha/></p>
                 </div>
             </div>
@@ -78,6 +82,9 @@ const EspecialistsSection = () => {
                 </div>
                 <div className="especialists flex pa3 flex-wrap justify-center">
                     {galleryItems}
+                </div>
+                <div className="w-100 flex flex-row justify-center pv3">
+                    <NavLink className={`${classes.dateLink} } ttu ph2 `} no-underline to="/Appointment">Pide tu cita aquí</NavLink>
                 </div>
             </div>
         </div>

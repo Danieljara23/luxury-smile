@@ -1,6 +1,19 @@
 .treatments-types{
     background-color: #EFEFEF;
+    overflow: hidden;
+    overflow-x: scroll
+}
+.treatments-types::-webkit-scrollbar {
+    display: none;
 }
 .treatments{
     background-color: rgba(0, 0, 0, 0.212)
+}
+div[aria-labelledby*="simple-modal-title"]{
+    top: 10% !important;
+    left: calc(50% - 195px) !important;
+    margin: 0;
+}
+.treatment-conten form{
+    display: inline;
 }

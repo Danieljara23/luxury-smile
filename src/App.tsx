@@ -15,6 +15,7 @@ import ContactSection from './components/Contact/Contact'
 import Appointment from './components/Appointment/Appointment'
 import Other from './components/Other/Other'
 import TopHeader from './shared/TopHeader/TopHeader'
+import { ReactComponent as WhatAppGreen } from './components/images/ico-whatsapp-green.svg'
 
 const App: React.FC = () => {
   const [isFixed, setIsFixed] = useState(false)
@@ -35,7 +36,10 @@ const App: React.FC = () => {
   console.log(isFixed)
   return (
       <HashRouter>
-        <div className="App">
+        <div className="App relative">
+          <div className="fixed whatsapp-fixed">
+              <WhatAppGreen/>
+          </div>
           <TopHeader isFixed={isFixed}/>
           <NavBar isFixed={isFixed}/>
           <div className="content">
@@ -46,8 +50,10 @@ const App: React.FC = () => {
             <Route path="/Testimonies" component={Testimonies}/>
             <Route path="/Contact" component={ContactSection}/>
             <Route path="/Appointment" component={Appointment}/>
+            
           </div>
           <Footer/>
+          
         </div>
       </HashRouter>
 

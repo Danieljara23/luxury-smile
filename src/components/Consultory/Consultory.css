@@ -40,3 +40,17 @@
 .consultory-advantage-container .advantage-container svg {
     width: 38px;
 }
+.image-consultory{
+    padding: 40px;
+}
+.consultory-contact .top-border{
+    border:none;
+}
+@media (max-width: 960px) {
+    .consultory-container {
+        flex-direction: column;
+    }
+    .consultory-container > div{
+        width: 100%;
+    }
+}

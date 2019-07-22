@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21.425" height="21.425" viewBox="0 0 21.425 21.425">
+  <g id="Grupo_2694" data-name="Grupo 2694" transform="translate(-1025 -2043)">
+    <g id="Grupo_2531" data-name="Grupo 2531" transform="translate(1025 2043)">
+      <g id="Grupo_2530" data-name="Grupo 2530">
+        <path id="Trazado_747" data-name="Trazado 747" d="M20.069,4H9.356A5.372,5.372,0,0,0,4,9.356V20.069a5.372,5.372,0,0,0,5.356,5.356H20.069a5.372,5.372,0,0,0,5.356-5.356V9.356A5.372,5.372,0,0,0,20.069,4Zm4.382,16.069a4.4,4.4,0,0,1-4.382,4.382H9.356a4.4,4.4,0,0,1-4.382-4.382V9.356A4.4,4.4,0,0,1,9.356,4.974H20.069a4.4,4.4,0,0,1,4.382,4.382Z" transform="translate(-4 -4)" fill="#69abbe"/>
+        <path id="Trazado_748" data-name="Trazado 748" d="M31.356,26a5.356,5.356,0,1,0,5.356,5.356A5.372,5.372,0,0,0,31.356,26Zm0,9.739a4.382,4.382,0,1,1,4.382-4.382A4.4,4.4,0,0,1,31.356,35.739Z" transform="translate(-20.644 -20.644)" fill="#69abbe"/>
+        <path id="Trazado_749" data-name="Trazado 749" d="M68.7,15a1.7,1.7,0,1,0,1.7,1.7A1.694,1.694,0,0,0,68.7,15Zm0,2.435a.73.73,0,1,1,.73-.73A.717.717,0,0,1,68.7,17.435Z" transform="translate(-51.661 -12.322)" fill="#69abbe"/>
+      </g>
+    </g>
+    <ellipse id="Elipse_112" data-name="Elipse 112" cx="5.009" cy="5.009" rx="5.009" ry="5.009" transform="translate(1030.947 2048.368)" fill="#69abbe" opacity="0.4"/>
+  </g>
+</svg>

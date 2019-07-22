@@ -7,7 +7,7 @@ import './NavBar.css'
 import { ReactComponent as Logo } from '../../components/images/logo-luxury-smile.svg'
 import { ReactComponent as LogoBlack } from '../../components/images/logo-luxury-smile-black.svg'
 import { ReactComponent as MenuMobile } from '../../components/images/menu-mobile.svg'
-import MobileMenu from './MobileMenu'
+import './MobileMenu.css'
 interface Props{
     isFixed: boolean
 }
@@ -31,7 +31,10 @@ const useStyles = makeStyles({
     headerLink: {
         fontSize: '13px',
         fontFamily: 'Roboto',
-        color: 'white'
+        color: 'white',
+        '&:hover':{
+            color: '#69ABBE'
+        }
     },
     headerLinkFixed: {
         color: '#9D9D9D'
@@ -49,6 +52,22 @@ const useStyles = makeStyles({
     fixedDateButton: {
         backgroundColor: '#87D2E7',
         color: 'white'
+    },
+    menuLink: {
+        color: 'white',
+        textTransform: 'uppercase',
+        padding: '2px',
+        fontSize: '13px'
+    },
+    listItemMenu: {
+        borderBottom: '1px solid gray'
+    },
+    appointment:{
+        borderRadius: 24,
+        backgroundColor: 'white',
+        fontSize: 13,
+        color: 'black',
+        textTransform: 'uppercase',
     }
   });
   
@@ -77,7 +96,16 @@ function NavBar(props:Props) {
                         <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2 ${isMobile ? 'dn': 'dib'}`} to="/Contact">Contacto</NavLink></li>
                         <li><NavLink to="/Appointment" className={`${classes.dateButton} ${ isFixed ? classes.fixedDateButton:''} ttu no-underline pa2 dib ${isMobile ? 'dn': 'dib'}`}>Pide tu cita aquí</NavLink></li>
                     </ul>
-                    <MobileMenu  showMenu = {showMenu} isFixed= {isFixed}/>
+                    <ul className={`mt0 pa4 header flex-column absolute w-100 items-center mobile-menu ${showMenu ? 'flex grow-menu' : 'dn'} ${isFixed ?'fixed-mobile ':''}`}>
+                        <li className={`w-100 pa2 tl ${classes.listItemMenu}`}><NavLink className={`${classes.menuLink}`} to="/" onClick={()=>setshowMenu(false)}>Inicio</NavLink></li>
+                        <li className={`w-100 pa2 tl ${classes.listItemMenu}`}><NavLink className={`${classes.menuLink}`} to="/Consultory" onClick={()=>setshowMenu(false)}>Consultorio</NavLink></li>
+                        <li className={`w-100 pa2 tl ${classes.listItemMenu}`}><NavLink className={`${classes.menuLink}`} to="/Treatments" onClick={()=>setshowMenu(false)}>Tratamientos</NavLink></li>
+                        <li className={`w-100 pa2 tl ${classes.listItemMenu}`}><NavLink className={`${classes.menuLink}`} to="/Especialists" onClick={()=>setshowMenu(false)}>Especialistas</NavLink></li>
+                        <li className={`w-100 pa2 tl ${classes.listItemMenu}`}><NavLink className={`${classes.menuLink}`} to="/Testimonies" onClick={()=>setshowMenu(false)}>Testimonios</NavLink></li>
+                        <li className={`w-100 pa2 tl ${classes.listItemMenu}`}><NavLink className={`${classes.menuLink}`} to="/Contact" onClick={()=>setshowMenu(false)}>Contacto</NavLink></li>
+                        <li className={`w-100 pa2 tc pt4 `}><NavLink to="/Appointment" className={`${classes.appointment} no-underline pa2 ph4 dib`}>Pide tu cita aquí</NavLink></li>
+                    </ul>
+                    
                 </div>
                 
                 </Toolbar>

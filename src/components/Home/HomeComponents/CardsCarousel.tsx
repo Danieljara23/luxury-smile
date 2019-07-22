@@ -4,7 +4,7 @@ import Link from '@material-ui/core/Link';
 import { ReactComponent as Flecha } from '../../images/ico-flecha.svg'
 import AliceCarousel from 'react-alice-carousel';
 import { createStyles, makeStyles } from '@material-ui/core/styles';
-
+import TreatmentsForm from '../../CardsForms/TreatmentsForm'
 const responsive = {
     0: {
         items: 1
@@ -39,9 +39,9 @@ const CardsCarousel = () => {
 
 
     const classes = useStyles();
-    const [galleryItems, setGalleryItems] = useState(
-        TreatmentsList.map((item) => (
-            <div className="card-container">
+    const [showForm, setShowForm] = useState(false)
+    const galleryItems = TreatmentsList.map((item) => (
+            <div className="card-container" onMouseEnter={()=>setShowForm(!showForm)}>
                 <div className="card-image">
                     <img src={item.imagePath} alt={item.title} />
                 </div>
@@ -52,13 +52,14 @@ const CardsCarousel = () => {
                 <div className="w-100 flex ph3">
                     <Link className={`${classes.readMore} ttu read-more-card` } underline='none'>Leer más <Flecha /></Link>
                 </div>
-                <div className="pt3 pb4 flex justify-center">
+                <div className={`pt3 pb4 flex justify-center form-container`}>
+                    <TreatmentsForm/>
                     <Link className={`${classes.dateLink} ttu card-date-button`} underline='none'>Pide tu cita aquí</Link>
                 </div>
             </div>
 
         ))
-    )
+    
     const handleOnDragStart = (e: any) => e.preventDefault()
     return (
         <>

@@ -20,6 +20,13 @@
     margin-top: 20px;
     margin-bottom: 20px;
 }
+.socials svg{
+    padding-right: 10px;
+    margin-top: 10px;
+}
+.socials svg g path, .socials svg path{
+    stroke: white;
+}
 @media (max-width: 960px) {
     .footer{
         flex-direction: column;

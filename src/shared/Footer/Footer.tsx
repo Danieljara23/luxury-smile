@@ -1,4 +1,6 @@
 import React from 'react';
+import { ReactComponent as Facebook } from '../../components/images/ico-facebook.svg'
+import { ReactComponent as Instagram } from '../../components/images/ico-instagram.svg'
 import './Footer.css'
 
 const Footer = () => {
@@ -31,7 +33,7 @@ const Footer = () => {
                     <h6 className="b">¡Síguenos!</h6>
                     <div className="flex flex-column">
                         <p>@luxurysmilecolombia</p>
-                        <p>Socials</p>
+                        <p className="socials"><Instagram/><Facebook/></p>
                     </div>
                 </div>
 

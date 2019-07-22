@@ -11,7 +11,7 @@ const Testimonies = () => {
             <div className="w-100 luxury-experience-background flex items-center justify-center">
                 <h6>#Experiencias <span>Luxury</span></h6>
             </div>
-            <div className="w-100 testimonies-experience">
+            <div className="w-100 testimonies-experience testimonies-component">
                 <ConsultoryExperience/>
             </div> 
             <div className="w-100 custom-border-top">
