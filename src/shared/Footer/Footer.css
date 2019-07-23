@@ -25,6 +25,9 @@
     margin-top: 10px;
 }
 .socials svg g path, .socials svg path{
+    stroke: lightgray;
+}
+.socials svg:hover g path, .socials svg:hover path{
     stroke: white;
 }
 @media (max-width: 960px) {

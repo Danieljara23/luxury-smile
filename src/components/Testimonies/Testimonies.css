@@ -25,6 +25,9 @@
     padding-top: 1.2rem;
     padding-bottom: 1.2rem;
 }
+.testimonies-component .luxury-experience-background span{
+    font-weight: bold;
+}
 @media (max-width: 960px) {
     .testimonies-component > div > div{
         flex-direction: column

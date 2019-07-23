@@ -14,6 +14,9 @@ interface Props{
 const isMobile = window.innerWidth < 768;
 
 const useStyles = makeStyles({
+    logo: {
+
+    },
     root: {
       flexGrow: 1,
       zIndex: 12,
@@ -51,7 +54,7 @@ const useStyles = makeStyles({
         lineHeight: 'normal',
         padding: '10px 20px',
         fontWeight: 'bold',
-        '&:hover':{
+        '&:hover': {
             backgroundColor: '#C9C9C9'
         }
     },
@@ -89,9 +92,11 @@ function NavBar(props:Props) {
             <AppBar position="static" className={`${ isFixed ? classes.fixedAppBar : classes.appBar} app-custom-bar`} elevation={0}>
                 <Toolbar className="flex">
                 <div className="w-30 luxury-logo tl">
-                    {
-                        isFixed ? (<LogoBlack/>):(<Logo/>)
-                    }
+                    <NavLink className={classes.logo} to="/">
+                        {
+                            isFixed ? (<LogoBlack/>):(<Logo/>)
+                        }
+                    </NavLink>
                     
                 </div>
                 <div className="w-70 navbar-links">
