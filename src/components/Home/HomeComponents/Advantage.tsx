@@ -8,7 +8,7 @@ const Advantages = () => {
     return(
         <>
         <div className="w-100">
-            <div className="w-100 flex pv4 justify-center advantages-container">
+            <div className="w-100 flex pb3 pt1 justify-center advantages-container">
                 <div className="w-30 flex items-center justify-center advantage-container ph3">
                     <IcoEspecialistas/>
                     <p className="ml2 f5 fw1 advantage-color">Atentido por especialistas</p>

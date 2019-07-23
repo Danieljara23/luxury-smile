@@ -11,7 +11,7 @@ const ContactInfo = () => {
     return(
         <div className="consultory-contact-info w-100 flex mv3">
             <div className="w-25 flex flex-row items-center justify-center">
-                <WhatsApp/>
+                <a href="https://wa.me/573013719026" target="_blank"><WhatsApp/></a>
                 <p>WhatsApp: 301 371 90 26</p>
             </div>
             <div className="w-25 flex flex-row items-center justify-center">
@@ -23,8 +23,8 @@ const ContactInfo = () => {
                 <p>luxurysmilecolombia@gmail.com</p>
             </div>
             <div className="w-25 flex flex-row items-center justify-center">
-                <Instagram/>
-                <Facebook/>
+                <a href="https://www.instagram.com/luxurysmilecolombia/" target="_blank"><Instagram/></a>
+                <a href="https://www.facebook.com/LUXURY-SMILE-526886811114080/" target="_blank"><Facebook/></a>
                 <p>@luxurysmilecolombia</p>
             </div>
         </div>

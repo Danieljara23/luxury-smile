@@ -31,7 +31,6 @@ const TopHeader = ( props:Props ) => {
     return(
         <div className={`w-100 top-header ${isFixed! ? 'dn':'flex '}`}>
             <div className="w-70-ns w-100-s top-header-main-text flex items-center justify-end">
-                {/* <h4>¡10% de DCTO en tu Blanqueamiento Dental!</h4> */}
                 <NavLink className={`${classes.discountLink}`} no-underline to="/Appointment">¡10% de DCTO en tu Blanqueamiento Dental!</NavLink>
             </div>
             <div className="w-20-ns w-70-s top-header-social-network flex flex-row items-center justify-center">

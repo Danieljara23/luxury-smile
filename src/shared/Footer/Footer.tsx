@@ -33,7 +33,14 @@ const Footer = () => {
                     <h6 className="b">¡Síguenos!</h6>
                     <div className="flex flex-column">
                         <p>@luxurysmilecolombia</p>
-                        <p className="socials"><Instagram/><Facebook/></p>
+                        <div className="socials">
+                            <a href="https://www.instagram.com/luxurysmilecolombia/" target="_blank">
+                                <Instagram/>
+                            </a>
+                             <a href="https://www.facebook.com/LUXURY-SMILE-526886811114080/" target="_blank">
+                                <Facebook/>
+                            </a>
+                        </div>
                     </div>
                 </div>
 

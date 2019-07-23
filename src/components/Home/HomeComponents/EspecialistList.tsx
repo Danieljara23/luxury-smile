@@ -7,7 +7,6 @@ const EspecialistsList:EspecialistModel[] = [
         discount: '20%',
         prefixType: 'Dr',
         schoolName: 'Colegio Odontológico Colombiano',
-        description: 'lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum',
         imgPath: require('../../images/img-especialistas-carlos.jpg')
     },
     {
@@ -15,7 +14,6 @@ const EspecialistsList:EspecialistModel[] = [
         fieldName: 'Periodoncia e Implantología Oral',
         prefixType: 'Dra',
         schoolName: 'Colegio Odontológico Colombiano',
-        description: 'lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum',
         imgPath: require('../../images/img-especialistas-sarita.jpg')
     },
     {
@@ -23,7 +21,6 @@ const EspecialistsList:EspecialistModel[] = [
         fieldName: 'Endodoncia',
         prefixType: 'Dra',
         schoolName: 'Universidad CES',
-        description: 'lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum',
         imgPath: require('../../images/img-especialistas-anabel.jpg')
     },
 ]

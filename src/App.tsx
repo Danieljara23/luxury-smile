@@ -38,7 +38,9 @@ const App: React.FC = () => {
       <HashRouter>
         <div className="App relative">
           <div className="fixed whatsapp-fixed">
-              <WhatAppGreen/>
+              <a href="https://www.facebook.com/LUXURY-SMILE-526886811114080/" target="_blank">
+                <WhatAppGreen/>
+              </a>
           </div>
           <TopHeader isFixed={isFixed}/>
           <NavBar isFixed={isFixed}/>

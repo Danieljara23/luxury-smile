@@ -1,4 +1,21 @@
 @import "../../../node_modules/react-alice-carousel/lib/alice-carousel.css";
+.main-carousel img{
+    width: 100%;
+    position: relative;
+}
+.main-carousel .alice-carousel__stage-item{
+    padding: 0;
+    margin-bottom: 0;
+}
+.main-carousel .alice-carousel__prev-btn, .main-carousel .alice-carousel__next-btn{
+    padding: 0;
+}
+.main-carousel .alice-carousel__dots {
+    position: absolute;
+    left: 50%;
+    bottom: 15%;
+    margin-top: 0;
+}
 .aws-btn {
     --slider-height-percentage: 30%;
     --slider-transition-duration: 387ms;
@@ -34,6 +51,12 @@
 .experience-container-carousel .alice-carousel__dots{
     margin: 0px;
     height: 30px;
+}
+.alice-carousel__prev-btn, .alice-carousel__next-btn{
+    padding: 0;
+}
+.treatments-container .alice-carousel__dots{
+    margin-top: 20px;
 }
 .luxury-experience{
     background: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url('../images/experiencias-luxury.jpg');
@@ -79,7 +102,7 @@
     border-radius: 9px;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
     height: 450px;
-    max-width: 390px;
+    max-width: 360px;
 }
 .alice-carousel__stage-item{
     padding-left: 15px;
@@ -159,23 +182,13 @@
     display: none;
 }
 .especialist-card:hover{
-    box-shadow: 0px 3px 6px #00000015;
-    height: 575px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
     -webkit-transition: all 300ms ease;
     -moz-transition: all 300ms ease;
     -o-transition: all 300ms ease;
     transition: all 300ms ease;
 }
-.especialist-card:hover .especialist-info, .especialist-card:hover .especialist-image{
-    height: 225px;
-}
-.especialist-card:hover .especialist-treatment-description{
-    display: inline;
-    color:#9D9D9D;
-    font-size: 14px;
-    font-weight: lighter;
-    margin: 2px 5px;
-}
+
 .especialist-card-desktop {
     max-width: 400px;
 }
@@ -186,12 +199,12 @@
 .treatments-background .card-container .form-container form{
     display: none;
 }
-.treatments-background .card-container:hover .form-container form{
+/* .treatments-background .card-container:hover .form-container form{
     display: flex;
 }
 .treatments-background .card-container:hover .form-container .card-date-button{
     display: none;
-}
+} */
 .treatments-background .card-container .form-container .card-date-button{
     display: inline-block;
 }
@@ -289,7 +302,7 @@
 .custom-border{
     border-right: 1px solid lightgrey;
 }
-.custom-border p{
+.custom-border p, .ofix-photo p{
     margin-top: 5px;
     margin-bottom: 5px;
 }
@@ -302,11 +315,21 @@
 }
 .embebed-map iframe{
     width: 100%;
-    height: -webkit-fill-available;
+    height: 100%;
     border:none;
     border: 2px solid #E0E0E0;
     border-radius: 6px;
     box-sizing: border-box;
+}
+.embebed-map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 3%;
+    padding-left: 0;
+    padding-right: 0;
 }
 .map-container{
 }
@@ -348,7 +371,7 @@ p.alice-carousel__prev-btn-item,.alice-carousel__prev-btn-item:hover {
     height: 50px;
     border-radius: 50%;
     position: absolute;
-    top: 35%;
+    top: 45%;
     left: 0;
 }
 
@@ -406,9 +429,9 @@ p.alice-carousel__next-btn-item,.alice-carousel__next-btn-item:hover  {
         background-size: auto;
         background-position: top;
     }
-    .embebed-map{
+    /* .embebed-map{
         height: 395px;
-    }
+    } */
     .especialist-container{
         display: inline-block;
         justify-content: unset;
@@ -455,9 +478,9 @@ p.alice-carousel__next-btn-item,.alice-carousel__next-btn-item:hover  {
     .card-container{
         height: 435px;
     }
-    .card-container:hover{
+    /* .card-container:hover{
         height: auto;
-    }
+    } */
     .experience-container-carousel p.alice-carousel__prev-btn-item{
         left: 2%;
     }
@@ -468,18 +491,42 @@ p.alice-carousel__next-btn-item,.alice-carousel__next-btn-item:hover  {
 }
 @media (min-width: 1100px){
     .card-container{
-        height: 510px;
+        height: 490px;
     }
-    .card-container:hover{
+    /* .card-container:hover{
         height: auto;
-    }
-    .embebed-map{
+    } */
+    /* .embebed-map{
         height: 395px;
-    }
+    } */
 }
 @media (min-width: 1300px){
-    .embebed-map{
+    /* .embebed-map{
         height: 310px;
-    }
+    } */
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "ContactInfo ContactInfo OfixImage OfixImage" "MapOfix MapOfix OfixImage OfixImage" "MapOfix MapOfix OfixImage OfixImage" "MapOfix MapOfix OfixImage OfixImage" "MapOfix MapOfix OfixImage OfixImage";
+   height: 540px;  
+}
+
+.ContactInfo { grid-area: ContactInfo; }
+
+.OfixImage { 
+    grid-area: OfixImage;
+    text-align: left;
+    padding-left: 2%;
+}
+
+.MapOfix { 
+    grid-area: MapOfix;
+    position: relative;
+    overflow: hidden;
+}
+.OfixImage img{
+    height: 100%;
+}

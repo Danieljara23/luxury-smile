@@ -10,9 +10,10 @@ const useStyles = makeStyles(
             fontSize: 13,
             fontWeight: 'bold',
             padding: 10,
-            paddingLeft: 14,
-            paddingRight: 14,
-            cursor: 'pointer'
+            paddingLeft: 30,
+            paddingRight: 30,
+            cursor: 'pointer',
+            boxShadow: '0px 3px 6px rgba(0, 0, 0, 0.16);'
         }
     }))
 
@@ -27,7 +28,7 @@ const Treatments = () => {
             <div className="w-100 flex flex-row justify-center">
                 <CardsCarousel/>
             </div>
-            <div className="w-100 pv3">
+            <div className="w-100 pv0 flex justify-center">
                 <Link className={`${classes.seeAll} ttu see-all ph3 pv1`} underline='none'>VER TODOS </Link>
             </div>
         </div>

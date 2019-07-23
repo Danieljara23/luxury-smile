@@ -40,6 +40,9 @@
 .consultory-advantage-container .advantage-container svg {
     width: 38px;
 }
+.consultory-advantage-container .advantage-container p{
+    margin-left: 2rem;
+}
 .image-consultory{
     padding: 40px;
 }
