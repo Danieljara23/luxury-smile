@@ -16,10 +16,13 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     container: {
       flexWrap: 'wrap',
+      margin: 'auto',
+      marginTop: '0',
+      marginBottom: 0,
+      paddingBottom: '20px'
     },
     textField: {
-      marginLeft: theme.spacing(1),
-      marginRight: theme.spacing(1),
+      width: '100%',
       '& label.Mui-focused': {
         color: '#69ABBE',
       },

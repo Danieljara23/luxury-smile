@@ -8,13 +8,25 @@ import Modal from '@material-ui/core/Modal';
 import TreatmentsForm from '../CardsForms/TreatmentsForm'
 import './Treatments.css'
 import { TreatmentModel } from '../../shared/models/TreatmentModel'
+import Dialog, { DialogProps } from '@material-ui/core/Dialog';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
             backgroundColor: 'white',
             color: '#AFAFAF',
             fontSize: '12px',
-            fontWeight: 500
+            fontWeight: 500, 
+            cursor: 'pointer'
+        },
+        rootClose: {
+            padding: 15,
+            width: '10px',
+            height: '10px',
+            justifyContent: 'center',
+            cursor: 'pointer'
         },
         dateLink: {
             color: 'white',
@@ -28,12 +40,26 @@ const useStyles = makeStyles((theme: Theme) =>
             color:'#69ABBE',
             fontWeight: 100
         },
+        cardHeight:{
+            height: 'auto'
+        },
         paper: {
-            position: 'absolute',
-            backgroundColor: theme.palette.background.paper,
-            boxShadow: theme.shadows[5],
-            outline: 'none',
-        },    
+           '& .MuiPaper-root': {
+                borderRadius: '9px'
+           } 
+        },
+        closeButton:{
+            position: 'fixed',
+            top: '2%',
+            right: '2%',
+            zIndex: 1400
+        },
+        filterCloseButton: {
+            backgroundColor: '#4D5766',
+            color: 'white',
+            width: 30,
+            height: 30
+        }
     }),
 );
 
@@ -51,7 +77,7 @@ const TreatmentsSection = () => {
     const [modalStyle] = React.useState(getModalStyle);
     const [filteredList, setFilteredList] = useState<TreatmentModel[]>(TreatmentsList)
     const [selectedTreatment, setSelectedTreatment] = useState('')
-
+    const [showClosefilter, setShowCloseFilter] =useState(false)
     const [selectedItem, setSelectedItem] = useState({
         title: 'Rehabilitación Oral',
         imagePath: require('../images/img-destacados-rehabilitacion-oral.jpg'),
@@ -59,6 +85,7 @@ const TreatmentsSection = () => {
     })
     const handleFilter = (e:any) => {
         setSelectedTreatment(e)
+        setShowCloseFilter(true)
         console.log(selectedTreatment)
     }
 
@@ -86,10 +113,17 @@ const TreatmentsSection = () => {
         ))
     ]
     const handleModal = (item:any) => {
-        console.log(item)
         setShowModal(true)
         setSelectedItem(item)
-    }   
+    }
+    const handleClose = (item:any) => {
+        setShowModal(false)
+    }
+    const handleCloseFilter = (e:any) => {
+        console.log(filteredList)
+        setShowCloseFilter(false)
+        setSelectedTreatment("")
+    }
 
     const galleryItems = [
         filteredList.map((item,index) => (
@@ -116,21 +150,29 @@ const TreatmentsSection = () => {
     return (
         <div className="w-100">
             <h4 className="treatments-title">Tratamientos</h4>
-            <div className="treatment-content">
+            <div className="treatment-content relative">
                 <div className="w-100 treatments-types flex pa3 justify-center">
+                    {
+                        showClosefilter ? (
+                            <div className="ph2" onClick={handleCloseFilter}>
+                                <Chip className={`${classes.root} ${classes.filterCloseButton}`} label={"x"} />
+                            </div>
+                        ):<>
+                        </>
+                    }
                     {filterBadges}
                 </div>
                 <div className="treatments flex pa3 flex-wrap justify-center">
                     <div className="treatments-overlay w-100 absolute"></div>
                     {galleryItems}
-                    <Modal
-                        aria-labelledby="simple-modal-title"
-                        aria-describedby="simple-modal-description"
+                    <Dialog
                         open={showModal}
-                        onBackdropClick={()=>setShowModal(false)}
+                        onClose={handleClose}
+                        scroll={'body'}
+                        aria-labelledby="scroll-dialog-title"
+                        className={classes.paper}
                     >
-                        <div>
-                        <div  className={`card-container ${classes.paper}`} >
+                        <div  className={`card-container ${classes.cardHeight}`} >
                             <div className="card-image">
                                 <img src={selectedItem.imagePath} alt={selectedItem.title} />
                             </div>
@@ -144,13 +186,17 @@ const TreatmentsSection = () => {
                             <div className="form-container">
                                 <TreatmentsForm/>
                             </div>
-                            <div className="pt3 pb4 flex justify-center">
+                            <div className={`pt3 pb4 justify-center ${showModal?'dn':'flex'}`}>
                                 <Link className={`${classes.dateLink} ttu card-date-button`} underline='none' >Pide tu cita aquí</Link>
                             </div>
                         </div>
+                    </Dialog>
+                    { showModal ? (
+                        <div className={`ph2 fixed ${classes.closeButton}`} onClick={handleClose}>
+                                <Chip className={`${classes.root} ${classes.rootClose}`} label={"x"} />
                         </div>
-                        
-                    </Modal>
+                    ):<></>
+                    }
                 </div>
             </div>
         </div>

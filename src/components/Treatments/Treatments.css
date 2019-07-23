@@ -6,6 +6,10 @@
 .treatments-types::-webkit-scrollbar {
     display: none;
 }
+.cards-title{
+    text-align: center;
+    margin-top: 20px;
+}
 .treatments{
     background-color: rgba(0, 0, 0, 0.212)
 }
