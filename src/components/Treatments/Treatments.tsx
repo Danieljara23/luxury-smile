@@ -83,6 +83,7 @@ const TreatmentsSection = () => {
         imagePath: require('../images/img-destacados-rehabilitacion-oral.jpg'),
         description: 'Es una especialidad dentro de la odontología que combina en forma integral las áreas de prótesis fija, prótesis removible'
     })
+
     const handleFilter = (e:any) => {
         setSelectedTreatment(e)
         setShowCloseFilter(true)
@@ -136,7 +137,7 @@ const TreatmentsSection = () => {
                     <p className="treatment-description">{item.description.substring(0, 81) + "..."}</p>
                 </div>
                 <div className="w-100 flex ph3">
-                    <Link className={`${classes.readMore} ttu read-more-card` } underline='none'>Leer más <Flecha /></Link>
+                    <Link className={`${classes.readMore} ttu read-more-card pointer` } underline='none'>Leer más <Flecha /></Link>
                 </div>
                 <div className="pt3 pb4 flex justify-center">
                     <Link className={`${classes.dateLink} ttu card-date-button`} underline='none'  onClick={()=>handleModal(item)}>Pide tu cita aquí</Link>

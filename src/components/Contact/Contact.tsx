@@ -7,7 +7,8 @@ import clsx from 'clsx';
 import Contact from '../Home/HomeComponents/Contact'
 import ContactInfo from '../ContactInfo/ContactInfo'
 import axios from 'axios';
-
+import FormValidator from '../FormValidator/FormValidator'
+import {Errors} from '../FormValidator/FormValidator'
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     container: {
@@ -70,9 +71,18 @@ const ContactSection = () => {
       email: '',
       message: '',
     });
+    const [errors, setErrors] = useState<Errors>({
+      name: '',
+      cellPhone: '',
+      email: '',
+      message: '',
+      telephone: ''
+    })
 
     const handleChange = (name: keyof State) => (event: React.ChangeEvent<HTMLInputElement>) => {
       setValues({ ...values, [name]: event.target.value });
+      setErrors(FormValidator(values)) 
+      console.log(errors)
     };
 
     const handleSubmit = (e:any) => {
@@ -109,14 +119,20 @@ const ContactSection = () => {
                                 label="Nombre completo"
                                 className={`${clsx(classes.textField, classes.dense)} mobile-input`}
                                 margin="dense"
+                                error={errors.name != '' ? true:false }
+                                helperText={errors.name || null}
                                 onChange={handleChange('name')}
+                                required
                             />
                             <TextField
                                 id="cellPhone"
                                 label="Celular"
                                 className={`${clsx(classes.textField, classes.dense)} mobile-input`}
                                 margin="dense"
+                                error={errors.cellPhone != '' ? true:false }
+                                helperText={errors.cellPhone || null}
                                 onChange={handleChange('cellPhone')}
+                                required
                             />
                         </div>
                         <div className="w-100 flex ph4 mt4 justify-center form-containers">
@@ -126,6 +142,9 @@ const ContactSection = () => {
                                 className={`${clsx(classes.textField, classes.dense)} mobile-input`}
                                 margin="dense"
                                 onChange={handleChange('telephone')}
+                                error={errors.telephone != '' ? true:false }
+                                helperText={errors.telephone || null}
+                                required
                             />
                             <TextField
                                 id="email"
@@ -133,7 +152,10 @@ const ContactSection = () => {
                                 className={`${clsx(classes.textField, classes.dense)} mobile-input`}
                                 margin="dense"
                                 name="email"
+                                error={errors.email != '' ? true:false }
                                 onChange={handleChange('email')}
+                                helperText={errors.email || null}
+                                required
                             />
                         </div>
                         <div className="w-100 flex ph4 pt4 justify-center form-containers">
@@ -147,6 +169,9 @@ const ContactSection = () => {
                                 margin="normal"
                                 variant="outlined"
                                 onChange={handleChange('message')}
+                                error={errors.message != '' ? true:false }
+                                helperText={errors.message || null}
+                                required
                             />
                         </div>
                         <div className="w-100 flex ph4 pt4 justify-center">
