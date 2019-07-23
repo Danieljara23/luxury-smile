@@ -28,6 +28,9 @@ const useStyles = makeStyles((theme: Theme) =>
       '& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
         borderColor: '#69ABBE',
       },
+      '& .Mui-error.MuiInput-underline:after': {
+        borderColor: '#f44336',
+      },
     },
     multiLine: {
         width: '65%',
