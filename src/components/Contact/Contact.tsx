@@ -22,10 +22,10 @@ const useStyles = makeStyles((theme: Theme) =>
         color: '#69ABBE',
       },
       '& .MuiInput-underline:after': {
-        borderBottomColor: '#69ABBE',
+        borderColor: '#69ABBE',
       },
       '& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
-        borderBottomColor: '#69ABBE',
+        borderColor: '#69ABBE',
       },
     },
     multiLine: {

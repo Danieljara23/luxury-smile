@@ -8,10 +8,7 @@
     font-size: 15px;
     font-weight: bold;
 }
-.top-header-social-network div:hover {
-    border-radius: 50%;
-    background-color: #E8E8E8;
-}
+
 .social-network-number a{
     color: #717171;
     font-size: 14px;

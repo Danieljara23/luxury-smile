@@ -53,6 +53,10 @@ const useStyles = makeStyles((theme: Theme) =>
         margin: theme.spacing(1),
         width: '300px'
     },
+    selectInput: {
+        color: 'color: rgba(0, 0, 0, 0.87)',
+        textAlign: 'left'
+    }
   }),
 );
 
@@ -61,7 +65,7 @@ const useStyles = makeStyles((theme: Theme) =>
 const Appointment = () => {
     const classes = useStyles();
     const [treatmentSelected, setTreatmentSelected ] = useState({
-        age: ''
+        especialist: ''
     })
     const isMobile = window.innerWidth <= 400
     function handleChange(event: React.ChangeEvent<{ name?: string; value: unknown }>) {
@@ -113,10 +117,11 @@ const Appointment = () => {
                             <FormControl className={classes.formControl}>
                             <InputLabel htmlFor="select-simple">Tratamiento</InputLabel>
                                 <Select
-                                value={treatmentSelected}
+                                className={classes.selectInput}
+                                value={treatmentSelected.especialist}
                                 onChange={handleChange}
                                 inputProps={{
-                                    title: 'Ortodoncia',
+                                    name: 'especialist',
                                     id: 'select-simple',
                                 }}
                                 >
