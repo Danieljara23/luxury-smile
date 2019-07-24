@@ -134,22 +134,13 @@ const TreatmentsSection = () => {
         setSelectedTreatment("")
     }
     const handleToggleParagraph = (e:any, index:any) => {
-        let descriptionElement = e.target.parentElement.parentElement.getElementsByClassName('treatment-description-container')[0]
-        let fullDescriptionElement = e.target.parentElement.parentElement.getElementsByClassName('full-description')[0]
         if( toggleDescription.itemIndex == index ){
-            // descriptionElement.style.display = toggleDescription.values == true ? "inline-block":"none"
-            // fullDescriptionElement.style.display = toggleDescription.values == true ? "none":"inline-block"
             setToggleDescription({itemIndex: index, values: !toggleDescription.values})
-            console.log("== index:", toggleDescription)
         }else{
-            // descriptionElement.style.display = "none"
-            // fullDescriptionElement.style.display = "inline-block"
             setToggleDescription({itemIndex: index, values: true})
-            console.log("!= index:", toggleDescription)
         }
-        console.log(descriptionElement)
-        // const fullDescriptionElement = 
     }
+
     const galleryItems = [
         filteredList.map((item,index) => (
             <div className="card-container ma3" id={"card-"+item}>
@@ -160,11 +151,14 @@ const TreatmentsSection = () => {
                 <div  className ={`treatment-description-container ph3 pt0 pb2 ${toggleDescription.itemIndex == index && toggleDescription.values == true ? 'dn':'db'}`}>
                     <p className="treatment-description">{item.description.substring(0, 81) + "..."}</p>
                 </div>
-                <div className={`full-description ${toggleDescription.itemIndex == index && toggleDescription.values == true ? 'db':'dn'}`}>
-                    <p>{item.description}</p>
+                <div className={`ph3 pt0 pb2 full-description ${toggleDescription.itemIndex == index && toggleDescription.values == true ? 'db':'dn'}`}>
+                    <p className="treatment-description">{item.description}</p>
                 </div>
-                <div className="w-100 flex ph3">
-                    <Link className={`${classes.readMore} ttu read-more-card pointer` } underline='none' onClick={(e:any) => handleToggleParagraph(e, index)}>Leer más <Flecha /></Link>
+                <div className={`w-100 ph3 ${toggleDescription.itemIndex == index && toggleDescription.values == true ? 'dn':'flex'}`}>
+                    <Link className={`${classes.readMore} ttu read-more-card pointer ` } underline='none' onClick={(e:any) => handleToggleParagraph(e, index)}>Leer más <Flecha /></Link>
+                </div>
+                <div className={`w-100 ph3 ${toggleDescription.itemIndex == index && toggleDescription.values == true ? 'flex':'dn'}`}>
+                    <Link className={`${classes.readMore} ttu read-more-card pointer read-less` } underline='none' onClick={(e:any) => handleToggleParagraph(e, index)}>Leer menos <Flecha /></Link>
                 </div>
                 <div className="pt3 pb4 flex justify-center">
                     <Link className={`${classes.dateLink} ttu card-date-button`} underline='none'  onClick={()=>handleModal(item)}>Pide tu cita aquí</Link>

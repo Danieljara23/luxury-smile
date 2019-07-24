@@ -7,7 +7,9 @@ import './NavBar.css'
 import { ReactComponent as Logo } from '../../components/images/logo-luxury-smile.svg'
 import { ReactComponent as LogoBlack } from '../../components/images/logo-luxury-smile-black.svg'
 import { ReactComponent as MenuMobile } from '../../components/images/menu-mobile.svg'
+import MobileTopHeader from '../TopHeader/MobileTopHeader'
 import './MobileMenu.css'
+import {Close} from '@material-ui/icons'
 interface Props{
     isFixed: boolean
 }
@@ -108,7 +110,14 @@ function NavBar(props:Props) {
                     
                 </div>
                 <div className="w-70 navbar-links">
-                    <MenuMobile className="hamburguer-icon" onClick={() => setshowMenu(!showMenu)} />
+                    {
+                        !showMenu ? (
+                            <MenuMobile className="hamburguer-icon" onClick={() => setshowMenu(!showMenu)} />
+                        ) : (
+                            <Close onClick={() => setshowMenu(!showMenu)}/>
+                        )
+                    }
+
                     <ul className={`header flex-row items-center ${isMobile ? 'dn': 'flex'}`}>
                         <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2 ${isMobile ? 'dn': 'dib'}`} to="/">Inicio</NavLink></li>
                         <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2 ${isMobile ? 'dn': 'dib'}`} to="/Consultory">Consultorio</NavLink></li>
@@ -125,7 +134,9 @@ function NavBar(props:Props) {
                         <li className={`w-100 pa2 tl ${classes.listItemMenu}`}><NavLink className={`${classes.menuLink} ${classes.listItemMenuMobile}`} to="/Especialists" onClick={()=>setshowMenu(false)}>Especialistas</NavLink></li>
                         <li className={`w-100 pa2 tl ${classes.listItemMenu}`}><NavLink className={`${classes.menuLink} ${classes.listItemMenuMobile}`} to="/Testimonies" onClick={()=>setshowMenu(false)}>Testimonios</NavLink></li>
                         <li className={`w-100 pa2 tl ${classes.listItemMenu}`}><NavLink className={`${classes.menuLink} ${classes.listItemMenuMobile}`} to="/Contact" onClick={()=>setshowMenu(false)}>Contacto</NavLink></li>
-                        <li className={`w-100 pa2 tc pt4 `}><NavLink to="/Appointment" className={`${classes.appointment} ${classes.appointMentMobile} no-underline pa2 ph4 dib`}>Pide tu cita aquí</NavLink></li>
+                        <li className={`w-100 pa2 tc pt4 `}><NavLink to="/Appointment" className={`${classes.appointment} ${classes.appointMentMobile} no-underline pa2 ph4 dib`} onClick={()=>setshowMenu(false)}>Pide tu cita aquí</NavLink></li>
+                        {isFixed ? <MobileTopHeader/>: <></>}
+                        
                     </ul>
                     
                 </div>

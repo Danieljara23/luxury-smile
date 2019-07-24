@@ -34,23 +34,41 @@ const useStyles = makeStyles(
             fontWeight: 100
         }
     }))
-
+    
 const CardsCarousel = () => {
+    const [toggleDescription, setToggleDescription] = useState({
+        itemIndex: null,
+        values: false
+    })
+    const handleToggleParagraph = (e:any, index:any) => {
+        if( toggleDescription.itemIndex == index ){
+            setToggleDescription({itemIndex: index, values: !toggleDescription.values})
+        }else{
+            setToggleDescription({itemIndex: index, values: true})
+        }
+    }
+
 
 
     const classes = useStyles();
     const [showForm, setShowForm] = useState(false)
-    const galleryItems = TreatmentsList.map((item) => (
+    const galleryItems = TreatmentsList.map((item, index) => (
             <div className="card-container" onMouseEnter={()=>setShowForm(!showForm)}>
                 <div className="card-image">
                     <img src={item.imagePath} alt={item.title} />
                 </div>
                 <h3 className="cards-title mb3 mt4">{item.title}</h3>
-                <div className="treatment-description-container ph3 pt0 pb2">
+                <div  className ={`treatment-description-container ph3 pt0 pb2 ${toggleDescription.itemIndex == index && toggleDescription.values == true ? 'dn':'db'}`}>
                     <p className="treatment-description">{item.description.substring(0, 81) + "..."}</p>
                 </div>
-                <div className="w-100 flex ph3">
-                    <Link className={`${classes.readMore} ttu read-more-card` } underline='none'>Leer más <Flecha /></Link>
+                <div className={`ph3 pt0 pb2 full-description ${toggleDescription.itemIndex == index && toggleDescription.values == true ? 'db':'dn'}`}>
+                    <p className="treatment-description">{item.description}</p>
+                </div>
+                <div className={`w-100 ph3 ${toggleDescription.itemIndex == index && toggleDescription.values == true ? 'dn':'flex'}`}>
+                    <Link className={`${classes.readMore} ttu read-more-card pointer ` } underline='none' onClick={(e:any) => handleToggleParagraph(e, index)}>Leer más <Flecha /></Link>
+                </div>
+                <div className={`w-100 ph3 ${toggleDescription.itemIndex == index && toggleDescription.values == true ? 'flex':'dn'}`}>
+                    <Link className={`${classes.readMore} ttu read-more-card pointer read-less` } underline='none' onClick={(e:any) => handleToggleParagraph(e, index)}>Leer menos <Flecha /></Link>
                 </div>
                 <div className={`pt3 pb4 flex justify-center form-container`}>
                     <TreatmentsForm/>

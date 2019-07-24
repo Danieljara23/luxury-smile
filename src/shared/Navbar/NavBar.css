@@ -17,6 +17,9 @@ ul.header li a{
 .luxury-logo svg{
     width: 100%;
 }
+.fixed .navbar-links svg{
+    color: black;
+}
 @media (max-width: 960px) {
     .hamburguer-icon{
         display: inline !important;

@@ -36,6 +36,22 @@ a.social-icon {
     width: 32px;
     height: 32px;
 }
+.top-header.mobile-header{
+    position: fixed;
+    bottom: 0;
+    background-color: black;
+    height: 32px;
+}
+.mobile-header .top-header-main-text{
+    display: none;
+}
+.mobile-header .social-network-number a{
+    color: white;
+}
+
+.navbar-links .mobile-header svg{
+    filter: brightness(100);
+}
 
 @media (max-width: 960px) {
     .top-header{

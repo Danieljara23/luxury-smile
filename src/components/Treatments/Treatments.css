@@ -21,7 +21,9 @@ div[aria-labelledby*="simple-modal-title"]{
 .treatment-conten form{
     display: inline;
 }
-
+.read-less svg {
+    transform: rotate(180deg);
+}
 @media (max-width: 600px) {
     .treatments-types{
         justify-content: end;
