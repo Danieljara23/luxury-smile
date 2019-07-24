@@ -41,6 +41,7 @@ const ExperienceCarousel = () => {
                     buttonsDisabled={false}
                     dotsDisabled={false}
                     items={galleryItems}
+                    stagePadding={{ paddingLeft: 0, paddingRight: 0 }}
                 />
         </div>
         </>

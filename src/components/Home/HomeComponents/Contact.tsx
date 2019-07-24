@@ -88,25 +88,31 @@ const Contact = (props:Props) => {
                 
             </div> */}
 
-            <div className="grid-container w-90 center">
-                <div className="ContactInfo  blue-container flex flex-row items-start pa3">
-                    <div className="w-60 custom-border flex flex-column justify-center ofix-contact-info">
-                        <p className="b ofix-building">Edificio Ofix 33</p>
-                        <p className="fw4">piso 7 - consultorio 715</p>
-                        <p>Carrera 80a #32 EE - 72 - Medellín - Colombia</p>
+            <div className=" w-80 center">
+                <div className="flex">
+                    <div className="flex w-100 flex-column justify-around">
+                        <div className="ContactInfo  blue-container flex flex-row items-start pa3">
+                            <div className="w-60 custom-border flex flex-column justify-center ofix-contact-info">
+                                <p className="b ofix-building">Edificio Ofix 33</p>
+                                <p className="fw4">piso 7 - consultorio 715</p>
+                                <p>Carrera 80a #32 EE - 72 - Medellín - Colombia</p>
+                            </div>
+                            <div className="w-40 pl4 ofix-photo">
+                                <p>Horario de atención</p> 
+                                <p>Lunes a viernes: 8am - 6pm</p>
+                                <p> Sábados: 8am - 12pm</p>
+                            </div>
+                        </div>
+                        <div className="MapOfix">
+                            <OfixMap/>
+                        </div>
+
                     </div>
-                    <div className="w-40 pl4 ofix-photo">
-                        <p>Horario de atención</p> 
-                        <p>Lunes a viernes: 8am - 6pm</p>
-                        <p> Sábados: 8am - 12pm</p>
+                    <div className="OfixImage">
+                        <img src={Ofix} alt=""/>
                     </div>
                 </div>
-                <div className="OfixImage">
-                    <img src={Ofix} alt=""/>
-                </div>
-                <div className="MapOfix">
-                    <OfixMap/>
-                </div>
+                
             </div>
             <div className="w-100 flex items-center justify-center pb4 route-links mt4">
                 <Link className={`${classes.route} ttu ph3 pv2 items-center flex see-route-link` } underline='none' href={"https://www.waze.com/ul?ll=6.23859400%2C-75.60083300&navigate=yes"} target="_blank"><span className="pr2 flex flex-row items-center" ><IcoWaze/></span> Ver ruta en Waze</Link>

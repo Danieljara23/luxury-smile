@@ -74,12 +74,20 @@ const useStyles = makeStyles({
     listItemMenu: {
         borderBottom: '1px solid gray'
     },
+    listItemMenuMobile: {
+        padding: '4px 2px',
+        fontSize: 17
+    },
     appointment:{
         borderRadius: 24,
         backgroundColor: 'white',
         fontSize: 13,
         color: 'black',
         textTransform: 'uppercase',
+    },
+    appointMentMobile:{
+        fontSize: 17,
+        fontWeight: 'bold'
     }
   });
   
@@ -111,13 +119,13 @@ function NavBar(props:Props) {
                         <li><NavLink to="/Appointment" className={`${classes.dateButton} ${ isFixed ? classes.fixedDateButton:''} ttu no-underline pa2 dib ${isMobile ? 'dn': 'dib'}`}>Pide tu cita aquí</NavLink></li>
                     </ul>
                     <ul className={`mt0 pa4 header flex-column absolute w-100 items-center mobile-menu ${showMenu ? 'flex grow-menu' : 'dn'} ${isFixed ?'fixed-mobile ':''}`}>
-                        <li className={`w-100 pa2 tl ${classes.listItemMenu}`}><NavLink className={`${classes.menuLink}`} to="/" onClick={()=>setshowMenu(false)}>Inicio</NavLink></li>
-                        <li className={`w-100 pa2 tl ${classes.listItemMenu}`}><NavLink className={`${classes.menuLink}`} to="/Consultory" onClick={()=>setshowMenu(false)}>Consultorio</NavLink></li>
-                        <li className={`w-100 pa2 tl ${classes.listItemMenu}`}><NavLink className={`${classes.menuLink}`} to="/Treatments" onClick={()=>setshowMenu(false)}>Tratamientos</NavLink></li>
-                        <li className={`w-100 pa2 tl ${classes.listItemMenu}`}><NavLink className={`${classes.menuLink}`} to="/Especialists" onClick={()=>setshowMenu(false)}>Especialistas</NavLink></li>
-                        <li className={`w-100 pa2 tl ${classes.listItemMenu}`}><NavLink className={`${classes.menuLink}`} to="/Testimonies" onClick={()=>setshowMenu(false)}>Testimonios</NavLink></li>
-                        <li className={`w-100 pa2 tl ${classes.listItemMenu}`}><NavLink className={`${classes.menuLink}`} to="/Contact" onClick={()=>setshowMenu(false)}>Contacto</NavLink></li>
-                        <li className={`w-100 pa2 tc pt4 `}><NavLink to="/Appointment" className={`${classes.appointment} no-underline pa2 ph4 dib`}>Pide tu cita aquí</NavLink></li>
+                        <li className={`w-100 pa2 tl ${classes.listItemMenu}`}><NavLink className={`${classes.menuLink} ${classes.listItemMenuMobile}`} to="/" onClick={()=>setshowMenu(false)}>Inicio</NavLink></li>
+                        <li className={`w-100 pa2 tl ${classes.listItemMenu}`}><NavLink className={`${classes.menuLink} ${classes.listItemMenuMobile}`} to="/Consultory" onClick={()=>setshowMenu(false)}>Consultorio</NavLink></li>
+                        <li className={`w-100 pa2 tl ${classes.listItemMenu}`}><NavLink className={`${classes.menuLink} ${classes.listItemMenuMobile}`} to="/Treatments" onClick={()=>setshowMenu(false)}>Tratamientos</NavLink></li>
+                        <li className={`w-100 pa2 tl ${classes.listItemMenu}`}><NavLink className={`${classes.menuLink} ${classes.listItemMenuMobile}`} to="/Especialists" onClick={()=>setshowMenu(false)}>Especialistas</NavLink></li>
+                        <li className={`w-100 pa2 tl ${classes.listItemMenu}`}><NavLink className={`${classes.menuLink} ${classes.listItemMenuMobile}`} to="/Testimonies" onClick={()=>setshowMenu(false)}>Testimonios</NavLink></li>
+                        <li className={`w-100 pa2 tl ${classes.listItemMenu}`}><NavLink className={`${classes.menuLink} ${classes.listItemMenuMobile}`} to="/Contact" onClick={()=>setshowMenu(false)}>Contacto</NavLink></li>
+                        <li className={`w-100 pa2 tc pt4 `}><NavLink to="/Appointment" className={`${classes.appointment} ${classes.appointMentMobile} no-underline pa2 ph4 dib`}>Pide tu cita aquí</NavLink></li>
                     </ul>
                     
                 </div>

@@ -329,7 +329,7 @@
     left: 0;
     width: 100% !important;
     height: 100% !important;
-    padding: 3%;
+    padding-top: 3%;
     padding-left: 0;
     padding-right: 0;
 }
@@ -502,7 +502,18 @@ p.alice-carousel__next-btn-item,.alice-carousel__next-btn-item:hover  {
     .experience-container-carousel p.alice-carousel__next-btn-item{
         right: 2%;
     }
+    /* .treatments-container .alice-carousel__stage-item{
+        width: 330px;
+        padding-left: 0px;
+        padding-right: 0px;
+    } */
+    .treatments-container .alice-carousel__prev-btn-item, .treatments-container .alice-carousel__next-btn-item, .treatments-container .alice-carousel__prev-btn-item:hover, .treatments-container .alice-carousel__next-btn-item:hover{
+        top: 38%;
+    }
 
+    .especialist-card{
+        width: auto;
+    }
 }
 @media (min-width: 961px){
     .embebed-map{
@@ -540,12 +551,15 @@ p.alice-carousel__next-btn-item,.alice-carousel__next-btn-item:hover  {
     grid-area: OfixImage;
     text-align: left;
     padding-left: 2%;
+    width: 60%;
 }
 
 .MapOfix { 
     grid-area: MapOfix;
     position: relative;
     overflow: hidden;
+    width: 100%;
+    height: 500px;
 }
 .OfixImage img{
     height: 100%;

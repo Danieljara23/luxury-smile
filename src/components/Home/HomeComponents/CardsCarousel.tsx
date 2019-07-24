@@ -68,8 +68,9 @@ const CardsCarousel = () => {
                     buttonsDisabled={false}
                     dotsDisabled={false}
                     items={galleryItems}
+                    infinite ={false}
                     responsive={responsive}
-                    stagePadding={{ paddingLeft: 10, paddingRight: 10 }}
+                    stagePadding={{ paddingLeft: 0, paddingRight: 0 }}
                 />
             </div>
 
