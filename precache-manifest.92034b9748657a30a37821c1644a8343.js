@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6bd5f4ca2cba9ad8ad8abf05ee15e0b6",
+    "revision": "913c097884b4ff7b209f6dcb0f319fee",
     "url": "/luxury-smile/index.html"
   },
   {
-    "revision": "8423f9971995a2d3b5e5",
+    "revision": "45e61501c8c382578148",
     "url": "/luxury-smile/static/css/2.eb62513e.chunk.css"
   },
   {
-    "revision": "0c434ce6563baef2459e",
-    "url": "/luxury-smile/static/css/main.b3f4a93b.chunk.css"
+    "revision": "1d7310bdaeb26a9c69ae",
+    "url": "/luxury-smile/static/css/main.b76e525d.chunk.css"
   },
   {
-    "revision": "8423f9971995a2d3b5e5",
-    "url": "/luxury-smile/static/js/2.b03c99a1.chunk.js"
+    "revision": "45e61501c8c382578148",
+    "url": "/luxury-smile/static/js/2.34020c2b.chunk.js"
   },
   {
-    "revision": "0c434ce6563baef2459e",
-    "url": "/luxury-smile/static/js/main.8b4e2216.chunk.js"
+    "revision": "1d7310bdaeb26a9c69ae",
+    "url": "/luxury-smile/static/js/main.dcb5e538.chunk.js"
   },
   {
     "revision": "77ee0a0bf814341351ff",
@@ -30,6 +30,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "5d2ccacc2182430eeeb286c23b9051e1",
     "url": "/luxury-smile/static/media/arrow-right.5d2ccacc.svg"
+  },
+  {
+    "revision": "ae57f4b15b24389d0782a16183fc7a6a",
+    "url": "/luxury-smile/static/media/banner-contacto.ae57f4b1.jpg"
   },
   {
     "revision": "9d0bcd0253ba11ec346291e451a4dbc3",
@@ -100,8 +104,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/luxury-smile/static/media/ico-whatsapp.30ab7630.svg"
   },
   {
-    "revision": "9e6271e0c02dd52ea90ff0edc34a6740",
-    "url": "/luxury-smile/static/media/img-consultorio.9e6271e0.jpg"
+    "revision": "ec922a9feba00f76bbdcde4d8d3c60ba",
+    "url": "/luxury-smile/static/media/img-consultorio.ec922a9f.jpg"
   },
   {
     "revision": "76b9d5bacc9c7e142370a773e35880d9",
@@ -116,20 +120,36 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/luxury-smile/static/media/img-destacados-rehabilitacion-oral.4bb90090.jpg"
   },
   {
-    "revision": "0ed0c9d75a309c8b0382abb88108675e",
-    "url": "/luxury-smile/static/media/img-especialistas-anabel.0ed0c9d7.jpg"
+    "revision": "b80df8e1cf673b3e7b345a6013bc6d75",
+    "url": "/luxury-smile/static/media/img-especialistas-anabel.b80df8e1.png"
   },
   {
-    "revision": "85bafe36c2315c79e003142b2a54343c",
-    "url": "/luxury-smile/static/media/img-especialistas-carlos.85bafe36.jpg"
+    "revision": "0d9b7031d83685a0d159d99307fe4d49",
+    "url": "/luxury-smile/static/media/img-especialistas-carlos.0d9b7031.png"
   },
   {
-    "revision": "361ced0391d8bd7c5e7fc48d1b13e867",
-    "url": "/luxury-smile/static/media/img-especialistas-sarita.361ced03.jpg"
+    "revision": "ded0dbbed14d3da5266c70163ab5f35f",
+    "url": "/luxury-smile/static/media/img-especialistas-sarita.ded0dbbe.png"
   },
   {
     "revision": "0d1b88190eda550eaf55e2080c21e20a",
     "url": "/luxury-smile/static/media/img-ofix.0d1b8819.jpg"
+  },
+  {
+    "revision": "d9516cca9d49612c493943670b49a3c3",
+    "url": "/luxury-smile/static/media/img-testimonios-1.d9516cca.png"
+  },
+  {
+    "revision": "8d09ee573b0c8ce9f766e9db1a3259fc",
+    "url": "/luxury-smile/static/media/img-testimonios-2.8d09ee57.png"
+  },
+  {
+    "revision": "3058257d44f889d5ea9e7eec58f28f78",
+    "url": "/luxury-smile/static/media/img-testimonios-3.3058257d.png"
+  },
+  {
+    "revision": "d32c48135ed95d83b9568c48b850cb7c",
+    "url": "/luxury-smile/static/media/logo-carlos-mobile.d32c4813.svg"
   },
   {
     "revision": "7c8ce64df65a4416e717a4003035535c",
