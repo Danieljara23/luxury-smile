@@ -37,13 +37,13 @@
     
 }
 @media (max-width: 600px) {
-    #contact-form{
+    .contact-form-container #contact-form{
         margin: 0;
     }
-    #contact-form > .form-border{
+    .contact-form-container #contact-form > .form-border{
         padding: 0;
     }
-    .form-containers > div{
+    .contact-form-container .form-containers > div{
         margin-left: 0;
         margin-right: 0;
     }

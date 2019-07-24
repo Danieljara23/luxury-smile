@@ -11,7 +11,7 @@ const isMobile = window.innerWidth < 768;
 const Especialist = () => {
     const [galleryItems, setGalleryItems] = useState(
         EspecialistsList.map((i) => (
-            <div className={`${ isMobile ? 'especialist-card-mobile':'w-30 especialist-card-desktop'} especialist-card mh2`}  >
+            <div className={`${ isMobile ? 'especialist-card-mobile':'w-30 especialist-card-desktop'} especialist-card mh2 pv3`}  >
                 { i.discount ? (
                     <div className="relative discount-badge"><p>{i.discount}<span> DCTO</span></p> </div>
                 ):(
@@ -27,7 +27,7 @@ const Especialist = () => {
                     <p className="especialist-school">{i.schoolName}</p>
                     <div className="quality-icon"><IcoCalidad/></div>
                     <p className="especialist-treatment">{i.fieldName}</p>
-                    <p className="especialist-read-more">Leer más <Flecha/></p>
+                    {/* <p className="especialist-read-more">Leer más <Flecha/></p> */}
                 </div>
             </div>
         ))

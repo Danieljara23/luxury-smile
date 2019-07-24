@@ -6,7 +6,7 @@
     margin-bottom: 35px;
 }
 .promotion-image {
-    background:  url('../images/slider-luxury-smile-1.jpg');
+    background:  url('../images/banner-contacto.jpg');
     background-repeat: no-repeat;
     background-origin: inherit;
     background-size: cover;
@@ -51,5 +51,9 @@
         width: 100%;
         margin-left: 0;
         margin-right: 0;
+    }
+    .promotion-image{
+        background-size: contain;
+        height: 80px;
     }
 }

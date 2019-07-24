@@ -3,6 +3,7 @@ import { ReactComponent as Instagram } from '../../components/images/ico-instagr
 import { ReactComponent as Facebook } from '../../components/images/ico-facebook.svg'
 import { ReactComponent as Whatsapp } from '../../components/images/ico-whatsapp.svg'
 import { ReactComponent as DocCarlos } from '../../components/images/ico-doc-carlos.svg'
+import { ReactComponent as DocCarlosMobile } from '../../components/images/logo-carlos-mobile.svg'
 import { NavLink } from "react-router-dom";
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 import './TopHeader.css'
@@ -24,6 +25,8 @@ const useStyles = makeStyles(
         }
     })
 )
+
+const isMobile = window.innerWidth < 768;
 
 const TopHeader = ( props:Props ) => {
     const { isFixed } = props
@@ -55,7 +58,12 @@ const TopHeader = ( props:Props ) => {
                 </div>
             </div>
             <div className="w-20-ns w-30-s top-header-doctor flex items-center">
-                <NavLink className={`${classes.doctor}`} no-underline to="/Consultory"><DocCarlos/></NavLink>
+                <NavLink className={`${classes.doctor}`} no-underline to="/Consultory">
+                    {
+                        isMobile ? <DocCarlosMobile/>:<DocCarlos/>
+                    }
+                    
+                </NavLink>
                 
             </div>
         </div>

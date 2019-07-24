@@ -2,21 +2,21 @@ import { ExperienceModel } from '../../../shared/models/ExperienceModel'
 
 export const ExperienceList: ExperienceModel[] = [
     {
-        name: 'Sarita Fajardo Velasquez',
+        name: 'Daniel Largo',
         treatmentType: 'Estética dental',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the…',
-        imgPath: require('../../images/img-testimonios.jpg')
+        description: '',
+        imgPath: require('../../images/img-testimonios-1.png')
     },
     {
-        name: 'Juan David Vasquez',
+        name: 'Marta Elena Quintero',
         treatmentType: 'Ortodoncia',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the…',
-        imgPath: require('../../images/img-testimonios.jpg')
+        description: '',
+        imgPath: require('../../images/img-testimonios-2.png')
     },
     {
-        name: 'Daniel Jaramillo Grisales',
+        name: 'Ruth Martinez',
         treatmentType: 'Endondoncia',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the…',
-        imgPath: require('../../images/img-testimonios.jpg')
+        description: '',
+        imgPath: require('../../images/img-testimonios-3.png')
     },
 ]

@@ -7,21 +7,21 @@ const EspecialistsList:EspecialistModel[] = [
         discount: '20%',
         prefixType: 'Dr',
         schoolName: 'Colegio Odontológico Colombiano',
-        imgPath: require('../../images/img-especialistas-carlos.jpg')
+        imgPath: require('../../images/img-especialistas-carlos.png')
     },
     {
         name: 'Sarita Fajardo Velasquez',
         fieldName: 'Periodoncia e Implantología Oral',
         prefixType: 'Dra',
         schoolName: 'Colegio Odontológico Colombiano',
-        imgPath: require('../../images/img-especialistas-sarita.jpg')
+        imgPath: require('../../images/img-especialistas-sarita.png')
     },
     {
         name: 'Anabel Giraldo',
         fieldName: 'Endodoncia',
         prefixType: 'Dra',
         schoolName: 'Universidad CES',
-        imgPath: require('../../images/img-especialistas-anabel.jpg')
+        imgPath: require('../../images/img-especialistas-anabel.png')
     },
 ]
 export default EspecialistsList
