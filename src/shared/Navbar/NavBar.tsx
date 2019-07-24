@@ -135,7 +135,7 @@ function NavBar(props:Props) {
                         <li className={`w-100 pa2 tl ${classes.listItemMenu}`}><NavLink className={`${classes.menuLink} ${classes.listItemMenuMobile}`} to="/Testimonies" onClick={()=>setshowMenu(false)}>Testimonios</NavLink></li>
                         <li className={`w-100 pa2 tl ${classes.listItemMenu}`}><NavLink className={`${classes.menuLink} ${classes.listItemMenuMobile}`} to="/Contact" onClick={()=>setshowMenu(false)}>Contacto</NavLink></li>
                         <li className={`w-100 pa2 tc pt4 `}><NavLink to="/Appointment" className={`${classes.appointment} ${classes.appointMentMobile} no-underline pa2 ph4 dib`} onClick={()=>setshowMenu(false)}>Pide tu cita aquí</NavLink></li>
-                        {isFixed ? <MobileTopHeader/>: <></>}
+                        {isMobile ? <MobileTopHeader/>: <></>}
                         
                     </ul>
                     
