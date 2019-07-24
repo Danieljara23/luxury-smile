@@ -46,7 +46,11 @@ const useStyles = makeStyles((theme: Theme) =>
         paper: {
            '& .MuiPaper-root': {
                 borderRadius: '9px'
-           } 
+           },
+           '& .MuiDialog-paperWidthSm':{
+               maxWidth: 'calc(100% - 44px)',
+               margin: 30
+           }
         },
         closeButton:{
             position: 'fixed',

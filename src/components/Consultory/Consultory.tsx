@@ -9,7 +9,7 @@ import './Consultory.css'
 
 const Consultory = () => {
     return(
-        <div className="w-90 center">
+        <div className="w-90 center consultory-mobile">
             <h4 className="consultory-main-title">Consultorio</h4>
             <div className="w-100 flex flex-row consultory-container">
                 <div className="w-50 image-consultory">

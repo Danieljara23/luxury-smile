@@ -324,14 +324,16 @@
     box-sizing: border-box;
 }
 .embebed-map {
-    position: absolute;
+    /* position: absolute;
     top: 0;
     left: 0;
     width: 100% !important;
     height: 100% !important;
     padding-top: 3%;
     padding-left: 0;
-    padding-right: 0;
+    padding-right: 0; */
+    padding-top: 3%;
+    height: 100%;
 }
 .map-container{
 }
@@ -408,6 +410,27 @@ p.alice-carousel__next-btn-item,.alice-carousel__next-btn-item:hover  {
     background-color: white;
 }
 
+.OfixImage { 
+    padding-left: 2%;
+    width: 60%;
+}
+
+.MapOfix { 
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+.OfixImage img{
+    height: 100%;
+}
+
+@media (max-width: 600px) {
+    .embebed-map{
+        height: 370px;
+        position: unset;
+        padding: unset;
+    }
+}
 @media (max-width: 960px) {
     .treatments-title, .especialist-title, .contact-title{
         margin-bottom: 35px;
@@ -441,9 +464,7 @@ p.alice-carousel__next-btn-item,.alice-carousel__next-btn-item:hover  {
         background-size: auto;
         background-position: top;
     }
-    /* .embebed-map{
-        height: 395px;
-    } */
+    
     .especialist-container{
         display: inline-block;
         justify-content: unset;
@@ -458,7 +479,8 @@ p.alice-carousel__next-btn-item,.alice-carousel__next-btn-item:hover  {
     }
     .contact-mobile{
         display: block;
-        width: 90%;
+        width: 100%;
+        padding: 0 4%;
     }
     .route-links{
         flex-direction: column;
@@ -514,11 +536,7 @@ p.alice-carousel__next-btn-item,.alice-carousel__next-btn-item:hover  {
     .especialist-card{
         width: auto;
     }
-}
-@media (min-width: 961px){
-    .embebed-map{
-        height: 225px;
-    }
+    
 }
 @media (min-width: 1100px){
     .card-container{
@@ -537,30 +555,7 @@ p.alice-carousel__next-btn-item,.alice-carousel__next-btn-item:hover  {
     } */
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-areas: "ContactInfo ContactInfo OfixImage OfixImage" "MapOfix MapOfix OfixImage OfixImage" "MapOfix MapOfix OfixImage OfixImage" "MapOfix MapOfix OfixImage OfixImage" "MapOfix MapOfix OfixImage OfixImage";
-   height: 540px;  
-}
 
-.ContactInfo { grid-area: ContactInfo; }
-
-.OfixImage { 
-    grid-area: OfixImage;
-    text-align: left;
-    padding-left: 2%;
-    width: 60%;
-}
-
-.MapOfix { 
-    grid-area: MapOfix;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 500px;
-}
 .OfixImage img{
     height: 100%;
 }

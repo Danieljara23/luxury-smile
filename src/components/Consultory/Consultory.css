@@ -72,3 +72,16 @@
         padding-right: 20px;
     }
 }
+
+@media (max-width: 600px) {
+    .consultory-mobile{
+        width: 100%;
+        padding: 0 4%;
+    }
+    .consultory-mobile .contact-mobile{
+        padding: 0;
+    }
+    .testimonies-consultory{
+        flex-direction: column;
+    }
+}

@@ -74,7 +74,7 @@ const EspecialistsSection = () => {
 
     return (
         <div className="w-100">
-            <h4>Tratamientos</h4>
+            <h4 className="especialist-title">Especialistas</h4>
             <div className="especialist-content">
                 <div className="w-100 especialist-types flex pa3 justify-center">
                     {filterBadges}

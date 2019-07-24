@@ -97,12 +97,12 @@ function NavBar(props:Props) {
     const [ showMenu, setshowMenu ] = useState(false)
     return (
         <div className={`${classes.root}  ${isFixed! ? 'fixed w-100 top-0':'relative'}`}>
-            <AppBar position="static" className={`${ isFixed ? classes.fixedAppBar : classes.appBar} app-custom-bar`} elevation={0}>
+            <AppBar position="static" className={`${ isFixed ? classes.fixedAppBar : classes.appBar} app-custom-bar`} elevation={2}>
                 <Toolbar className="flex">
                 <div className="w-30 luxury-logo tl">
                     <NavLink className={classes.logo} to="/">
                         {
-                            isFixed ? (<LogoBlack/>):(<Logo/>)
+                            isFixed ? (<div className="mt1"><LogoBlack/></div>):(<Logo/>)
                         }
                     </NavLink>
                     

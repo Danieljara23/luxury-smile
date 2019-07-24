@@ -29,7 +29,7 @@ const ConsultoryExperience = (props:Props) => {
                 <h6 className="consultory-experience-title">{props.title}</h6>
 
             ):(<></>)}
-            <div className="w-100 flex">
+            <div className="w-100 flex  testimonies-consultory">
                 {ExperienceList.map((item) => (
                     <div className="w-100">
                         <div className="img-experience dib mt4">

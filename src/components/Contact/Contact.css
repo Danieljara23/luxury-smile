@@ -34,4 +34,17 @@
         border: none;
         padding-top: 0;
     }
+    
+}
+@media (max-width: 600px) {
+    #contact-form{
+        margin: 0;
+    }
+    #contact-form > .form-border{
+        padding: 0;
+    }
+    .form-containers > div{
+        margin-left: 0;
+        margin-right: 0;
+    }
 }

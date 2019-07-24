@@ -1,9 +1,8 @@
 .especialist-types{
     background-color: #EFEFEF;
+    
 }
-.especialist-content{
-    background-color: rgba(0, 0, 0, 0.212)
-}
+
 .especialist-card-desktop{
     background-color: white;
 }
@@ -14,4 +13,21 @@
 }
 .discount-badge{
     margin-top: 12px;
+}
+@media (max-width: 600px) {
+    .especialist-types{
+        justify-content: end;
+        overflow: hidden;
+        overflow-x: scroll
+    }
+    .especialist-types::-webkit-scrollbar {
+        display: none;
+    }
+    .especialist-component .especialist-card-mobile {
+        border-radius: 9px;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+        height: 495px;
+        margin-bottom: 30px;
+        width: 100%;
+    }
 }

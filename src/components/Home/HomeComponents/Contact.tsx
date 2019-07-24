@@ -40,26 +40,30 @@ const Contact = (props:Props) => {
                     <h3 className="contact-title">{props.title}</h3>
                 ):(<></>)}
             </div>
-            {/* <div className="w-80 flex flex-row center contact-desktop">
-                <div className="w-60 flex flex-column ofix-contact-photo">
-                    <div className="w-100 flex flex-row blue-container ph4 pv3">
-                        <div className="w-60 custom-border flex flex-column justify-center ofix-contact-info">
-                            <p className="b ofix-building">Edificio Ofix 33</p>
-                            <p className="fw4">piso 7 - consultorio 715</p>
-                            <p>Carrera 80a #32 EE - 72 - Medellín - Colombia</p>
+            
+            <div className=" w-80 center contact-desktop">
+                <div className="flex ">
+                    <div className="flex w-100 flex-column justify-around">
+                        <div className="ContactInfo  blue-container flex flex-row items-start pa3">
+                            <div className="w-60 custom-border flex flex-column justify-center ofix-contact-info">
+                                <p className="b ofix-building">Edificio Ofix 33</p>
+                                <p className="fw4">piso 7 - consultorio 715</p>
+                                <p>Carrera 80a #32 EE - 72 - Medellín - Colombia</p>
+                            </div>
+                            <div className="w-40 pl4 ofix-photo">
+                                <p>Horario de atención</p> 
+                                <p>Lunes a viernes: 8am - 6pm</p>
+                                <p> Sábados: 8am - 12pm</p>
+                            </div>
                         </div>
-                        <div className="w-40 pl4 ofix-photo">
-                            <p>Horario de atención</p> 
-                            <p>Lunes a viernes: 8am - 6pm</p>
-                            <p> Sábados: 8am - 12pm</p>
+                        <div className="MapOfix">
+                            <OfixMap/>
                         </div>
+
                     </div>
-                    <div className="w-100 relative mt2 ofix-map">
-                        <OfixMap/>
+                    <div className="OfixImage">
+                        <img src={Ofix} alt=""/>
                     </div>
-                </div>
-                <div className="w-40 ofix-container ph3 flex items-start">
-                    <img src={Ofix} alt=""/>
                 </div>
                 
             </div>
@@ -84,33 +88,6 @@ const Contact = (props:Props) => {
                 </div>
                 <div className="relative mt2 ofix-map">
                     <OfixMap/>
-                </div>
-                
-            </div> */}
-
-            <div className=" w-80 center">
-                <div className="flex">
-                    <div className="flex w-100 flex-column justify-around">
-                        <div className="ContactInfo  blue-container flex flex-row items-start pa3">
-                            <div className="w-60 custom-border flex flex-column justify-center ofix-contact-info">
-                                <p className="b ofix-building">Edificio Ofix 33</p>
-                                <p className="fw4">piso 7 - consultorio 715</p>
-                                <p>Carrera 80a #32 EE - 72 - Medellín - Colombia</p>
-                            </div>
-                            <div className="w-40 pl4 ofix-photo">
-                                <p>Horario de atención</p> 
-                                <p>Lunes a viernes: 8am - 6pm</p>
-                                <p> Sábados: 8am - 12pm</p>
-                            </div>
-                        </div>
-                        <div className="MapOfix">
-                            <OfixMap/>
-                        </div>
-
-                    </div>
-                    <div className="OfixImage">
-                        <img src={Ofix} alt=""/>
-                    </div>
                 </div>
                 
             </div>

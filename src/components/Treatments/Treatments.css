@@ -21,3 +21,9 @@ div[aria-labelledby*="simple-modal-title"]{
 .treatment-conten form{
     display: inline;
 }
+
+@media (max-width: 600px) {
+    .treatments-types{
+        justify-content: end;
+    }
+}

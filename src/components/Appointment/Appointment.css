@@ -38,22 +38,18 @@
     .multiline-container > div{
         width: 100%;
     }
-    /* .consultory-contact-info {
-        overflow: auto;
-        white-space: nowrap;
-        justify-content: unset;
-    }
-    
-    .consultory-contact-info div {
-        width: 300px;
-        padding-left: 20px;
-        padding-right: 20px;
-
-    }
-    .consultory-contact-info::-webkit-scrollbar {
-        display: none;
-    } */
     .form-border{
         padding: 0;
+    }
+}
+@media (max-width: 600px) {
+    #appointment-form .form-border{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .appointment-container > div, .appointment-container .multiline-container > div{
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
