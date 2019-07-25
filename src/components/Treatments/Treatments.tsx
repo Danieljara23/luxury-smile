@@ -93,6 +93,7 @@ const TreatmentsSection = () => {
     })
 
     const handleFilter = (e:any) => {
+        console.log(e)
         setSelectedTreatment(e)
         setShowCloseFilter(true)
         console.log(selectedTreatment)
@@ -102,6 +103,7 @@ const TreatmentsSection = () => {
         let tempSelected:TreatmentModel[] = TreatmentsList
         
         if(selectedTreatment != ""){
+            console.log("Inside If")
             tempSelected = TreatmentsList.filter((item)=>{
                 return item.title.search(selectedTreatment) !== -1
             })
@@ -115,7 +117,7 @@ const TreatmentsSection = () => {
     const filterBadges = [
         TreatmentsList.map((item) => (
             <div className="ph2">
-                <span onClick={(e)=>handleFilter(item.title)}>
+                <span onClick={()=>handleFilter("Endondoncia")}>
                     <Chip className={classes.root} label={item.title} />
                 </span>
             </div>

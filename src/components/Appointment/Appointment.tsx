@@ -10,6 +10,11 @@ import Select from '@material-ui/core/Select';
 import TreatmentsList from '../Home/HomeComponents/TreatmentsList'
 import InputLabel from '@material-ui/core/InputLabel';
 import ContactInfo from '../ContactInfo/ContactInfo'
+import axios from 'axios';
+import AppointmentFormValidator from '../FormValidator/AppointmentFormValidator'
+import { Errors } from '../FormValidator/AppointmentFormValidator'
+
+
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     container: {
@@ -60,6 +65,13 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
+interface State {
+    name: string
+    cellPhone: string
+    telephone: string
+    email: string
+    treatment: string
+}
 
 
 const Appointment = () => {
@@ -67,13 +79,51 @@ const Appointment = () => {
     const [treatmentSelected, setTreatmentSelected ] = useState({
         especialist: ''
     })
+    const [values, setValues] = useState<State>({
+        name: '',
+        cellPhone: '',
+        email: '',
+        treatment: '',
+        telephone: '',
+      });
+      const [errors, setErrors] = useState<Errors>({
+        name: '',
+        cellPhone: '',
+        email: '',
+        treatment: '',
+        telephone: ''
+    })
     const isMobile = window.innerWidth <= 400
-    function handleChange(event: React.ChangeEvent<{ name?: string; value: unknown }>) {
-        setTreatmentSelected(oldValues => ({
+    function handleChangeSelect(event: React.ChangeEvent<{ name?: string; value: unknown }>) {
+        setValues(oldValues => ({
             ...oldValues,
             [event.target.name as string]: event.target.value,
         }));
     }
+    const handleChange= (name: keyof State) => (event: React.ChangeEvent<HTMLInputElement>) => {
+        setValues({ ...values, [name]: event.target.value });
+        setErrors(AppointmentFormValidator(values)) 
+        console.log(errors)
+      };
+
+    
+    const handleSubmit = (e:any) => {
+        e.preventDefault();
+          axios({
+            method: "POST", 
+            url:"http://localhost:3002/send", 
+            data: values
+        }).then((response)=>{
+          console.log(response)
+            if (response.data.msg === 'success'){
+                alert("Message Sent."); 
+            }else if(response.data.msg === 'fail'){
+                alert("Message failed to send.")
+            }
+        })
+      }
+  
+
     return(
         <div className="w-100 apointment-container">
             <h4 className="appointment-title">Pide tu cita</h4>
@@ -81,49 +131,60 @@ const Appointment = () => {
                 {/* <img src={isMobile ? FirstSlideMobile: FirstSlide} alt=""/> */}
             </div>
             <div className="w-100 appointment-form mt1 center flex justify-center">
-                <form className={`${classes.container} ma4 w-80 pt0 `} noValidate autoComplete="off" id="appointment-form">
-                    <div className="w-100 flex flex-column form-border pa4">
-                        <div className="w-100 flex ph4 justify-center appointment-container">
+                <form className={`${classes.container} ma4 w-80 pt0 `} noValidate autoComplete="off" id="appointment-form" onSubmit={handleSubmit}>
+                    <div className="w-100 flex flex-wrap flex-row form-border pa4 justify-center">
+                        <div className="w-70 flex ph4 justify-start appointment-container">
                             <TextField
-                                id="standard-dense"
+                                id="name"
                                 label="Nombre completo"
                                 className={`${clsx(classes.textField, classes.dense)} mobile-input`}
                                 margin="dense"
+                                error={errors.name != '' ? true:false }
+                                helperText={errors.name || null}
+                                onChange={handleChange('name')}
                             />
                             <TextField
-                                id="standard-dense"
+                                id="cellPhone"
                                 label="Celular *"
                                 className={`${clsx(classes.textField, classes.dense)} mobile-input`}
                                 margin="dense"
+                                error={errors.cellPhone != '' ? true:false }
+                                helperText={errors.cellPhone || null}
+                                onChange={handleChange('cellPhone')}
                             />
                         </div>
-                        <div className="w-100 flex ph4 mt4 justify-center appointment-container">
+                        <div className="w-70 flex ph4 justify-start appointment-container">
                             <TextField
-                                id="standard-dense"
+                                id="telephone"
                                 label="Teléfono fijo"
                                 className={`${clsx(classes.textField, classes.dense)} mobile-input`}
                                 margin="dense"
+                                onChange={handleChange('telephone')}
+                                error={errors.telephone != '' ? true:false }
+                                helperText={errors.telephone || null}
                             />
                             <TextField
-                                id="standard-dense"
+                                id="email"
                                 label="Correo electrónico"
                                 className={`${clsx(classes.textField, classes.dense)} mobile-input`}
                                 margin="dense"
+                                error={errors.email != '' ? true:false }
+                                onChange={handleChange('email')}
+                                helperText={errors.email || null}
                             />
                             
                         </div>
-                        <div className="w-100 flex ph4 pt4 justify-start appointment-container">
-                            <div className="w-70 pt3 pr3 pl0 multiline-container">
+                        <div className="w-70 flex ph4 justify-start appointment-container">
+                            <div className="pt3 pr3 pl0 multiline-container">
                             <FormControl className={classes.formControl}>
-                            <InputLabel htmlFor="select-simple">Tratamiento</InputLabel>
+                            <InputLabel htmlFor="treatment">Tratamiento</InputLabel>
                                 <Select
+                                id="treatment"
                                 className={classes.selectInput}
-                                value={treatmentSelected.especialist}
-                                onChange={handleChange}
-                                inputProps={{
-                                    name: 'especialist',
-                                    id: 'select-simple',
-                                }}
+                                value={values.treatment}
+                                error={errors.treatment != '' ? true:false }
+                                onChange={handleChangeSelect}
+                                inputProps={{name: 'treatment', id: 'treatment'}}
                                 >
                                     {
                                         TreatmentsList.map((item) => (
@@ -136,7 +197,7 @@ const Appointment = () => {
                             <div></div>
                         </div>
                         <div className="w-100 flex ph4 pt4 justify-center">
-                        <Button variant="contained" className={`${classes.button}`}>
+                        <Button variant="contained" className={`${classes.button}`} type="submit">
                             PIDE TU CITA AQUÍ
                         </Button>
                         </div>

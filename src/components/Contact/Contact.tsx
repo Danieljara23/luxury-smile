@@ -89,7 +89,6 @@ const ContactSection = () => {
     };
 
     const handleSubmit = (e:any) => {
-      console.log(values)
       e.preventDefault();
         axios({
           method: "POST", 
@@ -99,16 +98,13 @@ const ContactSection = () => {
         console.log(response)
           if (response.data.msg === 'success'){
               alert("Message Sent."); 
-              resetForm(e)
           }else if(response.data.msg === 'fail'){
               alert("Message failed to send.")
           }
       })
     }
 
-    const resetForm = (e:any) => {
-      e.target.reset()
-    }
+    
     
     return(
         <div className="w-100 contact-form-container">
