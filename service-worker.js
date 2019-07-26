@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/luxury-smile/precache-manifest.70492626dd49e3c11ffad5b4da4467ef.js"
+  "/luxury-smile/precache-manifest.5f96ec74a8ba5d98dd507065de6cbf7b.js"
 );
 
 self.addEventListener('message', (event) => {
