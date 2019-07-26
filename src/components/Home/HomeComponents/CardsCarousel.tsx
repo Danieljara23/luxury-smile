@@ -5,6 +5,10 @@ import { ReactComponent as Flecha } from '../../images/ico-flecha.svg'
 import AliceCarousel from 'react-alice-carousel';
 import { createStyles, makeStyles } from '@material-ui/core/styles';
 import TreatmentsForm from '../../CardsForms/TreatmentsForm'
+import { TreatmentModel } from '../../../shared/models/TreatmentModel'
+import Dialog, { DialogProps } from '@material-ui/core/Dialog';
+import Chip from '@material-ui/core/Chip';
+
 const responsive = {
     0: {
         items: 1
@@ -32,7 +36,42 @@ const useStyles = makeStyles(
         readMore:{
             color:'#69ABBE',
             fontWeight: 100
-        }
+        },
+        paper: {
+            '& .MuiPaper-root': {
+                 borderRadius: '9px'
+            },
+            '& .MuiDialog-paperWidthSm':{
+                maxWidth: 'calc(100% - 44px)',
+                margin: 30
+            },
+            '& .treatment-description-container':{
+                height: 'auto'
+            }
+         },
+         closeButton:{
+             position: 'fixed',
+             top: '2%',
+             right: '2%',
+             zIndex: 1400
+         },
+         cardHeight:{
+            height: 'auto'
+        },
+        root: {
+            backgroundColor: 'white',
+            color: '#AFAFAF',
+            fontSize: '12px',
+            fontWeight: 500, 
+            cursor: 'pointer'
+        },
+        rootClose: {
+            padding: 15,
+            width: '10px',
+            height: '10px',
+            justifyContent: 'center',
+            cursor: 'pointer'
+        },
     }))
     
 const CardsCarousel = () => {
@@ -40,6 +79,12 @@ const CardsCarousel = () => {
         itemIndex: null,
         values: false
     })
+    const [selectedItem, setSelectedItem] = useState({
+        title: 'Rehabilitación Oral',
+        imagePath: require('../../images/img-destacados-rehabilitacion-oral.jpg'),
+        description: 'Es una especialidad dentro de la odontología que combina en forma integral las áreas de prótesis fija, prótesis removible'
+    })
+
     const handleToggleParagraph = (e:any, index:any) => {
         if( toggleDescription.itemIndex == index ){
             setToggleDescription({itemIndex: index, values: !toggleDescription.values})
@@ -49,7 +94,7 @@ const CardsCarousel = () => {
     }
 
 
-
+    const [showModal, setShowModal] = useState(false);
     const classes = useStyles();
     const [showForm, setShowForm] = useState(false)
     const galleryItems = TreatmentsList.map((item, index) => (
@@ -72,12 +117,20 @@ const CardsCarousel = () => {
                 </div>
                 <div className={`pt3 pb4 flex justify-center form-container`}>
                     <TreatmentsForm/>
-                    <Link className={`${classes.dateLink} ttu card-date-button`} underline='none'>Pide tu cita aquí</Link>
+                    <Link className={`${classes.dateLink} ttu card-date-button`} underline='none' onClick={()=>handleModal(item)}>Pide tu cita aquí</Link>
                 </div>
             </div>
 
         ))
-    
+
+    const handleModal = (item:any) => {
+        setShowModal(true)
+        setSelectedItem(item)
+    }
+    const handleClose = (item:any) => {
+        setShowModal(false)
+    }
+
     const handleOnDragStart = (e: any) => e.preventDefault()
     return (
         <>
@@ -90,6 +143,36 @@ const CardsCarousel = () => {
                     responsive={responsive}
                     stagePadding={{ paddingLeft: 0, paddingRight: 0 }}
                 />
+                <Dialog
+                        open={showModal}
+                        onClose={handleClose}
+                        scroll={'body'}
+                        aria-labelledby="scroll-dialog-title"
+                        className={classes.paper}
+                    >
+                        <div  className={`card-container ${classes.cardHeight}`} >
+                            <div className="card-image">
+                                <img src={selectedItem.imagePath} alt={selectedItem.title} />
+                            </div>
+                            <h3 className="cards-title mb3 mt4">{selectedItem.title}</h3>
+                            <div className="treatment-description-container ph3 pt0 ">
+                                <p className="treatment-description">{selectedItem.description}</p>
+                            </div>
+                            
+                            <div className="form-container">
+                                <TreatmentsForm/>
+                            </div>
+                            <div className={`pt3 pb4 justify-center ${showModal?'dn':'flex'}`}>
+                                <Link className={`${classes.dateLink} ttu card-date-button`} underline='none' >Pide tu cita aquí</Link>
+                            </div>
+                        </div>
+                    </Dialog>
+                    { showModal ? (
+                        <div className={`ph2 fixed ${classes.closeButton}`} onClick={handleClose}>
+                                <Chip className={`${classes.root} ${classes.rootClose}`} label={"x"} />
+                        </div>
+                    ):<></>
+                    }
             </div>
 
         </>

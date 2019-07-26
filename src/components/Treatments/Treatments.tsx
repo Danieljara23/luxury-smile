@@ -4,13 +4,10 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import Chip from '@material-ui/core/Chip';
 import Link from '@material-ui/core/Link';
 import { ReactComponent as Flecha } from '../images/ico-flecha.svg'
-import Modal from '@material-ui/core/Modal';
 import TreatmentsForm from '../CardsForms/TreatmentsForm'
 import './Treatments.css'
 import { TreatmentModel } from '../../shared/models/TreatmentModel'
-import Dialog, { DialogProps } from '@material-ui/core/Dialog';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
+import Dialog from '@material-ui/core/Dialog';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -50,6 +47,9 @@ const useStyles = makeStyles((theme: Theme) =>
            '& .MuiDialog-paperWidthSm':{
                maxWidth: 'calc(100% - 44px)',
                margin: 30
+           },
+           '& .treatment-description-container':{
+               height: 'auto'
            }
         },
         closeButton:{
@@ -92,12 +92,6 @@ const TreatmentsSection = () => {
         values: false
     })
 
-    const handleFilter = (e:any) => {
-        console.log(e)
-        setSelectedTreatment(e)
-        setShowCloseFilter(true)
-        console.log(selectedTreatment)
-    }
 
     useEffect(() =>{
         let tempSelected:TreatmentModel[] = TreatmentsList
@@ -109,15 +103,15 @@ const TreatmentsSection = () => {
             })
         }
         
-        return() =>{
+        
             setFilteredList(tempSelected)
-        }
+        
     })
 
     const filterBadges = [
         TreatmentsList.map((item) => (
             <div className="ph2">
-                <span onClick={()=>handleFilter("Endondoncia")}>
+                <span onClick={()=>handleFilter(item.title)}>
                     <Chip className={classes.root} label={item.title} />
                 </span>
             </div>
@@ -129,6 +123,13 @@ const TreatmentsSection = () => {
     }
     const handleClose = (item:any) => {
         setShowModal(false)
+    }
+    const handleFilter = (e:any) => {
+        console.log(e)
+        setSelectedTreatment(e)
+        setShowCloseFilter(true)
+        document.getElementsByClassName('treatments-types')[0].scrollTo(0,0)
+        console.log(selectedTreatment)
     }
     const handleCloseFilter = (e:any) => {
         console.log(filteredList)
@@ -201,12 +202,10 @@ const TreatmentsSection = () => {
                                 <img src={selectedItem.imagePath} alt={selectedItem.title} />
                             </div>
                             <h3 className="cards-title mb3 mt4">{selectedItem.title}</h3>
-                            <div className="treatment-description-container ph3 pt0 pb2">
-                                <p className="treatment-description">{selectedItem.description.substring(0, 81) + "..."}</p>
+                            <div className="treatment-description-container ph3 pt0 ">
+                                <p className="treatment-description">{selectedItem.description}</p>
                             </div>
-                            <div className="w-100 flex ph3">
-                                <Link className={`${classes.readMore} ttu read-more-card` } underline='none'>Leer más <Flecha /></Link>
-                            </div>
+                            
                             <div className="form-container">
                                 <TreatmentsForm/>
                             </div>
