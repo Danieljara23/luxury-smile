@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
-
+import React from 'react';
 interface MapInfo {
     name: string
     google: any
