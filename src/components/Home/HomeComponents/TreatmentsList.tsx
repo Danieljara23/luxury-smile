@@ -10,12 +10,12 @@ const TreatmentsList:TreatmentModel[] = [
         title: 'Estética dental',
         imagePath: require('../../images/estetica-dental.jpg'),
         description: 'O cosmética es una especialidad de la odontología que soluciona problemas relacionados con la salud bucal y la armonía estética de la boca en su totalidad.',
-        discount: '20%'
     },
     {
         title: 'Aclaramiento dental',
         imagePath: require('../../images/aclaramiento-dental.jpg'),
-        description: 'Es un tratamiento dental estético que logra reducir varios tonos el color original de las piezas dentales, dejando los dientes más blancos y brillantes.'
+        description: 'Es un tratamiento dental estético que logra reducir varios tonos el color original de las piezas dentales, dejando los dientes más blancos y brillantes.',
+        discount: '10%'
     },
     {
         title: 'Operatoria dental',

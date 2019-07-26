@@ -11,7 +11,7 @@ import  ThirdSlideMobile from '../../images/slider-mobile-3.jpg'
 import AliceCarousel from 'react-alice-carousel';
 
 const Slider:React.FC = () => {
-    const isMobile = window.innerWidth <= 400
+    const isMobile = window.innerWidth <= 600
     const showArrows = isMobile ? true:false
     const galleryItems = [
                 <img src={isMobile ? FirstSlideMobile: FirstSlide} />,

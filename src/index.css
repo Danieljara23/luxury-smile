@@ -10,5 +10,5 @@ body {
 .whatsapp-fixed {
   right: 0;
   bottom: 0;
-  z-index: 3;
+  z-index: 10000;
 }

@@ -19,7 +19,7 @@ const Advantages = () => {
                 </div>
                 <div className="w-30 flex items-center justify-center advantage-container ph3">
                     <IcoMetodoPago/>
-                    <p className="ml2 f5 fw1 advantage-color">Pago en efectivo o con tarjeta</p>
+                    <p className="ml2 f5 fw1 advantage-color">Facilidades de pago</p>
                 </div>
             </div>
         </div>
