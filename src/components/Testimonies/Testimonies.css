@@ -4,7 +4,7 @@
     font-size: 27px;
 }
 .luxury-experience-background{
-    background: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url('../images/experiencias-luxury.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url('../images/banner-testimonios.jpg');
     background-repeat: no-repeat;
     background-origin: inherit;
     background-size: cover;
@@ -31,5 +31,14 @@
 @media (max-width: 960px) {
     .testimonies-component > div > div{
         flex-direction: column
+    }
+}
+@media (max-width: 600px) {
+    .luxury-experience-background{
+        background: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url('../images/Banner-mobile-testimonios.jpg');
+        background-repeat: no-repeat;
+        background-origin: inherit;
+        background-size: cover;
+        height: 230px;
     }
 }

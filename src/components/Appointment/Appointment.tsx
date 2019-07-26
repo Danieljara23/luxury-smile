@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import './Appointment.css'
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
@@ -13,7 +12,7 @@ import ContactInfo from '../ContactInfo/ContactInfo'
 import axios from 'axios';
 import AppointmentFormValidator from '../FormValidator/AppointmentFormValidator'
 import { Errors } from '../FormValidator/AppointmentFormValidator'
-
+import './Appointment.css'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -52,7 +51,10 @@ const useStyles = makeStyles((theme: Theme) =>
         paddingLeft: '2rem',
         paddingRight: '2rem',
         paddingTop: '5px',
-        paddingBottom: '4px'
+        paddingBottom: '4px',
+        '&:hover': {
+            backgroundColor: '#69ABBE'
+        }
     },
     formControl: {
         margin: theme.spacing(1),
@@ -116,7 +118,7 @@ const Appointment = () => {
         }).then((response)=>{
           console.log(response)
             if (response.data.msg === 'success'){
-                alert("Message Sent."); 
+                alert("Hemos agendado tu cita, nos estaremos comunicando contigo telefónicamente para confirmarla."); 
             }else if(response.data.msg === 'fail'){
                 alert("Message failed to send.")
             }

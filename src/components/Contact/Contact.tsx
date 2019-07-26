@@ -49,7 +49,10 @@ const useStyles = makeStyles((theme: Theme) =>
         paddingLeft: '2rem',
         paddingRight: '2rem',
         paddingTop: '5px',
-        paddingBottom: '4px'
+        paddingBottom: '4px',
+        '&:hover': {
+          backgroundColor: '#69ABBE'
+        }
     },
   }),
 );
@@ -97,7 +100,16 @@ const ContactSection = () => {
       }).then((response)=>{
         console.log(response)
           if (response.data.msg === 'success'){
-              alert("Message Sent."); 
+            alert("Gracias por ponerte en contacto con Luxury Smile, te responderemos en la mayor brevedad")
+            setValues(
+              {
+                name: '',
+                cellPhone: '',
+                telephone: '',
+                email: '',
+                message: '',
+              }
+            )
           }else if(response.data.msg === 'fail'){
               alert("Message failed to send.")
           }
@@ -121,6 +133,7 @@ const ContactSection = () => {
                                 error={errors.name != '' ? true:false }
                                 helperText={errors.name || null}
                                 onChange={handleChange('name')}
+                                value={values.name}
                                 required
                             />
                             <TextField
@@ -131,6 +144,7 @@ const ContactSection = () => {
                                 error={errors.cellPhone != '' ? true:false }
                                 helperText={errors.cellPhone || null}
                                 onChange={handleChange('cellPhone')}
+                                value={values.cellPhone}
                                 required
                             />
                         </div>
@@ -143,6 +157,7 @@ const ContactSection = () => {
                                 onChange={handleChange('telephone')}
                                 error={errors.telephone != '' ? true:false }
                                 helperText={errors.telephone || null}
+                                value={values.telephone}
                                 required
                             />
                             <TextField
@@ -154,6 +169,7 @@ const ContactSection = () => {
                                 error={errors.email != '' ? true:false }
                                 onChange={handleChange('email')}
                                 helperText={errors.email || null}
+                                value={values.email}
                                 required
                             />
                         </div>
@@ -170,6 +186,7 @@ const ContactSection = () => {
                                 onChange={handleChange('message')}
                                 error={errors.message != '' ? true:false }
                                 helperText={errors.message || null}
+                                value={values.message}
                                 required
                             />
                         </div>

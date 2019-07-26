@@ -9,7 +9,7 @@
     border: 1px solid #E0E0E0;
     border-radius: 6px;
 }
-#standard-dense{
+#standard-dense, .MuiInput-input{
     box-sizing: content-box;
 }
 .contact-component-container .top-border{

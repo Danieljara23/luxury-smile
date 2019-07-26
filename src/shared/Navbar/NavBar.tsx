@@ -9,7 +9,7 @@ import { ReactComponent as LogoBlack } from '../../components/images/logo-luxury
 import { ReactComponent as MenuMobile } from '../../components/images/menu-mobile.svg'
 import MobileTopHeader from '../TopHeader/MobileTopHeader'
 import './MobileMenu.css'
-import {Close} from '@material-ui/icons'
+import { ReactComponent as Close } from '../../components/images/ico-cerrar.svg'
 interface Props{
     isFixed: boolean
 }
@@ -114,7 +114,7 @@ function NavBar(props:Props) {
                         !showMenu ? (
                             <MenuMobile className="hamburguer-icon" onClick={() => setshowMenu(!showMenu)} />
                         ) : (
-                            <Close onClick={() => setshowMenu(!showMenu)}/>
+                            <Close  onClick={() => setshowMenu(!showMenu)}/>
                         )
                     }
 

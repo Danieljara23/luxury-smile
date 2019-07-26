@@ -6,6 +6,7 @@ import axios from 'axios';
 import Button from '@material-ui/core/Button';
 import FormValidator from '../FormValidator/FormValidator'
 import {Errors} from '../FormValidator/FormValidator'
+import FormAlert from '../Alerts/Alerts'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -52,7 +53,10 @@ const useStyles = makeStyles((theme: Theme) =>
         paddingLeft: '2rem',
         paddingRight: '2rem',
         paddingTop: '5px',
-        paddingBottom: '4px'
+        paddingBottom: '4px',
+        '&:hover': {
+          backgroundColor: '#69ABBE'
+        }
     },
   }),
 );
@@ -88,6 +92,10 @@ const TreatmentsForm  = () => {
       setErrors(FormValidator(values)) 
       console.log(errors)
     };
+    const handleAlert = () => {
+      console.log("Alert called")
+      return (<FormAlert formType="contact" />)
+    }
 
     const handleSubmit = (e:any) => {
       e.preventDefault();
@@ -98,13 +106,19 @@ const TreatmentsForm  = () => {
       }).then((response)=>{
         console.log(response)
           if (response.data.msg === 'success'){
-              alert("Message Sent."); 
-              let contactForm = document.getElementById('contact-form')
-              if(contactForm){
-                contactForm.reset()
-              }
+              alert("Gracias por ponerte en contacto con Luxury Smile, te responderemos en la mayor brevedad")
+              handleAlert()
+              setValues(
+                {
+                  name: '',
+                  cellPhone: '',
+                  telephone: '',
+                  email: '',
+                  message: 'Hola, deseo que se contacten conmigo para obtener mayor información',
+                }
+              )
           }else if(response.data.msg === 'fail'){
-              alert("Message failed to send.")
+              alert("Ha ocurrido un error")
           }
       })
     }
@@ -114,6 +128,7 @@ const TreatmentsForm  = () => {
                             <TextField
                                 id="name"
                                 label="Nombre completo"
+                                value={values.name}
                                 className={clsx(classes.textField, classes.dense)}
                                 margin="dense"
                                 error={errors.name != '' ? true:false }
@@ -123,6 +138,7 @@ const TreatmentsForm  = () => {
                             <TextField
                                 id="cellPhone"
                                 label="Celular"
+                                value={values.cellPhone}
                                 className={clsx(classes.textField, classes.dense)}
                                 margin="dense"
                                 error={errors.cellPhone != '' ? true:false }
@@ -132,6 +148,7 @@ const TreatmentsForm  = () => {
                             <TextField
                                 id="telephone"
                                 label="Teléfono"
+                                value={values.telephone}
                                 className={clsx(classes.textField, classes.dense)}
                                 margin="dense"
                                 onChange={handleChange('telephone')}
@@ -141,6 +158,7 @@ const TreatmentsForm  = () => {
                             <TextField
                                 id="email"
                                 label="Correo electrónico"
+                                value={values.email}
                                 className={clsx(classes.textField, classes.dense)}
                                 margin="dense"
                                 name="email"

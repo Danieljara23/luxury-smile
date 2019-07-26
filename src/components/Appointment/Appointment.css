@@ -6,10 +6,9 @@
     margin-bottom: 35px;
 }
 .promotion-image {
-    background:  url('../images/banner-contacto.jpg');
+    background:  url('../images/Banner-pide-tu-cita.jpg');
     background-repeat: no-repeat;
     background-origin: inherit;
-    background-size: cover;
     height: 300px;
 }
 .apointment-container .consultory-contact-info{
@@ -32,6 +31,9 @@
         border: none;
         padding-top: 0;
     }
+    #appointment-form input{
+        box-sizing: content-box;
+    }
     .multiline-container{
         width: 100%;
         padding-right: 0;
@@ -44,6 +46,12 @@
     }
 }
 @media (max-width: 600px) {
+    .promotion-image {
+        background:  url('../images/banner-mobile-pide-tu-cita.jpg');
+        background-repeat: no-repeat;
+        background-origin: inherit;
+        height: 230px;
+    }
     #appointment-form .form-border{
         padding-left: 0;
         padding-right: 0;
@@ -52,9 +60,5 @@
         width: 100%;
         margin-left: 0;
         margin-right: 0;
-    }
-    .promotion-image{
-        background-size: contain;
-        height: 80px;
     }
 }

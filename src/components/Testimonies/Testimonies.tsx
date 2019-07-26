@@ -1,8 +1,8 @@
 import React from 'react'
-import './Testimonies.css'
 import ConsultoryExperience from '../Consultory/ConsultoryExperience'
 import '../Consultory/ConsultoryExperience.css'
 import Advantages from '../Home/HomeComponents/Advantage'
+import './Testimonies.css'
 
 const Testimonies = () => {
     return(

@@ -41,6 +41,7 @@ a.social-icon {
     bottom: 0;
     background-color: black;
     height: 32px;
+    justify-content: center;
 }
 .mobile-header .top-header-main-text{
     display: none;
@@ -75,7 +76,6 @@ a.social-icon {
     }
     .top-header-doctor{
         overflow: hidden;
-        width: 30%;
         display: inline-block;
         margin-top: 10px;
     }

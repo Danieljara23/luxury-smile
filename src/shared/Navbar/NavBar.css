@@ -36,6 +36,7 @@ ul.header li a{
     .navbar-links svg{
         font-size: 2.5rem;
         color: #b2a661;
+        fill: #b2a661;
     }
     .app-custom-bar{
         max-height: 85px;
