@@ -15,6 +15,14 @@
     border-top: 1px solid lightgray;
     padding-top: 20px;
 }
+ #appointment-form input{
+        box-sizing: content-box;
+}
+@media (min-width: 1300px){
+    .promotion-image{
+        background-size: cover; 
+    }
+}
 @media (max-width: 960px) {
     #appointment-form .mobile-input{
         width: 100%;
@@ -31,9 +39,7 @@
         border: none;
         padding-top: 0;
     }
-    #appointment-form input{
-        box-sizing: content-box;
-    }
+   
     .multiline-container{
         width: 100%;
         padding-right: 0;
@@ -55,6 +61,7 @@
     #appointment-form .form-border{
         padding-left: 0;
         padding-right: 0;
+        width: 100%;
     }
     .appointment-container > div, .appointment-container .multiline-container > div{
         width: 100%;

@@ -42,6 +42,7 @@
     }
     .contact-form-container #contact-form > .form-border{
         padding: 0;
+        width: 80%;
     }
     .contact-form-container .form-containers > div{
         margin-left: 0;

@@ -20,8 +20,7 @@ const TreatmentsList:TreatmentModel[] = [
     {
         title: 'Operatoria dental',
         imagePath: require('../../images/operatoria-dental.jpg'),
-        description: 'Es la rama de la odontología que estudia la prevención, diagnostico y restauración de las piezas dentarias afectadas por procesos patológicos, traumáticos, congénitos, etc. para devolverles su forma, función y estética.',
-        discount: '10%'
+        description: 'Es la rama de la odontología que estudia la prevención, diagnostico y restauración de las piezas dentarias afectadas por procesos patológicos, traumáticos, congénitos, etc. para devolverles su forma, función y estética.'
     },
     {
         title: 'Periodoncia',

@@ -146,7 +146,12 @@ const TreatmentsSection = () => {
 
     const galleryItems = [
         filteredList.map((item,index) => (
-            <div className="card-container ma3" id={"card-"+item}>
+            <div className="relative card-container ma3" id={"card-"+item}>
+                { item.discount ? (
+                    <div className="absolute discount-badge"><p>{item.discount}<span> DCTO</span></p> </div>
+                ):(
+                    <div className="absolute discount-badge no-discount"><p></p> </div>
+                )}
                 <div className="card-image">
                     <img src={item.imagePath} alt={item.title} />
                 </div>

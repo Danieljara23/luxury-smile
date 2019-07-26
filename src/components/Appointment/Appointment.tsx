@@ -133,9 +133,9 @@ const Appointment = () => {
                 {/* <img src={isMobile ? FirstSlideMobile: FirstSlide} alt=""/> */}
             </div>
             <div className="w-100 appointment-form mt1 center flex justify-center">
-                <form className={`${classes.container} ma4 w-80 pt0 `} noValidate autoComplete="off" id="appointment-form" onSubmit={handleSubmit}>
-                    <div className="w-100 flex flex-wrap flex-row form-border pa4 justify-center">
-                        <div className="w-70 flex ph4 justify-start appointment-container">
+                <form className={`${classes.container} ma4 w-100 pt0 justify-center`} noValidate autoComplete="off" id="appointment-form" onSubmit={handleSubmit}>
+                    <div className="flex flex-column form-border pa4 justify-center">
+                        <div className="flex ph4 pt4 justify-start appointment-container">
                             <TextField
                                 id="name"
                                 label="Nombre completo"
@@ -155,7 +155,7 @@ const Appointment = () => {
                                 onChange={handleChange('cellPhone')}
                             />
                         </div>
-                        <div className="w-70 flex ph4 justify-start appointment-container">
+                        <div className="flex ph4 pt4 justify-start appointment-container">
                             <TextField
                                 id="telephone"
                                 label="Teléfono fijo"
@@ -176,7 +176,7 @@ const Appointment = () => {
                             />
                             
                         </div>
-                        <div className="w-70 flex ph4 justify-start appointment-container">
+                        <div className="flex ph4 pt4 justify-start appointment-container">
                             <div className="pt3 pr3 pl0 multiline-container">
                             <FormControl className={classes.formControl}>
                             <InputLabel htmlFor="treatment">Tratamiento</InputLabel>
