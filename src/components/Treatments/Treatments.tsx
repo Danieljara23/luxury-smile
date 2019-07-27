@@ -31,7 +31,10 @@ const useStyles = makeStyles((theme: Theme) =>
             paddingLeft: 12,
             paddingRight: 12,
             fontWeight: 600,
-            cursor: 'pointer'
+            cursor: 'pointer',
+            '&:hover': {
+                backgroundColor: '#5A8A98'
+            }
         },
         readMore:{
             color:'#69ABBE',

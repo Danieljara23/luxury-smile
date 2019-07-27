@@ -31,7 +31,11 @@ const useStyles = makeStyles(
             paddingLeft: 12,
             paddingRight: 12,
             fontWeight: 600,
-            cursor: 'pointer'
+            cursor: 'pointer',
+            backgroundColor: '#69ABBE',
+            '&:hover': {
+                backgroundColor: '#5A8A98'
+            }
         },
         readMore:{
             color:'#69ABBE',

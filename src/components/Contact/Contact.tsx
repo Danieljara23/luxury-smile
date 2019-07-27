@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme: Theme) =>
         paddingTop: '5px',
         paddingBottom: '4px',
         '&:hover': {
-          backgroundColor: '#69ABBE'
+          backgroundColor: '#5A8A98'
         }
     },
   }),
@@ -60,32 +60,22 @@ const useStyles = makeStyles((theme: Theme) =>
 
 
 interface State {
-  name: string
-  cellPhone: string
-  telephone: string
-  email: string
-  message: string
+  name?: string
+  cellPhone?: string
+  telephone?: string
+  email?: string
+  message?: string
 }
 
 const ContactSection = () => {
     const classes = useStyles();
     
-    const [values, setValues] = useState<State>({
-      name: '',
-      cellPhone: '',
-      telephone: '',
-      email: '',
-      message: '',
-    });
-    const [errors, setErrors] = useState<Errors>({
-      name: '',
-      cellPhone: '',
-      email: '',
-      message: '',
-      telephone: ''
-    })
+    const [values, setValues] = useState<State>({});
+    const [errors, setErrors] = useState<State>({})
 
     const handleChange = (name: keyof State) => (event: React.ChangeEvent<HTMLInputElement>) => {
+      console.log(errors)
+      console.log("Values:",values)
       setValues({ ...values, [name]: event.target.value });
       setErrors(FormValidator(values)) 
       console.log(errors)
@@ -130,8 +120,8 @@ const ContactSection = () => {
                                 label="Nombre completo"
                                 className={`${clsx(classes.textField, classes.dense)} mobile-input`}
                                 margin="dense"
-                                error={errors.name != '' ? true:false }
-                                helperText={errors.name || null}
+                                error={errors.hasOwnProperty('name') ? true:false }
+                                helperText={errors ?( errors.name || null):null}
                                 onChange={handleChange('name')}
                                 value={values.name}
                                 required
@@ -141,9 +131,9 @@ const ContactSection = () => {
                                 label="Celular"
                                 className={`${clsx(classes.textField, classes.dense)} mobile-input`}
                                 margin="dense"
-                                error={errors.cellPhone != '' ? true:false }
-                                helperText={errors.cellPhone || null}
-                                onChange={handleChange('cellPhone')}
+                                error={ errors.hasOwnProperty('cellPhone')? true:false }
+                                helperText={errors ?(  errors.cellPhone || null):null}
+                                onChange={() => handleChange('cellPhone')}
                                 value={values.cellPhone}
                                 required
                             />
@@ -155,8 +145,8 @@ const ContactSection = () => {
                                 className={`${clsx(classes.textField, classes.dense)} mobile-input`}
                                 margin="dense"
                                 onChange={handleChange('telephone')}
-                                error={errors.telephone != '' ? true:false }
-                                helperText={errors.telephone || null}
+                                error={errors.hasOwnProperty('telephone')  ? true:false }
+                                helperText={errors ? (errors.telephone || null):null}
                                 value={values.telephone}
                                 required
                             />
@@ -166,9 +156,9 @@ const ContactSection = () => {
                                 className={`${clsx(classes.textField, classes.dense)} mobile-input`}
                                 margin="dense"
                                 name="email"
-                                error={errors.email != '' ? true:false }
+                                error={errors.hasOwnProperty('email') ? true:false }
                                 onChange={handleChange('email')}
-                                helperText={errors.email || null}
+                                helperText={errors ? (errors.email || null):null}
                                 value={values.email}
                                 required
                             />
@@ -184,8 +174,8 @@ const ContactSection = () => {
                                 margin="normal"
                                 variant="outlined"
                                 onChange={handleChange('message')}
-                                error={errors.message != '' ? true:false }
-                                helperText={errors.message || null}
+                                error={errors.hasOwnProperty('message') ? true:false }
+                                helperText={errors ? (errors.message || null):null}
                                 value={values.message}
                                 required
                             />

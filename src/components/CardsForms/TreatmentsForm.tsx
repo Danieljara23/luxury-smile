@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme: Theme) =>
         paddingTop: '5px',
         paddingBottom: '4px',
         '&:hover': {
-          backgroundColor: '#69ABBE'
+          backgroundColor: '#5A8A98'
         }
     },
   }),
