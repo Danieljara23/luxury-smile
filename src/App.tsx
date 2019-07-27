@@ -15,8 +15,8 @@ import ContactSection from './components/Contact/Contact'
 import Appointment from './components/Appointment/Appointment'
 import Other from './components/Other/Other'
 import TopHeader from './shared/TopHeader/TopHeader'
-import { ReactComponent as WhatAppGreen } from './components/images/ico-whatsapp-green.svg'
-
+// import { ReactComponent as WhatAppGreen } from './components/images/ico-whatsapp-green.svg'
+const WhatAppGreen = require('./components/images/ico-whatsapp-green.png')
 const App: React.FC = () => {
   const [isFixed, setIsFixed] = useState(false)
 
@@ -39,7 +39,7 @@ const App: React.FC = () => {
         <div className="App relative">
           <div className="fixed whatsapp-fixed">
               <a href="https://wa.me/573013719026" target="_blank">
-                <WhatAppGreen/>
+                <img src={WhatAppGreen} alt=""/>
               </a>
           </div>
           <TopHeader isFixed={isFixed}/>
