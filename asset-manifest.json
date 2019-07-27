@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/luxury-smile/static/css/main.4beca63d.chunk.css",
-    "main.js": "/luxury-smile/static/js/main.2db3d3f0.chunk.js",
-    "main.js.map": "/luxury-smile/static/js/main.2db3d3f0.chunk.js.map",
+    "main.js": "/luxury-smile/static/js/main.7d6d02c8.chunk.js",
+    "main.js.map": "/luxury-smile/static/js/main.7d6d02c8.chunk.js.map",
     "runtime~main.js": "/luxury-smile/static/js/runtime~main.bd30390b.js",
     "runtime~main.js.map": "/luxury-smile/static/js/runtime~main.bd30390b.js.map",
     "static/css/2.eb62513e.chunk.css": "/luxury-smile/static/css/2.eb62513e.chunk.css",
     "static/js/2.649da041.chunk.js": "/luxury-smile/static/js/2.649da041.chunk.js",
     "static/js/2.649da041.chunk.js.map": "/luxury-smile/static/js/2.649da041.chunk.js.map",
     "index.html": "/luxury-smile/index.html",
-    "precache-manifest.f3000117aec8d4bcd901c634f993f561.js": "/luxury-smile/precache-manifest.f3000117aec8d4bcd901c634f993f561.js",
+    "precache-manifest.cd6fc32477bd28cf7c71265c1ebac842.js": "/luxury-smile/precache-manifest.cd6fc32477bd28cf7c71265c1ebac842.js",
     "service-worker.js": "/luxury-smile/service-worker.js",
     "static/css/2.eb62513e.chunk.css.map": "/luxury-smile/static/css/2.eb62513e.chunk.css.map",
     "static/css/main.4beca63d.chunk.css.map": "/luxury-smile/static/css/main.4beca63d.chunk.css.map",
@@ -56,10 +56,10 @@
     "static/media/periodoncia.jpg": "/luxury-smile/static/media/periodoncia.cfec9388.jpg",
     "static/media/rehabilitacion-oral.jpg": "/luxury-smile/static/media/rehabilitacion-oral.0bdebe4b.jpg",
     "static/media/slider-1.jpg": "/luxury-smile/static/media/slider-1.71447baf.jpg",
-    "static/media/slider-2.jpg": "/luxury-smile/static/media/slider-2.687f972e.jpg",
+    "static/media/slider-2.jpg": "/luxury-smile/static/media/slider-2.f6b9577f.jpg",
     "static/media/slider-3.jpg": "/luxury-smile/static/media/slider-3.b72962b4.jpg",
     "static/media/slider-mobile-1.jpg": "/luxury-smile/static/media/slider-mobile-1.ba3007d5.jpg",
-    "static/media/slider-mobile-2.jpg": "/luxury-smile/static/media/slider-mobile-2.3b88794a.jpg",
+    "static/media/slider-mobile-2.jpg": "/luxury-smile/static/media/slider-mobile-2.7bbc281e.jpg",
     "static/media/slider-mobile-3.jpg": "/luxury-smile/static/media/slider-mobile-3.f0c38ef4.jpg"
   }
 }
