@@ -19,7 +19,9 @@ const isMobile = window.innerWidth < 768;
 
 const useStyles = makeStyles({
     logo: {
-
+        '& img':{
+            height: '78px'
+        }
     },
     root: {
       flexGrow: 1,
@@ -104,7 +106,7 @@ function NavBar(props:Props) {
             <AppBar position="static" className={`${ isFixed ? classes.fixedAppBar : classes.appBar} app-custom-bar`} elevation={2}>
                 <Toolbar className="flex">
                 <div className="w-30 luxury-logo tl">
-                    <NavLink className={classes.logo} to="/">
+                    <NavLink className={`${classes.logo} flex `} to="/">
                         {
                             isFixed ? (<div className="mt1"><LogoBlack/></div>):(<img src={Logo}/>)
                         }

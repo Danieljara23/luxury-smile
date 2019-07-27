@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme: Theme) =>
     textField: {
       marginLeft: theme.spacing(1),
       marginRight: theme.spacing(1),
-      width: '300px',
+      width: '50%',
       '& label.Mui-focused': {
         color: '#69ABBE',
       },
@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     multiLine: {
-        width: '65%',
+        width: '100%',
     },
     dense: {
       marginTop: 19,
