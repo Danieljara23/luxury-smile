@@ -121,10 +121,10 @@ const ContactSection = () => {
     return(
         <div className="w-100 contact-form-container">
             <h4 className="contact-title">Contacto</h4>
-            <div className="w-100 contact-form center flex justify-center">
-                <form className={`${classes.container} ma4 w-80 pt0`} onSubmit={handleSubmit} noValidate autoComplete="off" id="contact-form" method="POST">
-                    <div className="w-100 flex flex-column form-border pa4">
-                        <div className="w-100 flex ph4 justify-center form-containers">
+            <div className="w-100 contact-form center flex justify-center mb4">
+                <form className={`${classes.container} w-100 pt0 justify-center`} onSubmit={handleSubmit} noValidate autoComplete="off" id="contact-form" method="POST">
+                    <div className="w-60 flex flex-column form-border pa4">
+                        <div className="flex ph4 justify-center form-containers">
                             <TextField
                                 id="name"
                                 label="Nombre completo"
@@ -148,7 +148,7 @@ const ContactSection = () => {
                                 required
                             />
                         </div>
-                        <div className="w-100 flex ph4 mt4 justify-center form-containers">
+                        <div className="flex ph4 justify-center form-containers">
                             <TextField
                                 id="telephone"
                                 label="Teléfono"
@@ -173,7 +173,7 @@ const ContactSection = () => {
                                 required
                             />
                         </div>
-                        <div className="w-100 flex ph4 pt4 justify-center form-containers">
+                        <div className="flex ph4 justify-center form-containers">
                             <TextField
                                 id="message"
                                 label="Escribe tu mensaje aquí*"

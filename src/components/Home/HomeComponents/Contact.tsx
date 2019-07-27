@@ -51,7 +51,7 @@ const Contact = (props:Props) => {
                                 <p>Carrera 80a #32 EE - 72 - Medellín - Colombia</p>
                             </div>
                             <div className="w-40 pl4 ofix-photo">
-                                <p>Horario de atención</p> 
+                                <p className="b">Horario de atención</p> 
                                 <p>Lunes a viernes: 8am - 6pm</p>
                                 <p> Sábados: 8am - 12pm</p>
                             </div>
@@ -75,7 +75,7 @@ const Contact = (props:Props) => {
                             <p>Carrera 80a #32 EE - 72 - Medellín - Colombia</p>
                         </div>
                         <div className="pl4 ">
-                            <p>Horario de atención</p> 
+                            <p className="b">Horario de atención</p> 
                             <p>Lunes a viernes: 8am - 6pm</p>
                             <p> Sábados: 8am - 12pm</p>
                         </div>

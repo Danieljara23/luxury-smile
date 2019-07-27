@@ -4,7 +4,6 @@ const EspecialistsList:EspecialistModel[] = [
     {
         name: 'Carlos Andres Enriquez N',
         fieldName: 'Rehabilitación Oral y Estética Dental',
-        discount: '20%',
         prefixType: 'Dr',
         schoolName: 'Colegio Odontológico Colombiano',
         imgPath: require('../../images/img-especialistas-carlos.png')

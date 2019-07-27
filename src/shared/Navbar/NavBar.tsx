@@ -4,12 +4,14 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import { NavLink } from "react-router-dom";
 import './NavBar.css'
-import { ReactComponent as Logo } from '../../components/images/logo-luxury-smile.svg'
+// import { ReactComponent as Logo } from '../../components/images/logo-luxury-smile.png'
 import { ReactComponent as LogoBlack } from '../../components/images/logo-luxury-smile-black.svg'
 import { ReactComponent as MenuMobile } from '../../components/images/menu-mobile.svg'
 import MobileTopHeader from '../TopHeader/MobileTopHeader'
 import './MobileMenu.css'
 import { ReactComponent as Close } from '../../components/images/ico-cerrar.svg'
+
+const Logo = require('../../components/images/logo-luxury-smile.png')
 interface Props{
     isFixed: boolean
 }
@@ -104,7 +106,7 @@ function NavBar(props:Props) {
                 <div className="w-30 luxury-logo tl">
                     <NavLink className={classes.logo} to="/">
                         {
-                            isFixed ? (<div className="mt1"><LogoBlack/></div>):(<Logo/>)
+                            isFixed ? (<div className="mt1"><LogoBlack/></div>):(<img src={Logo}/>)
                         }
                     </NavLink>
                     

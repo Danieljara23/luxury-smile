@@ -98,7 +98,12 @@ const CardsCarousel = () => {
     const classes = useStyles();
     const [showForm, setShowForm] = useState(false)
     const galleryItems = TreatmentsList.map((item, index) => (
-            <div className="card-container" onMouseEnter={()=>setShowForm(!showForm)}>
+            <div className="card-container relative" onMouseEnter={()=>setShowForm(!showForm)}>
+                { item.discount ? (
+                    <div className="absolute discount-badge"><p>{item.discount}<span> DCTO</span></p> </div>
+                ):(
+                    <div className="absolute discount-badge no-discount"><p></p> </div>
+                )}
                 <div className="card-image">
                     <img src={item.imagePath} alt={item.title} />
                 </div>
