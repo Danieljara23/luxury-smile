@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "769c672c316e8000104b1774c4e6041e",
+    "revision": "febcc5ca3971e1432dd55eca70914e33",
     "url": "/luxury-smile/index.html"
   },
   {
@@ -8,15 +8,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/luxury-smile/static/css/2.eb62513e.chunk.css"
   },
   {
-    "revision": "5c16f96185a200f69b90",
-    "url": "/luxury-smile/static/css/main.4beca63d.chunk.css"
+    "revision": "a130f9193b962dbf3a55",
+    "url": "/luxury-smile/static/css/main.00f296e5.chunk.css"
   },
   {
     "revision": "6aba89270ab8fc4e8000",
     "url": "/luxury-smile/static/js/2.649da041.chunk.js"
   },
   {
-    "revision": "5c16f96185a200f69b90",
+    "revision": "a130f9193b962dbf3a55",
     "url": "/luxury-smile/static/js/main.7d6d02c8.chunk.js"
   },
   {
