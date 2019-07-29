@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/luxury-smile/static/css/main.5d1036a4.chunk.css",
-    "main.js": "/luxury-smile/static/js/main.78abafaa.chunk.js",
-    "main.js.map": "/luxury-smile/static/js/main.78abafaa.chunk.js.map",
+    "main.css": "/luxury-smile/static/css/main.ad2e84fa.chunk.css",
+    "main.js": "/luxury-smile/static/js/main.3feda0b5.chunk.js",
+    "main.js.map": "/luxury-smile/static/js/main.3feda0b5.chunk.js.map",
     "runtime~main.js": "/luxury-smile/static/js/runtime~main.bd30390b.js",
     "runtime~main.js.map": "/luxury-smile/static/js/runtime~main.bd30390b.js.map",
     "static/css/2.eb62513e.chunk.css": "/luxury-smile/static/css/2.eb62513e.chunk.css",
-    "static/js/2.649da041.chunk.js": "/luxury-smile/static/js/2.649da041.chunk.js",
-    "static/js/2.649da041.chunk.js.map": "/luxury-smile/static/js/2.649da041.chunk.js.map",
+    "static/js/2.f1b422d7.chunk.js": "/luxury-smile/static/js/2.f1b422d7.chunk.js",
+    "static/js/2.f1b422d7.chunk.js.map": "/luxury-smile/static/js/2.f1b422d7.chunk.js.map",
     "index.html": "/luxury-smile/index.html",
-    "precache-manifest.487df7aa4dda00439a0778c957556418.js": "/luxury-smile/precache-manifest.487df7aa4dda00439a0778c957556418.js",
+    "precache-manifest.adea3e8d83b6ec48e38eca8e70baf72c.js": "/luxury-smile/precache-manifest.adea3e8d83b6ec48e38eca8e70baf72c.js",
     "service-worker.js": "/luxury-smile/service-worker.js",
     "static/css/2.eb62513e.chunk.css.map": "/luxury-smile/static/css/2.eb62513e.chunk.css.map",
-    "static/css/main.5d1036a4.chunk.css.map": "/luxury-smile/static/css/main.5d1036a4.chunk.css.map",
+    "static/css/main.ad2e84fa.chunk.css.map": "/luxury-smile/static/css/main.ad2e84fa.chunk.css.map",
     "static/media/Testimonies.css": "/luxury-smile/static/media/banner-testimonios.dadd2fde.jpg",
     "static/media/Appointment.css": "/luxury-smile/static/media/banner-mobile-pide-tu-cita.be37fce3.jpg",
     "static/media/aclaramiento-dental.jpg": "/luxury-smile/static/media/aclaramiento-dental.32397bd0.jpg",
@@ -57,9 +57,9 @@
     "static/media/rehabilitacion-oral.jpg": "/luxury-smile/static/media/rehabilitacion-oral.0bdebe4b.jpg",
     "static/media/slider-1.jpg": "/luxury-smile/static/media/slider-1.71447baf.jpg",
     "static/media/slider-2.jpg": "/luxury-smile/static/media/slider-2.f6b9577f.jpg",
-    "static/media/slider-3.jpg": "/luxury-smile/static/media/slider-3.b72962b4.jpg",
+    "static/media/slider-3.jpg": "/luxury-smile/static/media/slider-3.d6755fcc.jpg",
     "static/media/slider-mobile-1.jpg": "/luxury-smile/static/media/slider-mobile-1.ba3007d5.jpg",
     "static/media/slider-mobile-2.jpg": "/luxury-smile/static/media/slider-mobile-2.7bbc281e.jpg",
-    "static/media/slider-mobile-3.jpg": "/luxury-smile/static/media/slider-mobile-3.f0c38ef4.jpg"
+    "static/media/slider-mobile-3.jpg": "/luxury-smile/static/media/slider-mobile-3.b412e017.jpg"
   }
 }
