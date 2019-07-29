@@ -11,7 +11,7 @@ const FormValidator = (values:any) => {
     let errors:any = {};
     if (values.name) {
         // errors.name = 'Nombre completo requerido';
-        if (!/^[a-zA-Z]+$/.test(values.name)) {
+        if (!/^[a-zA-Z ]+$/.test(values.name)) {
             errors.name = 'Nombre inválido';
         }
     }
