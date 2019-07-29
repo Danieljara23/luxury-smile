@@ -182,7 +182,7 @@ const TreatmentsSection = () => {
 
     return (
         <div className="w-100">
-            <h4 className="treatments-title">Tratamientos</h4>
+            <h4 className="treatments-title">Servicios</h4>
             <div className="treatment-content relative">
                 <div className="w-100 treatments-types flex pa3 justify-center">
                     {

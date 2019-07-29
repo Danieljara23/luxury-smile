@@ -23,7 +23,7 @@ const Treatments = () => {
     return(
         <div className="w-100 ph5 flex flex-column treatments-background pb4">
             <div className="w-100">
-                <h3 className="treatments-title mb4 mt5">Tratamientos</h3>
+                <h3 className="treatments-title mb4 mt5">Servicios</h3>
             </div>
             <div className="w-100 flex flex-row justify-center">
                 <CardsCarousel/>

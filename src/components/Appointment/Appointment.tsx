@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
@@ -68,12 +68,12 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 interface State {
-    name: string
-    cellPhone: string
-    telephone: string
-    email: string
-    treatment: string
-}
+    name?: string
+    cellPhone?: string
+    telephone?: string
+    email?: string
+    treatment?: string
+  }
 
 
 const Appointment = () => {
@@ -81,32 +81,24 @@ const Appointment = () => {
     const [treatmentSelected, setTreatmentSelected ] = useState({
         especialist: ''
     })
-    const [values, setValues] = useState<State>({
-        name: '',
-        cellPhone: '',
-        email: '',
-        treatment: '',
-        telephone: '',
-      });
-      const [errors, setErrors] = useState<Errors>({
-        name: '',
-        cellPhone: '',
-        email: '',
-        treatment: '',
-        telephone: ''
-    })
+    const [values, setValues] = useState<State>({});
+    const [errors, setErrors] = useState<State>({})
     const isMobile = window.innerWidth <= 400
+
     function handleChangeSelect(event: React.ChangeEvent<{ name?: string; value: unknown }>) {
         setValues(oldValues => ({
             ...oldValues,
             [event.target.name as string]: event.target.value,
         }));
     }
-    const handleChange= (name: keyof State) => (event: React.ChangeEvent<HTMLInputElement>) => {
-        setValues({ ...values, [name]: event.target.value });
-        setErrors(AppointmentFormValidator(values)) 
+    const handleChange = (e: any) => {
+        const { name, value  } = e.target
+        setValues({ ...values, [name]: value });
+    };
+    useEffect(() => {
         console.log(errors)
-      };
+        return setErrors(AppointmentFormValidator(values))
+    }, [values])
 
     
     const handleSubmit = (e:any) => {
@@ -138,54 +130,63 @@ const Appointment = () => {
                         <div className="flex ph4 pt4 justify-start appointment-container">
                             <TextField
                                 id="name"
+                                name="name"
                                 label="Nombre completo"
+                                value={values.name || ''}
                                 className={`${clsx(classes.textField, classes.dense)} mobile-input`}
                                 margin="dense"
-                                error={errors.name != '' ? true:false }
-                                helperText={errors.name || null}
-                                onChange={handleChange('name')}
+                                error={errors.hasOwnProperty('name') ? true:false }
+                                helperText={errors ?( errors.name || null):null}
+                                onChange={(e) => handleChange(e)}
                             />
                             <TextField
                                 id="cellPhone"
+                                name="cellPhone"
                                 label="Celular *"
+                                value={values.cellPhone}
                                 className={`${clsx(classes.textField, classes.dense)} mobile-input`}
                                 margin="dense"
-                                error={errors.cellPhone != '' ? true:false }
-                                helperText={errors.cellPhone || null}
-                                onChange={handleChange('cellPhone')}
+                                error={ errors.hasOwnProperty('cellPhone')? true:false }
+                                helperText={errors ?(  errors.cellPhone || null):null}
+                                onChange={(e) => handleChange(e)}
                             />
                         </div>
                         <div className="flex ph4 pt4 justify-start appointment-container">
                             <TextField
                                 id="telephone"
+                                name="telephone"
+                                value={values.telephone || ''}
                                 label="Teléfono fijo"
                                 className={`${clsx(classes.textField, classes.dense)} mobile-input`}
                                 margin="dense"
-                                onChange={handleChange('telephone')}
-                                error={errors.telephone != '' ? true:false }
-                                helperText={errors.telephone || null}
+                                onChange={(e) => handleChange(e)}
+                                error={errors.hasOwnProperty('telephone')  ? true:false }
+                                helperText={errors ? (errors.telephone || null):null}
                             />
                             <TextField
                                 id="email"
+                                name="email"
                                 label="Correo electrónico"
+                                value={values.email || ''}
                                 className={`${clsx(classes.textField, classes.dense)} mobile-input`}
                                 margin="dense"
-                                error={errors.email != '' ? true:false }
-                                onChange={handleChange('email')}
-                                helperText={errors.email || null}
+                                error={errors.hasOwnProperty('email') ? true:false }
+                                onChange={(e) => handleChange(e)}
+                                helperText={errors ? (errors.email || null):null}
                             />
                             
                         </div>
                         <div className="flex ph4 pt4 justify-start appointment-container">
                             <div className="pt3 pr3 pl0 multiline-container">
                             <FormControl className={classes.formControl}>
-                            <InputLabel htmlFor="treatment">Tratamiento</InputLabel>
+                            <InputLabel htmlFor="treatment">Servicio</InputLabel>
                                 <Select
                                 id="treatment"
+                                name="treatment"
                                 className={classes.selectInput}
-                                value={values.treatment}
-                                error={errors.treatment != '' ? true:false }
-                                onChange={handleChangeSelect}
+                                value={values.treatment || ''}
+                                error={errors.hasOwnProperty('treatment') ? true:false }
+                                onChange={(e) => handleChange(e)}
                                 inputProps={{name: 'treatment', id: 'treatment'}}
                                 >
                                     {

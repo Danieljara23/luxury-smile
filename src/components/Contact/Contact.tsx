@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Contact.css'
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
@@ -67,43 +67,41 @@ interface State {
   message?: string
 }
 
-const ContactSection = () => {
+const ContactSection =  () => {
     const classes = useStyles();
     
     const [values, setValues] = useState<State>({});
     const [errors, setErrors] = useState<State>({})
-
-    const handleChange = (name: keyof State) => (event: React.ChangeEvent<HTMLInputElement>) => {
-      console.log(errors)
-      console.log("Values:",values)
-      setValues({ ...values, [name]: event.target.value });
-      setErrors(FormValidator(values)) 
-      console.log(errors)
+    
+    const handleChange = (e: any) => {
+      const { name, value  } = e.target
+      setValues({ ...values, [name]: value });
     };
 
+    useEffect(() => {
+      return setErrors(FormValidator(values))
+    }, [values])
+
     const handleSubmit = (e:any) => {
-      e.preventDefault();
-        axios({
-          method: "POST", 
-          url:"http://localhost:3002/send", 
-          data: values
-      }).then((response)=>{
-        console.log(response)
-          if (response.data.msg === 'success'){
-            alert("Gracias por ponerte en contacto con Luxury Smile, te responderemos en la mayor brevedad")
-            setValues(
-              {
-                name: '',
-                cellPhone: '',
-                telephone: '',
-                email: '',
-                message: '',
-              }
-            )
-          }else if(response.data.msg === 'fail'){
-              alert("Message failed to send.")
-          }
-      })
+          e.preventDefault();
+          axios({
+            method: "POST", 
+            url:"http://localhost:3002/send", 
+            data: values
+        }).then((response)=>{
+          console.log(response)
+            if (response.data.msg === 'success'){
+              alert("Gracias por ponerte en contacto con Luxury Smile, te responderemos en la mayor brevedad")
+              setValues(
+                {
+                  
+                }
+              )
+            }else if(response.data.msg === 'fail'){
+                alert("Message failed to send.")
+            }
+        })
+      
     }
 
     
@@ -117,37 +115,40 @@ const ContactSection = () => {
                         <div className="flex ph4 justify-center form-containers">
                             <TextField
                                 id="name"
+                                name="name"
                                 label="Nombre completo"
                                 className={`${clsx(classes.textField, classes.dense)} mobile-input`}
                                 margin="dense"
                                 error={errors.hasOwnProperty('name') ? true:false }
                                 helperText={errors ?( errors.name || null):null}
-                                onChange={handleChange('name')}
-                                value={values.name}
+                                onChange={(e) => handleChange(e)}
+                                value={values.name || ''}
                                 required
                             />
                             <TextField
                                 id="cellPhone"
+                                name="cellPhone"
                                 label="Celular"
                                 className={`${clsx(classes.textField, classes.dense)} mobile-input`}
                                 margin="dense"
                                 error={ errors.hasOwnProperty('cellPhone')? true:false }
                                 helperText={errors ?(  errors.cellPhone || null):null}
-                                onChange={() => handleChange('cellPhone')}
-                                value={values.cellPhone}
+                                onChange={(e) => handleChange(e)}
+                                value={values.cellPhone || ''}
                                 required
                             />
                         </div>
                         <div className="flex ph4 justify-center form-containers">
                             <TextField
                                 id="telephone"
+                                name="telephone"
                                 label="Teléfono"
                                 className={`${clsx(classes.textField, classes.dense)} mobile-input`}
                                 margin="dense"
-                                onChange={handleChange('telephone')}
+                                onChange={(e) => handleChange(e)}
                                 error={errors.hasOwnProperty('telephone')  ? true:false }
                                 helperText={errors ? (errors.telephone || null):null}
-                                value={values.telephone}
+                                value={values.telephone || ''}
                                 required
                             />
                             <TextField
@@ -157,15 +158,16 @@ const ContactSection = () => {
                                 margin="dense"
                                 name="email"
                                 error={errors.hasOwnProperty('email') ? true:false }
-                                onChange={handleChange('email')}
+                                onChange={(e) => handleChange(e)}
                                 helperText={errors ? (errors.email || null):null}
-                                value={values.email}
+                                value={values.email || ''}
                                 required
                             />
                         </div>
                         <div className="flex ph4 justify-center form-containers">
                             <TextField
                                 id="message"
+                                name="message"
                                 label="Escribe tu mensaje aquí*"
                                 className={`${clsx(classes.textField, classes.dense, classes.multiLine)} mobile-input`}
                                 multiline
@@ -173,10 +175,10 @@ const ContactSection = () => {
                                 defaultValue=""
                                 margin="normal"
                                 variant="outlined"
-                                onChange={handleChange('message')}
+                                onChange={(e) => handleChange(e)}
                                 error={errors.hasOwnProperty('message') ? true:false }
                                 helperText={errors ? (errors.message || null):null}
-                                value={values.message}
+                                value={values.message || ''}
                                 required
                             />
                         </div>

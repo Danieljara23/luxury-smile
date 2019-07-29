@@ -125,11 +125,11 @@ function NavBar(props:Props) {
                     <ul className={`header flex-row items-center ${isMobile ? 'dn': 'flex'}`}>
                         <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2 ${isMobile ? 'dn': 'dib'}`} to="/">Inicio</NavLink></li>
                         <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2 ${isMobile ? 'dn': 'dib'}`} to="/Consultory">Consultorio</NavLink></li>
-                        <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2 ${isMobile ? 'dn': 'dib'}`} to="/Treatments">Tratamientos</NavLink></li>
+                        <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2 ${isMobile ? 'dn': 'dib'}`} to="/Treatments">Servicios</NavLink></li>
                         <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2 ${isMobile ? 'dn': 'dib'}`} to="/Especialists">Especialistas</NavLink></li>
                         <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2 ${isMobile ? 'dn': 'dib'}`} to="/Testimonies">Testimonios</NavLink></li>
                         <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2 ${isMobile ? 'dn': 'dib'}`} to="/Contact">Contacto</NavLink></li>
-                        <li><NavLink to="/Appointment" className={`${classes.dateButton} ${ isFixed ? classes.fixedDateButton:''} ttu no-underline pa2 dib ${isMobile ? 'dn': 'dib'}`}>Pide tu cita aquí</NavLink></li>
+                        <li><NavLink to="/Appointment" className={`${classes.dateButton} ${ isFixed ? classes.fixedDateButton:''} ttu pa2 dib ${isMobile ? 'dn': 'dib'}`}>Pide tu cita aquí</NavLink></li>
                     </ul>
                     <ul className={`mt0 pa4 header flex-column absolute w-100 items-center mobile-menu ${showMenu ? 'flex grow-menu' : 'dn'} ${isFixed ?'fixed-mobile ':''}`}>
                         <li className={`w-100 pa2 tl ${classes.listItemMenu}`}><NavLink className={`${classes.menuLink} ${classes.listItemMenuMobile}`} to="/" onClick={()=>setshowMenu(false)}>Inicio</NavLink></li>
@@ -138,7 +138,7 @@ function NavBar(props:Props) {
                         <li className={`w-100 pa2 tl ${classes.listItemMenu}`}><NavLink className={`${classes.menuLink} ${classes.listItemMenuMobile}`} to="/Especialists" onClick={()=>setshowMenu(false)}>Especialistas</NavLink></li>
                         <li className={`w-100 pa2 tl ${classes.listItemMenu}`}><NavLink className={`${classes.menuLink} ${classes.listItemMenuMobile}`} to="/Testimonies" onClick={()=>setshowMenu(false)}>Testimonios</NavLink></li>
                         <li className={`w-100 pa2 tl ${classes.listItemMenu}`}><NavLink className={`${classes.menuLink} ${classes.listItemMenuMobile}`} to="/Contact" onClick={()=>setshowMenu(false)}>Contacto</NavLink></li>
-                        <li className={`w-100 pa2 tc pt4 `}><NavLink to="/Appointment" className={`${classes.appointment} ${classes.appointMentMobile} no-underline pa2 ph4 dib`} onClick={()=>setshowMenu(false)}>Pide tu cita aquí</NavLink></li>
+                        <li className={`w-100 pa2 tc pt4 `}><NavLink to="/Appointment" className={`${classes.appointment} ${classes.appointMentMobile}  pa2 ph4 dib`} onClick={()=>setshowMenu(false)}>Pide tu cita aquí</NavLink></li>
                         {isMobile ? <MobileTopHeader/>: <></>}
                         
                     </ul>

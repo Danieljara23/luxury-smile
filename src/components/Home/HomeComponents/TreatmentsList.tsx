@@ -52,5 +52,10 @@ const TreatmentsList:TreatmentModel[] = [
         imagePath: require('../../images/bichectomia.jpg'),
         description: 'Es una técnica mínimamente invasiva, en la cual se extraen las bolsas de bichat, es decir, los cúmulos de grasa que se acumulan en las mejillas y consiste en hacer dos incisiones de un centímetro o dos aproximadamente en el interior de la boca, una a cada lado, a la altura de la parte intermedia entre las muelas. A partir de ahí, se extraen las bolsas de bichat, con el objetivo de perfilar el óvalo facial con resultados permanentes, debido a que la grasa eliminada no se vuelve a reproducir. '
     },
+    {
+        title: 'CAD-CAM',
+        imagePath: require('../../images/cadcam.jpg'),
+        description: 'Utilizamos tecnología digital de ultima generación mediante el sistema CAD-CAM podemos realizar el escaneo de la boca del paciente, ya no necesitamos utilizar la impresión convencional con la masilla pesada que tanto molesta a los pacientes, ademas con esta tecnología garantizamos exactitud y adaptación en todas tus restauraciones. '
+    },
 ]
 export default TreatmentsList

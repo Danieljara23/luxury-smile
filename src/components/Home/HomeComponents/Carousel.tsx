@@ -9,14 +9,16 @@ import  SecondSlideMobile from '../../images/slider-mobile-2.jpg'
 import  ThirdSlide from '../../images/slider-3.jpg'
 import  ThirdSlideMobile from '../../images/slider-mobile-3.jpg'
 import AliceCarousel from 'react-alice-carousel';
+import { NavLink } from "react-router-dom";
 
 const Slider:React.FC = () => {
     const isMobile = window.innerWidth <= 600
     const showArrows = isMobile ? true:false
     const galleryItems = [
-                <img src={isMobile ? FirstSlideMobile: FirstSlide} />,
-                <img src={isMobile ? SecondSlideMobile:SecondSlide} />,
-                <img src={isMobile ? ThirdSlideMobile:ThirdSlide} />
+        <NavLink className={` flex `} to="/Appointment"><img src={isMobile ? FirstSlideMobile: FirstSlide} /></NavLink>,
+        <NavLink className={` flex `} to="/Appointment"><img src={isMobile ? SecondSlideMobile:SecondSlide} /></NavLink>,
+        <NavLink className={` flex `} to="/Appointment"><img src={isMobile ? ThirdSlideMobile:ThirdSlide} /></NavLink>,
+                
         ]
     return(
         <div className="w-100 main-carousel">

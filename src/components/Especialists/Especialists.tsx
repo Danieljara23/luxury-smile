@@ -83,7 +83,7 @@ const EspecialistsSection = () => {
                     {galleryItems}
                 </div>
                 <div className="w-100 flex flex-row justify-center pv3">
-                    <NavLink className={`${classes.dateLink} } ttu ph2 `} no-underline to="/Appointment">Pide tu cita aquí</NavLink>
+                    <NavLink className={`${classes.dateLink} } ttu ph2 `} to="/Appointment">Pide tu cita aquí</NavLink>
                 </div>
             </div>
         </div>

@@ -9,7 +9,6 @@ export interface Errors{
 
 const FormValidator = (values:any) => {
     let errors:any = {};
-    console.log(values)
     if (values.name) {
         // errors.name = 'Nombre completo requerido';
         if (!/^[a-zA-Z]+$/.test(values.name)) {
@@ -41,7 +40,6 @@ const FormValidator = (values:any) => {
             errors.message = 'Mensaje inválido';
         }
     }
-    console.log(errors)
     return errors;
 }
 

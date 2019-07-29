@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import clsx from 'clsx';
@@ -62,36 +62,29 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 
-interface State {
-  name: string
-  cellPhone: string
-  telephone: string
-  email: string
-  message: string
-}
 
+interface State {
+  name?: string
+  cellPhone?: string
+  telephone?: string
+  email?: string
+  message?: string
+}
 
 const TreatmentsForm  = () => {
     const classes = useStyles();
-    const [values, setValues] = useState<State>({
-      name: '',
-      cellPhone: '',
-      telephone: '',
-      email: '',
-      message: 'Hola, deseo que se contacten conmigo para obtener mayor información',
-    });
-    const [errors, setErrors] = useState<Errors>({
-      name: '',
-      cellPhone: '',
-      email: '',
-      message: '',
-      telephone: ''
-    })
-    const handleChange = (name: keyof State) => (event: React.ChangeEvent<HTMLInputElement>) => {
-      setValues({ ...values, [name]: event.target.value });
-      setErrors(FormValidator(values)) 
-      console.log(errors)
+    const [values, setValues] = useState<State>({});
+    const [errors, setErrors] = useState<State>({})
+    
+    const handleChange = (e: any) => {
+      const { name, value  } = e.target
+      setValues({ ...values, [name]: value });
     };
+
+    useEffect(() => {
+      return setErrors(FormValidator(values))
+    }, [values])
+
     const handleAlert = () => {
       console.log("Alert called")
       return (<FormAlert formType="contact" />)
@@ -127,44 +120,47 @@ const TreatmentsForm  = () => {
                     <div className="w-100 flex flex-column pa2">
                             <TextField
                                 id="name"
+                                name="name"
                                 label="Nombre completo"
-                                value={values.name}
                                 className={clsx(classes.textField, classes.dense)}
                                 margin="dense"
-                                error={errors.name != '' ? true:false }
-                                helperText={errors.name || null}
-                                onChange={handleChange('name')}
+                                error={errors.hasOwnProperty('name') ? true:false }
+                                helperText={errors ?( errors.name || null):null}
+                                onChange={(e) => handleChange(e)}
+                                value={values.name || ''}
                             />
                             <TextField
                                 id="cellPhone"
+                                name="cellPhone"
                                 label="Celular"
-                                value={values.cellPhone}
                                 className={clsx(classes.textField, classes.dense)}
                                 margin="dense"
-                                error={errors.cellPhone != '' ? true:false }
-                                helperText={errors.cellPhone || null}
-                                onChange={handleChange('cellPhone')}
+                                error={ errors.hasOwnProperty('cellPhone')? true:false }
+                                helperText={errors ?(  errors.cellPhone || null):null}
+                                onChange={(e) => handleChange(e)}
+                                value={values.cellPhone || ''}
                             />
                             <TextField
                                 id="telephone"
+                                name="telephone"
                                 label="Teléfono"
-                                value={values.telephone}
                                 className={clsx(classes.textField, classes.dense)}
                                 margin="dense"
-                                onChange={handleChange('telephone')}
-                                error={errors.telephone != '' ? true:false }
-                                helperText={errors.telephone || null}
+                                onChange={(e) => handleChange(e)}
+                                error={errors.hasOwnProperty('telephone')  ? true:false }
+                                helperText={errors ? (errors.telephone || null):null}
+                                value={values.telephone || ''}
                             />
                             <TextField
                                 id="email"
+                                name="email"
                                 label="Correo electrónico"
-                                value={values.email}
                                 className={clsx(classes.textField, classes.dense)}
                                 margin="dense"
-                                name="email"
-                                error={errors.email != '' ? true:false }
-                                onChange={handleChange('email')}
-                                helperText={errors.email || null}
+                                error={errors.hasOwnProperty('email') ? true:false }
+                                onChange={(e) => handleChange(e)}
+                                helperText={errors ? (errors.email || null):null}
+                                value={values.email || ''}
                             />
                      
                         
