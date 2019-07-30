@@ -2,6 +2,7 @@ import React from 'react';
 import  CardsCarousel  from '../HomeComponents/CardsCarousel'
 import Link from '@material-ui/core/Link';
 import { createStyles, makeStyles } from '@material-ui/core/styles';
+import { NavLink } from "react-router-dom";
 
 const useStyles = makeStyles(
     createStyles({
@@ -13,7 +14,8 @@ const useStyles = makeStyles(
             paddingLeft: 30,
             paddingRight: 30,
             cursor: 'pointer',
-            boxShadow: '0px 3px 6px rgba(0, 0, 0, 0.16);'
+            boxShadow: '0px 3px 6px rgba(0, 0, 0, 0.16)',
+            textDecoration: 'none'
         }
     }))
 
@@ -29,7 +31,8 @@ const Treatments = () => {
                 <CardsCarousel/>
             </div>
             <div className="w-100 pv0 flex justify-center">
-                <Link className={`${classes.seeAll} ttu see-all ph3 pv1`} underline='none'>VER TODOS </Link>
+                {/* <Link className={`${classes.seeAll} ttu see-all ph3 pv1`} underline='none'>VER TODOS </Link> */}
+                <NavLink className={`${classes.seeAll} ttu see-all ph3 pv1`} to="/Treatments">VER TODOS</NavLink>
             </div>
         </div>
         

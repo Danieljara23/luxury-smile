@@ -112,7 +112,7 @@ const Appointment = () => {
             if (response.data.msg === 'success'){
                 alert("Hemos agendado tu cita, nos estaremos comunicando contigo telefónicamente para confirmarla."); 
             }else if(response.data.msg === 'fail'){
-                alert("Message failed to send.")
+                alert("Ha ocurrido un error.")
             }
         })
       }

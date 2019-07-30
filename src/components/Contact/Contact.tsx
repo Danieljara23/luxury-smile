@@ -98,7 +98,7 @@ const ContactSection =  () => {
                 }
               )
             }else if(response.data.msg === 'fail'){
-                alert("Message failed to send.")
+                alert("Ha ocurrido un error")
             }
         })
       
