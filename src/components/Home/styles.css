@@ -1,5 +1,6 @@
 @import "../../../node_modules/react-alice-carousel/lib/alice-carousel.css";
 .main-carousel img{
+    width: 100%;
     position: relative;
 }
 .main-carousel .alice-carousel__stage-item{
