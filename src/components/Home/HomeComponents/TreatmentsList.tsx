@@ -4,7 +4,7 @@ const TreatmentsList:TreatmentModel[] = [
     {
         title: 'Rehabilitación Oral',
         imagePath: require('../../images/rehabilitacion-oral.jpg'),
-        description: 'Es una especialidad dentro de la odontología que combina en forma integral las áreas de prótesis fija, prótesis removible, operatoria, oclusión e Implante dental, que realiza el diagnóstico y plan de tratamiento adecuado al paciente de alta complejidad que requiere recuperar su salud bucal y estetica, a través de las técnicas más modernas de rehabilitación.',
+        description: 'Es una especialidad dentro de la odontología que combina en forma integral las áreas de prótesis fija, prótesis removible, operatoria, oclusión e Implantes dentales, que realiza el diagnóstico y plan de tratamiento adecuado al paciente de alta complejidad que requiere recuperar su salud bucal y estetica, a través de las técnicas más modernas de rehabilitación.',
     },
     {
         title: 'Estética dental',

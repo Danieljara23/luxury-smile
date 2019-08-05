@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ExperienceList } from './ExperienceList'
-import Chip from '@material-ui/core/Chip';
+// import Chip from '@material-ui/core/Chip';
 import { createStyles, makeStyles } from '@material-ui/core/styles';
 import AliceCarousel from 'react-alice-carousel';
 
@@ -25,7 +25,8 @@ const ExperienceCarousel = () => {
                     <img src={item.imgPath} alt={item.name}/>
                 </div>
                 <h6 className="pt3 white experience-title mv2">{item.name}</h6>
-                <p className="b white experience-type">Paciente <Chip className={classes.root} label={item.treatmentType} /></p>
+                <p className="b white experience-type">Paciente </p>
+                {/* <p className="b white experience-type">Paciente <Chip className={classes.root} label={item.treatmentType} /></p> */}
                 <div className="w-100 flex justify-center pb3">
                     <p className="white experience-description w-60">{item.description}</p>
                 </div>

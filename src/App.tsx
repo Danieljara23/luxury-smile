@@ -38,7 +38,7 @@ const App: React.FC = () => {
       <HashRouter>
         <div className="App relative">
           <div className="fixed whatsapp-fixed">
-              <a href="https://wa.me/573013719026" target="_blank">
+              <a href="https://wa.me/573508736090" target="_blank">
                 <img src={WhatAppGreen} alt=""/>
               </a>
           </div>

@@ -20,7 +20,7 @@
 }
 @media (min-width: 1300px){
     .promotion-image{
-        background-size: cover; 
+        background-size: contain; 
     }
 }
 @media (max-width: 960px) {

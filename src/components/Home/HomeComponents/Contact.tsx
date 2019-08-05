@@ -46,14 +46,15 @@ const Contact = (props:Props) => {
                     <div className="flex w-100 flex-column justify-around">
                         <div className="ContactInfo  blue-container flex flex-row items-start pa3">
                             <div className="w-60 custom-border flex flex-column justify-center ofix-contact-info">
-                                <p className="b ofix-building">Edificio Ofix 33</p>
-                                <p className="fw4">piso 7 - consultorio 715</p>
-                                <p>Carrera 80a #32 EE - 72 - Medellín - Colombia</p>
+                                <p className="b ofix-building">Carrera 80a #32 EE - 72</p>
+                                <p>Edificio OFIX 33 PISO 7 CONSULTORIO 715</p>
+                                <p className="fw4">Medellín - Colombia</p>
                             </div>
                             <div className="w-40 pl4 ofix-photo">
                                 <p className="b">Horario de atención</p> 
                                 <p>Lunes a viernes: 8am - 6pm</p>
-                                <p> Sábados: 8am - 12pm</p>
+                                <p>Sábados: 9am - 1pm</p>
+                                <p>Domingo: Casos especiales</p>
                             </div>
                         </div>
                         <div className="MapOfix">
@@ -70,14 +71,15 @@ const Contact = (props:Props) => {
             <div className="w-80 flex flex-row center contact-mobile">
                     <div className="w-100 flex flex-column blue-container ph4 pv3 ofix-contact-info mv3">
                         <div className="custom-border flex flex-column justify-center">
-                            <p className="b ofix-building">Edificio Ofix 33</p>
-                            <p>piso 7 - consultorio 715</p>
-                            <p>Carrera 80a #32 EE - 72 - Medellín - Colombia</p>
+                            <p className="b ofix-building">Carrera 80a #32 EE - 72</p>
+                            <p>Edificio OFIX 33 PISO 7 CONSULTORIO 715</p>
+                            <p className="fw4">Medellín - Colombia</p>
                         </div>
                         <div className="pl4 ">
                             <p className="b">Horario de atención</p> 
                             <p>Lunes a viernes: 8am - 6pm</p>
-                            <p> Sábados: 8am - 12pm</p>
+                            <p>Sábados: 9am - 1pm</p>
+                            <p>Domingo: Casos especiales</p>
                         </div>
                     
 

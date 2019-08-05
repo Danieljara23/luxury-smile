@@ -11,21 +11,23 @@ const Footer = () => {
                     <h6 className="b">Horario de atención</h6>
                     <div className="flex flex-column">
                         <p>Lunes a viernes: 8am - 6pm</p>
-                        <p>Sábados: 8am - 12pm</p>
-                        <p>Domingo: cerrado</p>
+                        <p>Sábados: 9am - 1pm</p>
+                        <p>Domingo: Casos especiales</p>
                     </div>
                 </div>
                 <div className="footer-item w-50 tl">
                     <h6 className="b tl">Contáctanos</h6>
                     <div className="w-100 flex contact-footer">
                         <div className="pr3 flex flex-column">
-                            <p>Edificio Ofix 33 piso 7 consultorio 715</p>
-                            <p>Carrera 80a #32 EE - 72. Medellín - Colombia</p>
+                            <p>Carrera 80a #32 EE - 72</p>
+                            <p>Edificio OFIX 33 PISO 7 CONSULTORIO 715</p>
+                            <p>Medellín - Colombia</p>
                             <p>luxurysmilecolombia@gmail.com</p>
                         </div>
                         <div className="pl3 flex flex-column">
-                            <p>Teléfono: 557 84 16</p>
-                            <p>WhatsApp: 301 371 90 26</p>
+                            <p>Teléfono:  557 84 16</p>
+                            <p>Para llamadas y Whatsapp: 301 371 9026 / 350 873 6090
+</p>
                         </div>
                     </div>
                 </div>

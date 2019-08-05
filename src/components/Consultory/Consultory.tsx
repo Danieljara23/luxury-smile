@@ -10,16 +10,16 @@ import './Consultory.css'
 const Consultory = () => {
     return(
         <div className="w-90 center consultory-mobile">
-            <h4 className="consultory-main-title">Consultorio</h4>
+            <h4 className="consultory-main-title">Nosotros</h4>
             <div className="w-100 flex flex-row consultory-container">
                 <div className="w-50 image-consultory">
                     <img src={Imageconsultory} alt="Image consultory"/>
                 </div>
                 <div className="w-50 flex flex-column items-start">
                     <h6 className="consultory-subtitle">Luxury Smile</h6>
-                    <p className="consultory-subtitle-paragraph">Fundación y estética dental</p>
+                    <p className="consultory-subtitle-paragraph">Función y estética dental</p>
                     <DocCarlos/>
-                    <p className="consultory-subtitle-description">Somos un consultorio ubicados en la ciudad de medellin,  con excelentes especialistas preparados en las principales universidades del pais, contamos con habilitacion en las diferentes areas de la odontologia, rehabilitacion oral, periodoncia, endodoncia, cirugia oral, todo en el mismo lugar.</p>
+                    <p className="consultory-subtitle-description">Somos un consultorio ubicados en la ciudad de Medellin,  con excelentes especialistas preparados en las principales universidades del pais, contamos con habilitacion en las diferentes areas de la odontologia, rehabilitacion oral, periodoncia, endodoncia, cirugia oral, todo en el mismo lugar.</p>
 
                     <p  className="consultory-third-subtitle">¿Por qué elegirnos?</p>
                     <div className="consultory-advantage-container w-60">

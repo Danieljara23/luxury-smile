@@ -124,7 +124,7 @@ function NavBar(props:Props) {
 
                     <ul className={`header flex-row items-center ${isMobile ? 'dn': 'flex'}`}>
                         <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2 ${isMobile ? 'dn': 'dib'}`} to="/">Inicio</NavLink></li>
-                        <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2 ${isMobile ? 'dn': 'dib'}`} to="/Consultory">Consultorio</NavLink></li>
+                        <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2 ${isMobile ? 'dn': 'dib'}`} to="/Consultory">Nosotros</NavLink></li>
                         <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2 ${isMobile ? 'dn': 'dib'}`} to="/Treatments">Servicios</NavLink></li>
                         <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2 ${isMobile ? 'dn': 'dib'}`} to="/Especialists">Especialistas</NavLink></li>
                         <li><NavLink className={`${classes.headerLink} ${isFixed ? classes.headerLinkFixed:''} ttu ph2 ${isMobile ? 'dn': 'dib'}`} to="/Testimonies">Testimonios</NavLink></li>
@@ -133,7 +133,7 @@ function NavBar(props:Props) {
                     </ul>
                     <ul className={`mt0 pa4 header flex-column absolute w-100 items-center mobile-menu ${showMenu ? 'flex grow-menu' : 'dn'} ${isFixed ?'fixed-mobile ':''}`}>
                         <li className={`w-100 pa2 tl ${classes.listItemMenu}`}><NavLink className={`${classes.menuLink} ${classes.listItemMenuMobile}`} to="/" onClick={()=>setshowMenu(false)}>Inicio</NavLink></li>
-                        <li className={`w-100 pa2 tl ${classes.listItemMenu}`}><NavLink className={`${classes.menuLink} ${classes.listItemMenuMobile}`} to="/Consultory" onClick={()=>setshowMenu(false)}>Consultorio</NavLink></li>
+                        <li className={`w-100 pa2 tl ${classes.listItemMenu}`}><NavLink className={`${classes.menuLink} ${classes.listItemMenuMobile}`} to="/Consultory" onClick={()=>setshowMenu(false)}>Nosotros</NavLink></li>
                         <li className={`w-100 pa2 tl ${classes.listItemMenu}`}><NavLink className={`${classes.menuLink} ${classes.listItemMenuMobile}`} to="/Treatments" onClick={()=>setshowMenu(false)}>Servicios</NavLink></li>
                         <li className={`w-100 pa2 tl ${classes.listItemMenu}`}><NavLink className={`${classes.menuLink} ${classes.listItemMenuMobile}`} to="/Especialists" onClick={()=>setshowMenu(false)}>Especialistas</NavLink></li>
                         <li className={`w-100 pa2 tl ${classes.listItemMenu}`}><NavLink className={`${classes.menuLink} ${classes.listItemMenuMobile}`} to="/Testimonies" onClick={()=>setshowMenu(false)}>Testimonios</NavLink></li>

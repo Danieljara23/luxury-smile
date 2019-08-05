@@ -24,11 +24,13 @@ const Slider:React.FC = () => {
         <div className="w-100 main-carousel">
             
             <AliceCarousel mouseDragEnabled
-                    buttonsDisabled={showArrows}
-                    dotsDisabled={false}
-                    items={galleryItems}
-                    stagePadding={{ paddingLeft: 0, paddingRight: 0 }}
-                />
+                autoPlay={true}
+                autoPlayInterval={5000}
+                buttonsDisabled={showArrows}
+                dotsDisabled={false}
+                items={galleryItems}
+                stagePadding={{ paddingLeft: 0, paddingRight: 0 }}
+            />
             {/* <AwesomeSlider className="aws-btn">
                 <div data-src={isMobile ? FirstSlideMobile: FirstSlide} />
                 <div data-src={isMobile ? SecondSlideMobile:SecondSlide} />
