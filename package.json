@@ -1,6 +1,5 @@
 {
   "name": "luxury-smile",
-  "homepage": "https://danieljara23.github.io/luxury-smile",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,7 +10,6 @@
     "@types/react-dom": "^16.8.4",
     "@types/react-router-dom": "^4.3.4",
     "axios": "^0.19.0",
-    "gh-pages": "^2.0.1",
     "jquery": "^3.4.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

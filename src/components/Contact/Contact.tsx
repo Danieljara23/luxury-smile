@@ -86,7 +86,8 @@ const ContactSection =  () => {
           e.preventDefault();
           axios({
             method: "POST", 
-            url:"http://localhost:3002/send", 
+            url:"../../php/index.php",
+            headers: { 'content-type': 'application/json' },
             data: values
         }).then((response)=>{
           console.log(response)

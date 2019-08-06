@@ -7,9 +7,9 @@ const TreatmentsList:TreatmentModel[] = [
         description: 'Es una especialidad dentro de la odontología que combina en forma integral las áreas de prótesis fija, prótesis removible, operatoria, oclusión e Implantes dentales, que realiza el diagnóstico y plan de tratamiento adecuado al paciente de alta complejidad que requiere recuperar su salud bucal y estetica, a través de las técnicas más modernas de rehabilitación.',
     },
     {
-        title: 'Estética dental',
+        title: 'Diseño de sonrisa',
         imagePath: require('../../images/estetica-dental.jpg'),
-        description: 'O cosmética es una especialidad de la odontología que soluciona problemas relacionados con la salud bucal y la armonía estética de la boca en su totalidad.',
+        description: 'Mejoramos forma, tamaño, color, texturas, logrando una sonrisa armoniosa en cuanto a biología, función y estética, consiguiendo así una sonrisa perfecta',
     },
     {
         title: 'Aclaramiento dental',
