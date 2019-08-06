@@ -72,6 +72,7 @@ const ContactSection =  () => {
     
     const [values, setValues] = useState<State>({});
     const [errors, setErrors] = useState<State>({})
+    const [mailSent, setMailSent] = useState(false)
     
     const handleChange = (e: any) => {
       const { name, value  } = e.target
@@ -86,21 +87,26 @@ const ContactSection =  () => {
           e.preventDefault();
           axios({
             method: "POST", 
-            url:"../../php/index.php",
+            // url:"../../php/index.php",
+            url:"http://luxurysmile.co/php/index.php",
             headers: { 'content-type': 'application/json' },
             data: values
         }).then((response)=>{
           console.log(response)
-            if (response.data.msg === 'success'){
-              alert("Gracias por ponerte en contacto con Luxury Smile, te responderemos en la mayor brevedad")
-              setValues(
-                {
+            if (response.data === 'success'){
+                setMailSent(true)
+            //   alert("Gracias por ponerte en contacto con Luxury Smile, te responderemos en la mayor brevedad")
+            //   setValues(
+            //     {
                   
-                }
-              )
-            }else if(response.data.msg === 'fail'){
+            //     }
+            //   )
+            }else if(response.data === 'fail'){
                 alert("Ha ocurrido un error")
             }
+        })
+        .catch(error => {
+            console.error(error.message)
         })
       
     }
@@ -189,7 +195,12 @@ const ContactSection =  () => {
                         </Button>
                         </div>
                     </div>
-
+                    <div>
+                        {mailSent == true? (
+                            <div>Gracias por contactarnos</div>
+                        ):(<></>)
+                        }
+                    </div>
                 </form>
             </div>
             <div className="w-100 contact-component-container">
