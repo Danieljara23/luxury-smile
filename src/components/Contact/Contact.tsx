@@ -9,6 +9,8 @@ import ContactInfo from '../ContactInfo/ContactInfo'
 import axios from 'axios';
 import FormValidator from '../FormValidator/FormValidator'
 import {Errors} from '../FormValidator/FormValidator'
+import AlertMessage from '../SnackBar/SnackBar'
+
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     container: {
@@ -96,11 +98,13 @@ const ContactSection =  () => {
             if (response.data === 'success'){
                 setMailSent(true)
             //   alert("Gracias por ponerte en contacto con Luxury Smile, te responderemos en la mayor brevedad")
-            //   setValues(
-            //     {
-                  
-            //     }
-            //   )
+              setValues({
+                  name: '',
+                  cellPhone: '',
+                  email: '',
+                  message: '',
+                  telephone: ''
+                })
             }else if(response.data === 'fail'){
                 alert("Ha ocurrido un error")
             }
@@ -197,7 +201,7 @@ const ContactSection =  () => {
                     </div>
                     <div>
                         {mailSent == true? (
-                            <div>Gracias por contactarnos</div>
+                            <div><AlertMessage/></div>
                         ):(<></>)
                         }
                     </div>
