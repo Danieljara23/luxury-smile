@@ -36,7 +36,7 @@ const FormValidator = (values:any) => {
     }
     if (values.message) {
         // errors.message = 'Mensaje requerido';
-        if (!/^[a-zA-Z]+$/.test(values.message)) {
+        if (!/^[a-zA-Z0-9 ]+$/.test(values.message)) {
             errors.message = 'Mensaje inválido';
         }
     }

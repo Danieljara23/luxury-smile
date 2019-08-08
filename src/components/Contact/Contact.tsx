@@ -75,6 +75,8 @@ const ContactSection =  () => {
     const [values, setValues] = useState<State>({});
     const [errors, setErrors] = useState<State>({})
     const [mailSent, setMailSent] = useState(false)
+    const [message, setMessage] = useState('contact')
+    // let message = ''
     
     const handleChange = (e: any) => {
       const { name, value  } = e.target
@@ -88,16 +90,17 @@ const ContactSection =  () => {
     const handleSubmit = (e:any) => {
           e.preventDefault();
           axios({
-            method: "POST", 
-            // url:"../../php/index.php",
+            method: "POST",
             url:"http://luxurysmile.co/php/index.php",
             headers: { 'content-type': 'application/json' },
             data: values
         }).then((response)=>{
-          console.log(response)
             if (response.data === 'success'){
+                setMessage('contact')
                 setMailSent(true)
-            //   alert("Gracias por ponerte en contacto con Luxury Smile, te responderemos en la mayor brevedad")
+                setTimeout(()=>{
+                  setMailSent(false)
+                },4000)
               setValues({
                   name: '',
                   cellPhone: '',
@@ -106,7 +109,11 @@ const ContactSection =  () => {
                   telephone: ''
                 })
             }else if(response.data === 'fail'){
-                alert("Ha ocurrido un error")
+                setMailSent(true)
+                setMessage('error')
+                setTimeout(()=>{
+                  setMailSent(false)
+                },4000)
             }
         })
         .catch(error => {
@@ -200,10 +207,7 @@ const ContactSection =  () => {
                         </div>
                     </div>
                     <div>
-                        {mailSent == true? (
-                            <div><AlertMessage/></div>
-                        ):(<></>)
-                        }
+                        <div><AlertMessage messageType={message} shouldbeOpen={mailSent} /></div>
                     </div>
                 </form>
             </div>

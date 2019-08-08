@@ -215,7 +215,7 @@ const TreatmentsSection = () => {
                             </div>
                             
                             <div className="form-container">
-                                <TreatmentsForm/>
+                                <TreatmentsForm selected={selectedItem.title}/>
                             </div>
                             <div className={`pt3 pb4 justify-center ${showModal?'dn':'flex'}`}>
                                 <Link className={`${classes.dateLink} ttu card-date-button`} underline='none' >Pide tu cita aquí</Link>

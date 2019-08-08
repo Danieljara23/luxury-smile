@@ -6,7 +6,7 @@ import axios from 'axios';
 import Button from '@material-ui/core/Button';
 import FormValidator from '../FormValidator/FormValidator'
 import {Errors} from '../FormValidator/FormValidator'
-import FormAlert from '../Alerts/Alerts'
+import AlertMessage from '../SnackBar/SnackBar'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -68,14 +68,21 @@ interface State {
   cellPhone?: string
   telephone?: string
   email?: string
-  message?: string
+  treatment?: string
+}
+interface Props {
+  selected: string
 }
 
-const TreatmentsForm  = () => {
+const TreatmentsForm  = (props:Props) => {
     const classes = useStyles();
+    const {selected} = props
     const [values, setValues] = useState<State>({});
     const [errors, setErrors] = useState<State>({})
-    
+    const [mailSent, setMailSent] = useState(false)
+    const [message, setMessage] = useState('appointment')
+
+
     const handleChange = (e: any) => {
       const { name, value  } = e.target
       setValues({ ...values, [name]: value });
@@ -85,35 +92,46 @@ const TreatmentsForm  = () => {
       return setErrors(FormValidator(values))
     }, [values])
 
-    const handleAlert = () => {
-      console.log("Alert called")
-      return (<FormAlert formType="contact" />)
-    }
+    useEffect(()=>{
+      setValues({
+        treatment: selected
+      })
+    },[])
+
+   
 
     const handleSubmit = (e:any) => {
       e.preventDefault();
-        axios({
-          method: "POST", 
-          url:"http://localhost:3002/send", 
-          data: values
-      }).then((response)=>{
-        console.log(response)
-          if (response.data.msg === 'success'){
-              alert("Gracias por ponerte en contacto con Luxury Smile, te responderemos en la mayor brevedad")
-              handleAlert()
-              setValues(
-                {
+          axios({
+            method: "POST",
+            url:"http://luxurysmile.co/php/index.php",
+            headers: { 'content-type': 'application/json' },
+            data: values
+        }).then((response)=>{
+            if (response.data === 'success'){
+                setMessage('appointment')
+                setMailSent(true)
+                setTimeout(()=>{
+                    setMailSent(false)
+                  },4000)
+              setValues({
                   name: '',
                   cellPhone: '',
-                  telephone: '',
                   email: '',
-                  message: 'Hola, deseo que se contacten conmigo para obtener mayor información',
-                }
-              )
-          }else if(response.data.msg === 'fail'){
-              alert("Ha ocurrido un error")
-          }
-      })
+                  treatment: selected,
+                  telephone: ''
+                })
+            }else if(response.data === 'fail'){
+                setMailSent(true)
+                setMessage('error')
+                setTimeout(()=>{
+                    setMailSent(false)
+                },4000)
+            }
+        })
+        .catch(error => {
+            console.error(error.message)
+        })
     }
     return(
         <form className={`${classes.container} ma4 mt0 w-80 pt0`}  noValidate autoComplete="off" id="contact-form" method="POST" onSubmit={handleSubmit}>
@@ -170,7 +188,9 @@ const TreatmentsForm  = () => {
                         </Button>
                         </div>
                     </div>
-
+                    <div>
+                        <div><AlertMessage messageType={message} shouldbeOpen={mailSent} /></div>
+                    </div>
                 </form>
     )
 }

@@ -6,7 +6,8 @@ import Contact from '../Home/HomeComponents/Contact'
 import  Imageconsultory from '../images/img-consultorio.jpg'
 import ContactInfo from '../ContactInfo/ContactInfo'
 import './Consultory.css'
-
+import ConsultoryCarousel from './ConsultoryCarousel'
+import Mision from './Mision'
 const Consultory = () => {
     return(
         <div className="w-90 center consultory-mobile">
@@ -28,7 +29,11 @@ const Consultory = () => {
                 </div>
             </div>
             <div className="consultory-experience-carousel w-100">
-                <ConsultoryExperience title="Nuestros clientes hablan por nosotros"/>
+                <ConsultoryCarousel/>
+            </div>
+            <div className="consultory-experience-carousel w-100">
+                {/* <ConsultoryExperience title="Nuestros clientes hablan por nosotros"/> */}
+                <Mision/>
             </div>
             <div className="consultory-contact w-100">
                 <Contact/>

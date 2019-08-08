@@ -125,7 +125,7 @@ const CardsCarousel = () => {
                     <Link className={`${classes.readMore} ttu read-more-card pointer read-less` } underline='none' onClick={(e:any) => handleToggleParagraph(e, index)}>Leer menos <Flecha /></Link>
                 </div>
                 <div className={`pt3 pb4 flex justify-center form-container`}>
-                    <TreatmentsForm/>
+                    <TreatmentsForm selected={item.title}/>
                     <Link className={`${classes.dateLink} ttu card-date-button`} underline='none' onClick={()=>handleModal(item)}>Pide tu cita aquí</Link>
                 </div>
             </div>
@@ -169,7 +169,7 @@ const CardsCarousel = () => {
                             </div>
                             
                             <div className="form-container">
-                                <TreatmentsForm/>
+                                <TreatmentsForm selected={selectedItem.title}/>
                             </div>
                             <div className={`pt3 pb4 justify-center ${showModal?'dn':'flex'}`}>
                                 <Link className={`${classes.dateLink} ttu card-date-button`} underline='none' >Pide tu cita aquí</Link>

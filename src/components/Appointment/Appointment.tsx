@@ -13,6 +13,7 @@ import axios from 'axios';
 import AppointmentFormValidator from '../FormValidator/AppointmentFormValidator'
 import { Errors } from '../FormValidator/AppointmentFormValidator'
 import './Appointment.css'
+import AlertMessage from '../SnackBar/SnackBar'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -83,6 +84,8 @@ const Appointment = () => {
     })
     const [values, setValues] = useState<State>({});
     const [errors, setErrors] = useState<State>({})
+    const [mailSent, setMailSent] = useState(false)
+    const [message, setMessage] = useState('contact')
     const isMobile = window.innerWidth <= 400
 
     function handleChangeSelect(event: React.ChangeEvent<{ name?: string; value: unknown }>) {
@@ -96,7 +99,6 @@ const Appointment = () => {
         setValues({ ...values, [name]: value });
     };
     useEffect(() => {
-        console.log(errors)
         return setErrors(AppointmentFormValidator(values))
     }, [values])
 
@@ -104,16 +106,34 @@ const Appointment = () => {
     const handleSubmit = (e:any) => {
         e.preventDefault();
           axios({
-            method: "POST", 
-            url:"http://localhost:3002/send", 
+            method: "POST",
+            url:"http://luxurysmile.co/php/index.php",
+            headers: { 'content-type': 'application/json' },
             data: values
         }).then((response)=>{
-          console.log(response)
-            if (response.data.msg === 'success'){
-                alert("Hemos agendado tu cita, nos estaremos comunicando contigo telefónicamente para confirmarla."); 
-            }else if(response.data.msg === 'fail'){
-                alert("Ha ocurrido un error.")
+            if (response.data === 'success'){
+                setMessage('appointment')
+                setMailSent(true)
+                setTimeout(()=>{
+                    setMailSent(false)
+                  },4000)
+              setValues({
+                  name: '',
+                  cellPhone: '',
+                  email: '',
+                  treatment: '',
+                  telephone: ''
+                })
+            }else if(response.data === 'fail'){
+                setMailSent(true)
+                setMessage('error')
+                setTimeout(()=>{
+                    setMailSent(false)
+                },4000)
             }
+        })
+        .catch(error => {
+            console.error(error.message)
         })
       }
   
@@ -205,7 +225,9 @@ const Appointment = () => {
                         </Button>
                         </div>
                     </div>
-
+                    <div>
+                        <div><AlertMessage messageType={message} shouldbeOpen={mailSent} /></div>
+                    </div>
                 </form>
             </div>
             <ContactInfo/>
