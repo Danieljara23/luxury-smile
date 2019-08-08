@@ -100,7 +100,6 @@ const TreatmentsSection = () => {
         let tempSelected:TreatmentModel[] = TreatmentsList
         
         if(selectedTreatment != ""){
-            console.log("Inside If")
             tempSelected = TreatmentsList.filter((item)=>{
                 return item.title.search(selectedTreatment) !== -1
             })
@@ -128,14 +127,11 @@ const TreatmentsSection = () => {
         setShowModal(false)
     }
     const handleFilter = (e:any) => {
-        console.log(e)
         setSelectedTreatment(e)
         setShowCloseFilter(true)
         document.getElementsByClassName('treatments-types')[0].scrollTo(0,0)
-        console.log(selectedTreatment)
     }
     const handleCloseFilter = (e:any) => {
-        console.log(filteredList)
         setShowCloseFilter(false)
         setSelectedTreatment("")
     }

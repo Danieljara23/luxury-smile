@@ -44,10 +44,8 @@ const AlertMessage = (props: Props) => {
   let message
 
   useEffect(()=>{
-    console.log("Inside Effect")
     setOpen(shouldbeOpen)
   })
-  console.log(messageType)
   if(messageType === 'contact'){
     message = 'Gracias por ponerte en contacto con Luxury Smile, te responderemos en la mayor brevedad'
   }else if(messageType === 'appointment'){

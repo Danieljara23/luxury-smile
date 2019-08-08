@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import {
   Route,
-  HashRouter
+  BrowserRouter as Router
 } from "react-router-dom";
 import NavBar from './shared/Navbar/NavBar'
 import Footer from './shared/Footer/Footer'
@@ -33,9 +33,8 @@ const App: React.FC = () => {
     }
   } 
 
-  console.log(isFixed)
   return (
-      <HashRouter>
+      <Router>
         <div className="App relative">
           <div className="fixed whatsapp-fixed">
               <a href="https://wa.me/573508736090" target="_blank">
@@ -57,7 +56,7 @@ const App: React.FC = () => {
           <Footer/>
           
         </div>
-      </HashRouter>
+      </Router>
 
   );
 }
