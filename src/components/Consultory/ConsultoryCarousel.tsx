@@ -17,10 +17,10 @@ const ConsultoryCarousel:React.FC = () => {
     const isMobile = window.innerWidth <= 600
     const showArrows = isMobile ? true:false
     const galleryItems = [
-        <NavLink className={` flex `} to="/Treatments"><img src={isMobile ? FirstSlideMobile: FirstSlide} /></NavLink>,
-        <NavLink className={` flex `} to="/Contact"><img src={isMobile ? SecondSlideMobile:SecondSlide} /></NavLink>,
-        <NavLink className={` flex `} to="/Contact"><img src={isMobile ? ThirdSlideMobile:ThirdSlide} /></NavLink>,
-        <NavLink className={` flex `} to="/Contact"><img src={isMobile ? FourthSlideMobile:FourthSlide} /></NavLink>,
+        <img src={isMobile ? FirstSlideMobile: FirstSlide} />,
+        <img src={isMobile ? SecondSlideMobile:SecondSlide} />,
+        <img src={isMobile ? ThirdSlideMobile:ThirdSlide} />,
+        <img src={isMobile ? FourthSlideMobile:FourthSlide} />,
                 
         ]
     return(

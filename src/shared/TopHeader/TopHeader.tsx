@@ -34,7 +34,7 @@ const TopHeader = ( props:Props ) => {
     return(
         <div className={`w-100 top-header ${isFixed! ? 'dn':'flex '}`}>
             <div className="w-70-ns w-100-s top-header-main-text flex items-center justify-end">
-                <NavLink className={`${classes.discountLink}`}  to="/Appointment">¡10% de DCTO en tu Blanqueamiento Dental!</NavLink>
+                <NavLink className={`${classes.discountLink}`}  to="/Appointment">¡10% de DCTO en tu Diseño de Sonrisa!</NavLink>
             </div>
             <div className="w-20-ns w-70-s top-header-social-network flex flex-row items-center justify-center">
                 <div className="">
@@ -53,7 +53,7 @@ const TopHeader = ( props:Props ) => {
                     </a>
                 </div>
                 <div className="social-network-number w-50">
-                    <a href="https://wa.me/573013719026" target="_blank">301 371 90 26</a>
+                    <a href="https://wa.me/573508736090" target="_blank">350 873 6090</a>
                     {/* <p className="pv1 mv0">301 371 90 26</p> */}
                 </div>
             </div>

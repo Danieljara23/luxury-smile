@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     snackBar: {
       '& .MuiPaper-root':{
-        backgroundColor: '#2393B2',
+        backgroundColor: '#04b3e5',
         color: 'white'
       }
     },
@@ -63,7 +63,7 @@ const AlertMessage = (props: Props) => {
   }
 
   return (
-    <Snackbar anchorOrigin={{ vertical: 'bottom', horizontal: 'left', }}
+    <Snackbar anchorOrigin={{ vertical: 'bottom', horizontal: 'center', }}
       open={open}
       className={`${messageType === 'error' ? classes.snackBarError: classes.snackBar}`}
       autoHideDuration={6000}
