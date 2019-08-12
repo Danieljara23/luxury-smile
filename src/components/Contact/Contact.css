@@ -18,6 +18,11 @@
 #contact-form input{
     box-sizing: content-box;
 }
+.contact-component-container .consultory-contact-info{
+    margin-right: auto;
+    margin-left: auto;
+    width: 90%;
+}
 
 @media (max-width: 960px) {
     #contact-form .mobile-input{

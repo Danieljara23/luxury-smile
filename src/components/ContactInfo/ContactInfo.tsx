@@ -12,11 +12,11 @@ const ContactInfo = () => {
         <div className="consultory-contact-info w-100 flex mv3">
             <div className="w-25 flex flex-row items-center justify-center">
                 <a href="https://wa.me/573013719026" target="_blank"><WhatsApp/></a>
-                <p>WhatsApp: 301 371 90 26</p>
+                <p>WhatsApp: 301 371 90 26  - 350 873 60 90</p>
             </div>
             <div className="w-25 flex flex-row items-center justify-center">
                 <Telefono/>
-                <p>557 84 16 - 350 873 60 90</p>
+                <p>Teléfono: 557 84 16</p>
             </div>
             <div className="w-25 flex flex-row items-center justify-center">
                 <Email/>

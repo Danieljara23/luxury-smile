@@ -18,6 +18,10 @@
  #appointment-form input{
         box-sizing: content-box;
 }
+.apointment-container .consultory-contact-info{
+    margin-right: auto;
+    margin-left: auto;
+}
 @media (min-width: 1300px){
     .promotion-image{
         background-size: contain; 
