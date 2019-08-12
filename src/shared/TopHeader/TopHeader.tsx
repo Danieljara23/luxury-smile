@@ -48,7 +48,7 @@ const TopHeader = ( props:Props ) => {
                     </a>
                 </div>
                 <div className="">
-                    <a href="https://wa.me/573013719026" target="_blank" className="social-icon">
+                    <a href="https://wa.me/573508736090" target="_blank" className="social-icon">
                         <Whatsapp/>
                     </a>
                 </div>

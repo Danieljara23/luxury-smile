@@ -10,12 +10,12 @@ const TreatmentsList:TreatmentModel[] = [
         title: 'Diseño de sonrisa',
         imagePath: require('../../images/estetica-dental.jpg'),
         description: 'Mejoramos forma, tamaño, color, texturas, logrando una sonrisa armoniosa en cuanto a biología, función y estética, consiguiendo así una sonrisa perfecta',
+        discount: '10%'
     },
     {
         title: 'Aclaramiento dental',
         imagePath: require('../../images/aclaramiento-dental.jpg'),
         description: 'Es un tratamiento dental estético que logra reducir varios tonos el color original de las piezas dentales, dejando los dientes más blancos y brillantes.',
-        discount: '10%'
     },
     {
         title: 'Operatoria dental',
