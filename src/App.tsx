@@ -19,7 +19,7 @@ import Other from './components/Other/Other'
 import TopHeader from './shared/TopHeader/TopHeader'
 import ReactGA from 'react-ga';
 
-ReactGA.initialize('UA-000000-01');
+ReactGA.initialize('UA-145360873-1');
 ReactGA.pageview(window.location.pathname + window.location.search);
 const WhatAppGreen = require('./components/images/ico-whatsapp-green.png')
 const App: React.FC = () => {
