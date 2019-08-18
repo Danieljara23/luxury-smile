@@ -17,7 +17,11 @@ import ContactThankyou from './components/ThankYouPages/ContactThankyou'
 import AppointmentThankyou from './components/ThankYouPages/AppointmentThankyou'
 import Other from './components/Other/Other'
 import TopHeader from './shared/TopHeader/TopHeader'
-// import { ReactComponent as WhatAppGreen } from './components/images/ico-whatsapp-green.svg'
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-000000-01');
+ReactGA.pageview(window.location.pathname + window.location.search);
+
+
 const WhatAppGreen = require('./components/images/ico-whatsapp-green.png')
 const App: React.FC = () => {
   const [isFixed, setIsFixed] = useState(false)
