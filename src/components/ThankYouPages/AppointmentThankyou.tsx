@@ -1,9 +1,19 @@
 import React from 'react'
 import '../Home/styles.css'
 import './Thankyou.css'
+import {withRouter} from 'react-router-dom';
+import TagManager from 'react-gtm-module'
 
-
+const tagManagerArgs = {
+    dataLayer: {
+        userId: '001',
+        userProject: 'project',
+        page: 'appointment-thank-you'
+    },
+    dataLayerName: 'PageDataLayer'
+}
 const AppointmentThankyou = () => {
+    TagManager.dataLayer(tagManagerArgs)
     return(
         <div className="thank-you-page">
             <h4 className="appointment-title">Hemos agendado tu cita</h4>
@@ -15,5 +25,5 @@ const AppointmentThankyou = () => {
     )
 }
 
-export default AppointmentThankyou
+export default withRouter(AppointmentThankyou)
 
