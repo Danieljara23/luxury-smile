@@ -10,6 +10,7 @@ import axios from 'axios';
 import FormValidator from '../FormValidator/FormValidator'
 import {Errors} from '../FormValidator/FormValidator'
 import AlertMessage from '../SnackBar/SnackBar'
+import { Redirect } from 'react-router'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -96,11 +97,11 @@ const ContactSection =  () => {
             data: values
         }).then((response)=>{
             if (response.data === 'success'){
-                setMessage('contact')
+                // setMessage('contact')
                 setMailSent(true)
-                setTimeout(()=>{
-                  setMailSent(false)
-                },4000)
+                // setTimeout(()=>{
+                //   setMailSent(false)
+                // },4000)
               setValues({
                   name: '',
                   cellPhone: '',
@@ -209,6 +210,9 @@ const ContactSection =  () => {
                     <div>
                         <div><AlertMessage messageType={message} shouldbeOpen={mailSent} /></div>
                     </div>
+                    {mailSent && (
+                      <Redirect to={'thankyou'}/>
+                    )}
                 </form>
             </div>
             <div className="w-100 contact-component-container">

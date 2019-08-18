@@ -14,6 +14,7 @@ import AppointmentFormValidator from '../FormValidator/AppointmentFormValidator'
 import { Errors } from '../FormValidator/AppointmentFormValidator'
 import './Appointment.css'
 import AlertMessage from '../SnackBar/SnackBar'
+import { Redirect } from 'react-router'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -85,7 +86,7 @@ const Appointment = () => {
     const [values, setValues] = useState<State>({});
     const [errors, setErrors] = useState<State>({})
     const [mailSent, setMailSent] = useState(false)
-    const [message, setMessage] = useState('contact')
+    const [message, setMessage] = useState('error')
     const isMobile = window.innerWidth <= 400
 
     function handleChangeSelect(event: React.ChangeEvent<{ name?: string; value: unknown }>) {
@@ -114,9 +115,9 @@ const Appointment = () => {
             if (response.data === 'success'){
                 setMessage('appointment')
                 setMailSent(true)
-                setTimeout(()=>{
-                    setMailSent(false)
-                  },4000)
+                // setTimeout(()=>{
+                //     setMailSent(false)
+                //   },4000)
               setValues({
                   name: '',
                   cellPhone: '',
@@ -228,6 +229,9 @@ const Appointment = () => {
                     <div>
                         <div><AlertMessage messageType={message} shouldbeOpen={mailSent} /></div>
                     </div>
+                    {mailSent && message != 'error' && (
+                      <Redirect to={'/thankyou-appointment'}/>
+                    )}
                 </form>
             </div>
             <ContactInfo/>

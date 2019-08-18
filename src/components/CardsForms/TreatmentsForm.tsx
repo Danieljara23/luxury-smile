@@ -7,6 +7,7 @@ import Button from '@material-ui/core/Button';
 import FormValidator from '../FormValidator/FormValidator'
 import {Errors} from '../FormValidator/FormValidator'
 import AlertMessage from '../SnackBar/SnackBar'
+import { Redirect } from 'react-router'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -109,7 +110,7 @@ const TreatmentsForm  = (props:Props) => {
             data: values
         }).then((response)=>{
             if (response.data === 'success'){
-                setMessage('appointment')
+                // setMessage('appointment')
                 setMailSent(true)
                 setTimeout(()=>{
                     setMailSent(false)
@@ -124,9 +125,7 @@ const TreatmentsForm  = (props:Props) => {
             }else if(response.data === 'fail'){
                 setMailSent(true)
                 setMessage('error')
-                setTimeout(()=>{
-                    setMailSent(false)
-                },4000)
+                
             }
         })
         .catch(error => {
@@ -191,6 +190,9 @@ const TreatmentsForm  = (props:Props) => {
                     <div>
                         <div><AlertMessage messageType={message} shouldbeOpen={mailSent} /></div>
                     </div>
+                    {mailSent && (
+                      <Redirect to={'thankyou'}/>
+                    )}
                 </form>
     )
 }

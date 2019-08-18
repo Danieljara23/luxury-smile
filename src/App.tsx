@@ -13,6 +13,8 @@ import EspecialistsSection from './components/Especialists/Especialists'
 import Testimonies from './components/Testimonies/Testimonies'
 import ContactSection from './components/Contact/Contact'
 import Appointment from './components/Appointment/Appointment'
+import ContactThankyou from './components/ThankYouPages/ContactThankyou'
+import AppointmentThankyou from './components/ThankYouPages/AppointmentThankyou'
 import Other from './components/Other/Other'
 import TopHeader from './shared/TopHeader/TopHeader'
 // import { ReactComponent as WhatAppGreen } from './components/images/ico-whatsapp-green.svg'
@@ -51,6 +53,8 @@ const App: React.FC = () => {
             <Route path="/Testimonies" component={Testimonies}/>
             <Route path="/Contact" component={ContactSection}/>
             <Route path="/Appointment" component={Appointment}/>
+            <Route path="/thankyou" component={ContactThankyou}/>
+            <Route path="/thankyou-appointment" component={AppointmentThankyou}/>
             
           </div>
           <Footer/>

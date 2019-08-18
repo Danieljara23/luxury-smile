@@ -1,6 +1,4 @@
 import React from 'react';
-import AwesomeSlider from 'react-awesome-slider';
-import 'react-awesome-slider/dist/styles.css';
 import '../Home/styles.css'
 import  FirstSlide from '../images/slider-desk-nosotros-1.jpg'
 import  FirstSlideMobile from '../images/slider-mobile-nosotros-1.jpg'

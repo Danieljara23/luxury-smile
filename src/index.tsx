@@ -3,6 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import TagManager from 'react-gtm-module'
+
+const tagManagerArgs = {
+    gtmId: 'GTM-ML8WKH',
+    dataLayerName: 'PageDataLayer'
+}
+TagManager.initialize(tagManagerArgs)
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
