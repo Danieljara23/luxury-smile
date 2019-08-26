@@ -3,6 +3,7 @@ import '../Home/styles.css'
 import './Thankyou.css'
 import TagManager from 'react-gtm-module'
 import {withRouter} from 'react-router-dom';
+
 const tagManagerArgs = {
     dataLayer: {
         userId: '001',

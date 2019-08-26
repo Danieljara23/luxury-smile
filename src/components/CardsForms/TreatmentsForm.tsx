@@ -81,7 +81,7 @@ const TreatmentsForm  = (props:Props) => {
     const [values, setValues] = useState<State>({});
     const [errors, setErrors] = useState<State>({})
     const [mailSent, setMailSent] = useState(false)
-    const [message, setMessage] = useState('appointment')
+    const [message, setMessage] = useState('error')
 
 
     const handleChange = (e: any) => {
@@ -110,7 +110,7 @@ const TreatmentsForm  = (props:Props) => {
             data: values
         }).then((response)=>{
             if (response.data === 'success'){
-                // setMessage('appointment')
+                setMessage('appointment')
                 setMailSent(true)
                 setTimeout(()=>{
                     setMailSent(false)
@@ -125,6 +125,9 @@ const TreatmentsForm  = (props:Props) => {
             }else if(response.data === 'fail'){
                 setMailSent(true)
                 setMessage('error')
+                setTimeout(()=>{
+                  setMailSent(false)
+                },3000)
                 
             }
         })
@@ -190,7 +193,7 @@ const TreatmentsForm  = (props:Props) => {
                     <div>
                         <div><AlertMessage messageType={message} shouldbeOpen={mailSent} /></div>
                     </div>
-                    {mailSent && (
+                    {mailSent && message != 'error' && values.email != '' && (
                       <Redirect to={'thankyou'}/>
                     )}
                 </form>

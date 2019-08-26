@@ -76,7 +76,7 @@ const ContactSection =  () => {
     const [values, setValues] = useState<State>({});
     const [errors, setErrors] = useState<State>({})
     const [mailSent, setMailSent] = useState(false)
-    const [message, setMessage] = useState('contact')
+    const [message, setMessage] = useState('error')
     // let message = ''
     
     const handleChange = (e: any) => {
@@ -97,7 +97,7 @@ const ContactSection =  () => {
             data: values
         }).then((response)=>{
             if (response.data === 'success'){
-                // setMessage('contact')
+                setMessage('contact')
                 setMailSent(true)
                 // setTimeout(()=>{
                 //   setMailSent(false)
@@ -114,7 +114,7 @@ const ContactSection =  () => {
                 setMessage('error')
                 setTimeout(()=>{
                   setMailSent(false)
-                },4000)
+                },3000)
             }
         })
         .catch(error => {
@@ -210,7 +210,7 @@ const ContactSection =  () => {
                     <div>
                         <div><AlertMessage messageType={message} shouldbeOpen={mailSent} /></div>
                     </div>
-                    {mailSent && (
+                    {mailSent && message != 'error' && values.email != '' && (
                       <Redirect to={'thankyou'}/>
                     )}
                 </form>

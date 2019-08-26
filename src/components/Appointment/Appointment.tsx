@@ -130,7 +130,7 @@ const Appointment = () => {
                 setMessage('error')
                 setTimeout(()=>{
                     setMailSent(false)
-                },4000)
+                },3000)
             }
         })
         .catch(error => {
@@ -229,7 +229,7 @@ const Appointment = () => {
                     <div>
                         <div><AlertMessage messageType={message} shouldbeOpen={mailSent} /></div>
                     </div>
-                    {mailSent && message != 'error' && (
+                    {mailSent && message != 'error' && (values.email != '' || values.email != undefined) && (
                       <Redirect to={'/thankyou-appointment'}/>
                     )}
                 </form>
